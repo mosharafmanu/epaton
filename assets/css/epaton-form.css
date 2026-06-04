@@ -1,0 +1,367 @@
+/*
+====================================================
+Universal Form Styles
+Works with: Contact Form 7, Omnisend, WPForms, Gravity Forms, etc.
+====================================================
+*/
+
+/* Form Input Placeholders */
+input::placeholder,
+textarea::placeholder {
+	color: var(--epaton-grey);
+	opacity: 1;
+}
+
+/* Form Labels - Universal */
+label,
+.form-label,
+.wpcf7-form-control-wrap label,
+form label {
+	font-size: 1rem; /* 16px */
+	font-weight: 500;
+	line-height: 1.5rem; /* 24px */
+	font-family: var(--epaton-font);
+	letter-spacing: normal;
+	color: var(--epaton-white);
+	display: block;
+	margin-bottom: 0.5rem;
+}
+/* Form Field Container */
+.field,
+.form-field,
+.wpcf7-form-control-wrap {
+	margin-bottom: 1.563rem; /* 25px */
+}
+
+/* Universal Input & Textarea Styles */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="url"],
+input[type="number"],
+input[type="date"],
+input[type="time"],
+input[type="password"],
+select,
+textarea {
+	font-size: 1rem; /* 16px */
+	font-weight: 500;
+	line-height: 1.5rem; /* 24px */
+	font-family: var(--epaton-font);
+	border-radius: 0.0625rem; /* 1px */
+	background: transparent;
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	color: var(--epaton-white);
+	width: 100%;
+	padding: 0.75rem 1rem;
+	transition: 0.3s all ease;
+}
+
+/* Textarea Specific */
+textarea {
+	min-height: 8.75rem; /* 140px */
+	resize: vertical;
+}
+/* Checkbox Styles - Universal */
+input[type="checkbox"] {
+	width: 1.5625rem; /* 25px */
+	height: 1.5625rem; /* 25px */
+	margin: 0;
+	margin-right: 0.75rem; /* 12px */
+	position: relative;
+	border-radius: 0.3125rem; /* 5px */
+	border: none;
+	appearance: none;
+	-webkit-appearance: none;
+	padding: 0;
+	cursor: pointer;
+	background: var(--epaton-white);
+	transition: 0.3s all ease;
+	flex-shrink: 0;
+}
+input[type="checkbox"]:checked {
+	background: var(--epaton-white);
+}
+input[type="checkbox"]:checked::after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 5px;
+	height: 10px;
+	border: solid var(--epaton-blue);
+	border-width: 0 2px 2px 0;
+	transform: translate(-50%, -50%) rotate(45deg);
+	top: .625rem; /* 10px */
+}
+
+/* Checkbox/Radio Label Wrapper - Universal */
+label:has(input[type="checkbox"]),
+label:has(input[type="radio"]),
+.wpcf7-list-item label,
+.checkbox-label,
+.radio-label {
+	display: flex;
+	align-items: flex-start;
+	column-gap: 0.75rem; /* 12px */
+	margin: 0;
+	cursor: pointer;
+	font-size: 1.0625rem; /* 17px */
+	font-weight: 450;
+	line-height: 175%;
+	letter-spacing: 0.85px;
+	font-family: var(--epaton-font);
+	color: var(--epaton-white);
+}
+
+/* Checkbox/Radio Label Text */
+.wpcf7-list-item-label,
+.checkbox-text,
+.radio-text {
+	color: var(--epaton-white);
+	font-size: 1rem; /* 16px */
+	font-weight: 400;
+	line-height: 150%;
+	letter-spacing: 0.85px;
+	font-family: var(--epaton-font);
+	flex: 1;
+}
+
+/* Links in Checkbox/Radio Labels */
+label a,
+.wpcf7-list-item label a {
+	color: var(--epaton-white);
+	text-decoration: underline;
+	transition: 0.3s all ease;
+}
+label a:hover,
+.wpcf7-list-item label a:hover {
+	color: var(--epaton-blue);
+}
+
+/* List Items */
+.wpcf7-list-item,
+.form-list-item {
+	margin: 0;
+	margin-bottom: 0.75rem; /* 12px */
+}
+
+/* Hide unnecessary breaks */
+.field br {
+	display: none;
+}
+
+/* Hide CF7 spinner */
+.wpcf7-spinner {
+	display: none;
+}
+/* Radio Button Styles - Universal */
+input[type="radio"] {
+	-webkit-appearance: none;
+	appearance: none;
+	background-color: var(--epaton-white);
+	margin: 0;
+	margin-right: 0.75rem; /* 12px */
+	font: inherit;
+	width: 1.75rem; /* 28px */
+	height: 1.75rem; /* 28px */
+	border: 0.125rem solid var(--epaton-white); /* 2px */
+	border-radius: 50%;
+	display: grid;
+	place-content: center;
+	cursor: pointer;
+	transition: 0.3s all ease;
+	flex-shrink: 0;
+}
+input[type="radio"]:hover {
+	border-color: var(--epaton-blue);
+}
+input[type="radio"]::before {
+	content: '';
+	width: 0.75rem; /* 12px */
+	height: 0.75rem; /* 12px */
+	border-radius: 50%;
+	transform: scale(0);
+	transition: 120ms transform ease-in-out;
+	background: var(--epaton-blue);
+}
+input[type="radio"]:checked::before {
+	transform: scale(1);
+}
+
+/* Autofill Styles */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+	-webkit-box-shadow: 0 0 0 30px var(--epaton-white) inset !important;
+	box-shadow: 0 0 0 30px var(--epaton-white) inset !important;
+	-webkit-text-fill-color: var(--epaton-blue) !important;
+}
+
+/* Submit Button - Universal */
+/* input[type="submit"],
+button[type="submit"],
+.submit-button {
+	background: var(--epaton-blue);
+	color: var(--epaton-white);
+	border: none;
+	padding: 0.9375rem 2.5rem; 
+	font-size: 1rem; 
+	font-weight: 500;
+	font-family: inherit;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	border-radius: 0;
+}
+input[type="submit"]:hover,
+button[type="submit"]:hover,
+.submit-button:hover {
+	background: var(--pr-white);
+	color: var(--epaton-blue);
+	border: none;
+} */
+/* Form Response Messages - Universal */
+.wpcf7-response-output,
+.form-message,
+.success-message,
+.error-message,
+.wpcf7 form .wpcf7-response-output {
+	margin: 0;
+	margin-top: 1.25rem; /* 20px */
+	padding: 1.125rem 1.25rem; /* 18px 20px */
+	border: 2px solid var(--epaton-blue);
+	border-radius: 0.625rem; /* 10px */
+	background: var(--epaton-white);
+	position: relative;
+	color: var(--epaton-blue);
+	font-size: 1rem; /* 16px */
+	line-height: 1.5rem; /* 24px */
+	font-family: var(--epaton-font);
+}
+
+/* Hide initial state */
+.wpcf7 form.init .wpcf7-response-output {
+	display: none;
+}
+
+/* Success Messages */
+.success-message,
+.wpcf7 form.sent .wpcf7-response-output {
+	border-color: #28a745;
+	background: #d4edda;
+	color: #155724;
+}
+
+/* Error Messages */
+.error-message,
+.wpcf7 form.failed .wpcf7-response-output,
+.wpcf7 form.aborted .wpcf7-response-output {
+	border-color: var(--epaton-blue);
+	background: #f8d7da;
+	color: var(--epaton-cyan);
+}
+
+/* Spam Messages */
+.wpcf7 form.spam .wpcf7-response-output {
+	border-color: #f56e28;
+	background: #fff3cd;
+	color: #856404;
+}
+
+/* Validation Messages */
+.wpcf7 form.invalid .wpcf7-response-output,
+.wpcf7 form.unaccepted .wpcf7-response-output {
+	border-color: #ffc107;
+	background: #fff3cd;
+	color: #856404;
+}
+
+/* Field Validation Errors - Universal */
+.wpcf7-not-valid-tip,
+.validation-error {
+	background: red;
+	color: var(--epaton-white);
+	width: max-content;
+	padding: .3125rem .625rem .125rem .625rem;
+	padding-bottom: .25rem; /* 4px */
+	border-radius: .25rem;
+	line-height: 1;
+	font-size: 0.875rem; /* 14px */
+	margin-top: 0.5rem; /* 8px */
+	display: block;
+}
+
+@media only screen and (max-width: 991px) {
+	.wpcf7-response-output,
+	.form-message,
+	.wpcf7 form .wpcf7-response-output {
+		width: 100%;
+	}
+}
+/* Form Layout - Field Rows - Universal */
+.field-row,
+.form-row-wrapper,
+.form-grid {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	column-gap: 1.5625rem; /* 25px */
+}
+
+/* Field Width Classes */
+.field-full,
+.form-row,
+.full-width {
+	width: 100%;
+}
+.field-half,
+.half-width {
+	width: calc((100% - 1.5625rem) / 2);
+}
+.field-third,
+.third-width {
+	width: calc((100% - 1.5625rem) / 3);
+}
+
+/* Select Dropdown Styling - Universal */
+select {
+	cursor: pointer;
+	background-image: url(../svgs/select-arrow.svg);
+	background-repeat: no-repeat;
+	background-position: right .9375rem center;
+	background-size: 0.75rem;
+	padding-right: 3rem;
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+
+/* Required Field Indicator */
+.required,
+abbr[title="required"] {
+	color: var(--epaton-blue);
+	text-decoration: none;
+	border: none;
+}
+
+/* Disabled Fields */
+input:disabled,
+textarea:disabled,
+select:disabled {
+	opacity: 0.6;
+	cursor: not-allowed;
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 991px) {
+	.field-half,
+	.field-third,
+	.half-width,
+	.third-width {
+		width: 100%;
+	}
+}
+
+
+

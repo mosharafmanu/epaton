@@ -1,0 +1,23 @@
+{
+    "key": "ui_options_page_6965247734063",
+    "title": "Resource Options",
+    "active": true,
+    "menu_order": 0,
+    "page_title": "Resource Options",
+    "menu_slug": "resource-options",
+    "parent_slug": "edit.php?post_type=resource",
+    "advanced_configuration": 0,
+    "icon_url": "",
+    "menu_title": "",
+    "position": "",
+    "redirect": false,
+    "description": "Configure settings for Resources including the parent page for breadcrumb navigation on single resource posts.",
+    "menu_icon": [],
+    "update_button": "Update",
+    "updated_message": "Options Updated",
+    "capability": "edit_posts",
+    "data_storage": "options",
+    "post_id": "",
+    "autoload": 0,
+    "modified": 1770433196
+}
