@@ -26,7 +26,7 @@ get_header();
 			<?php if ( have_posts() ) : ?>
 
 				<!-- Blog Posts Grid -->
-				<div class="blog-grid card-grid columns-4">
+				<div class="blog-grid card-grid columns-3">
 					<?php
 					while ( have_posts() ) :
 						the_post();

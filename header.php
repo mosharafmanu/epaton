@@ -26,13 +26,34 @@
 <div id="page" class="site">
 
 
-<header class="site-header layout-padding">
-	<div class="header-inner">
+<header class="site-header">
+	<div class="site-header-inner layout-padding">
+		<div class="site-header-bar">
+			<?php epaton_render_site_logo(); ?>
 
+			<nav class="site-navigation" aria-label="<?php esc_attr_e('Primary navigation', 'epaton'); ?>">
+				<?php
+wp_nav_menu(
+    [
+        'theme_location' => 'mainMenu',
+        'container'      => false,
+        'menu_class'     => 'primary-menu',
+        'fallback_cb'    => false,
+        'depth'          => 2,
+        'walker'         => new Epaton_Primary_Menu_Walker(),
+    ]
+);
+?>
+			</nav>
 
-
-
+			<div class="site-header-actions">
+				<?php epaton_render_header_button(); ?>
+				<!-- <button class="menu-trigger hamburger-menu-toggle" type="button" aria-label="<?php esc_attr_e('Open menu', 'epaton'); ?>">
+					<span></span>
+					<span></span>
+					<span></span>
+				</button> -->
+			</div>
+		</div>
 	</div>
-
-
 </header>

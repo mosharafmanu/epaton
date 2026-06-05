@@ -28,7 +28,6 @@
 .color-epaton-silver { color: var(--epaton-silver); }
 .color-epaton-grey { color: var(--epaton-grey); }
 
-
 * {
     box-sizing: border-box;
 }
@@ -212,7 +211,6 @@ h1,.h1-style,
 h2,.h2-style,
 h3,.h3-style,
 h4,.h4-style {
-	color: var(--epaton-white);
 	margin-top: 0;
 	margin-bottom: 0.9375rem; /* 15px */
 	font-weight: 700;
@@ -341,6 +339,13 @@ h4,
 .layout-padding {
 	padding-left: 1.5rem; /* 24px */
 	padding-right: 1.5rem; /* 24px */
+}
+
+.epaton-container {
+	width: 100%;
+	max-width: 68.625rem; /* 1098px */
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .layout-margin {

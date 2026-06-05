@@ -1,0 +1,65 @@
+{
+    "key": "group_blog_options",
+    "title": "Blog Options",
+    "fields": [
+        {
+            "key": "field_blog_options_title",
+            "label": "Title",
+            "name": "blog_options_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Main heading shown at the top of the blog/news index.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "NEWS",
+            "maxlength": "",
+            "placeholder": "NEWS",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_blog_options_description",
+            "label": "Description",
+            "name": "blog_options_description",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Short intro copy shown below the blog/news title.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Want to keep learning? Explore our news, and the latest industry insights.",
+            "maxlength": "",
+            "rows": 3,
+            "placeholder": "",
+            "new_lines": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "blog-options"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Controls the blog/news index heading and intro copy.",
+    "show_in_rest": 0,
+    "modified": 1780654504
+}

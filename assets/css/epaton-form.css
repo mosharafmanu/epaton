@@ -363,5 +363,123 @@ select:disabled {
 	}
 }
 
+/*
+====================================================
+Epaton Contact Form 7
+====================================================
+*/
+.epaton-contact-form {
+	width: 100%;
+	background: linear-gradient(180deg, var(--epaton-blue) 0%, #25247d 100%);
+	color: var(--epaton-white);
+}
 
+.epaton-contact-form .epaton-contact-field {
+	margin-bottom: 1.25rem;
+}
+
+.epaton-contact-form label {
+	margin-bottom: 0.5rem;
+	color: var(--epaton-white);
+	font-size: 1rem;
+	font-weight: 500;
+	line-height: 1.2;
+}
+
+.epaton-contact-form .wpcf7-form-control-wrap {
+	display: block;
+	margin-bottom: 0;
+}
+
+.epaton-contact-form input[type="text"],
+.epaton-contact-form input[type="email"],
+.epaton-contact-form input[type="tel"],
+.epaton-contact-form select,
+.epaton-contact-form textarea {
+	min-height: 3rem;
+	border: 0;
+	border-radius: 0;
+	background-color: var(--epaton-white);
+	color: var(--epaton-navy);
+	font-size: 1rem;
+	line-height: 1.4;
+}
+
+.epaton-contact-form select {
+	background-color: var(--epaton-white);
+	color: var(--epaton-grey);
+}
+
+.epaton-contact-form textarea {
+	min-height: 9rem;
+}
+
+.epaton-contact-form .epaton-contact-privacy {
+	display: flex;
+	align-items: flex-start;
+	gap: 0.625rem;
+	margin: 0.75rem 0 1.25rem;
+	color: var(--epaton-white);
+	font-size: 0.8125rem;
+	font-weight: 400;
+	line-height: 1.25;
+}
+
+.epaton-contact-form .epaton-contact-privacy .wpcf7-form-control-wrap {
+	width: auto;
+	flex: 0 0 auto;
+}
+
+.epaton-contact-form .epaton-contact-privacy .wpcf7-list-item {
+	margin: 0;
+}
+
+.epaton-contact-form .epaton-contact-privacy .wpcf7-list-item label {
+	display: block;
+	margin: 0;
+}
+
+.epaton-contact-form .epaton-contact-privacy .wpcf7-list-item-label {
+	display: none;
+}
+
+.epaton-contact-form input[type="checkbox"] {
+	width: 1.375rem;
+	height: 1.375rem;
+	margin: 0;
+	border: 2px solid var(--epaton-white);
+	border-radius: 0;
+	background: transparent;
+}
+
+.epaton-contact-form input[type="checkbox"]:checked {
+	background: var(--epaton-white);
+}
+
+.epaton-contact-form input[type="checkbox"]:checked::after {
+	border-color: var(--epaton-blue);
+}
+
+.epaton-contact-form .epaton-contact-submit,
+.epaton-contact-form input[type="submit"] {
+	display: block;
+	width: 100%;
+	min-height: 3rem;
+	border: 0;
+	border-radius: 0;
+	background: var(--epaton-white);
+	color: var(--epaton-navy);
+	font-size: 1rem;
+	font-weight: 700;
+	line-height: 1;
+	text-align: center;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+
+.epaton-contact-form .epaton-contact-submit:hover,
+.epaton-contact-form input[type="submit"]:hover {
+	background: var(--epaton-cyan);
+	color: var(--epaton-navy);
+}
 

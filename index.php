@@ -13,30 +13,29 @@
  */
 
 get_header();
+
+$blog_title       = function_exists( 'get_field' ) ? get_field( 'blog_options_title', 'options' ) : '';
+$blog_description = function_exists( 'get_field' ) ? get_field( 'blog_options_description', 'options' ) : '';
+
+$blog_title       = $blog_title ?: __( 'NEWS', 'epaton' );
+$blog_description = $blog_description ?: __( 'Want to keep learning? Explore our news, and the latest industry insights.', 'epaton' );
 ?>
 
 	<main id="primary" class="site-main blog-page">
 
-		<?php
-		// Include Inner Hero Section from Blog Options with breadcrumb inside
-		get_template_part(
-			'template-parts/sections/inner_hero',
-			null,
-			[
-				'context'         => 'options',
-				'field_prefix'    => 'blog_hero_',
-				'default_title'   => 'Blog',
-				'show_breadcrumb' => true,
-			]
-		);
-		?>
-
 		<!-- Blog Posts Grid Section -->
-		<section class="blog-grid-section layout-padding pt-70 pt-lg-100">
+		<section class="blog-grid-section layout-padding">
+			<header class="blog-index-header">
+				<h1 class="blog-index-title"><?php echo esc_html( $blog_title ); ?></h1>
+				<?php if ( $blog_description ) : ?>
+					<p class="blog-index-description"><?php echo esc_html( $blog_description ); ?></p>
+				<?php endif; ?>
+			</header>
+
 			<?php if ( have_posts() ) : ?>
 
 				<!-- Blog Posts Grid -->
-				<div class="blog-grid card-grid columns-4">
+				<div class="blog-grid card-grid columns-3">
 					<?php
 					while ( have_posts() ) :
 						the_post();

@@ -4,7 +4,7 @@
     "fields": [
         {
             "key": "field_header_settings_tab",
-            "label": "Header Settings",
+            "label": "Header",
             "name": "",
             "aria-label": "",
             "type": "tab",
@@ -26,11 +26,11 @@
             "name": "site_logo",
             "aria-label": "",
             "type": "image",
-            "instructions": "Upload your site logo. Recommended size: 112x69px. Supports PNG, JPG, SVG formats.",
+            "instructions": "Upload the white Epaton SVG logo used in the header and footer.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -42,7 +42,7 @@
             "max_width": "",
             "max_height": "",
             "max_size": "",
-            "mime_types": "jpg,jpeg,png,svg",
+            "mime_types": "svg,png,jpg,jpeg",
             "preview_size": "medium"
         },
         {
@@ -51,344 +51,11 @@
             "name": "header_button",
             "aria-label": "",
             "type": "link",
-            "instructions": "Configure the header call-to-action button (e.g., 'Contact us'). Text is shown on desktop, phone icon on mobile.",
+            "instructions": "Header call-to-action button.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array"
-        },
-        {
-            "key": "field_header_button_mobile_phone",
-            "label": "Header Button Mobile Phone",
-            "name": "header_button_mobile_phone",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "Used for the mobile header phone icon link at 1199px and below. Enter a callable phone number.",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "+44 (0)1923 839333",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_contact_information_tab",
-            "label": "Contact Information",
-            "name": "",
-            "aria-label": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "placement": "top",
-            "endpoint": 0,
-            "selected": 0
-        },
-        {
-            "key": "field_office_locations",
-            "label": "Office Locations",
-            "name": "office_locations",
-            "aria-label": "",
-            "type": "repeater",
-            "instructions": "Add contact information for each office location (Head Office, Manufacturing, South Africa, Brazil, etc.).",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "layout": "block",
-            "pagination": 0,
-            "min": 0,
-            "max": 0,
-            "collapsed": "field_office_name",
-            "button_label": "Add Office Location",
-            "rows_per_page": 20,
-            "sub_fields": [
-                {
-                    "key": "field_office_name",
-                    "label": "Office Name",
-                    "name": "office_name",
-                    "aria-label": "",
-                    "type": "text",
-                    "instructions": "Enter the office name (e.g., Head Office, UK Manufacturing, South Africa, Brazil).",
-                    "required": 1,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "50",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "maxlength": "",
-                    "placeholder": "e.g., Head Office",
-                    "prepend": "",
-                    "append": "",
-                    "parent_repeater": "field_office_locations"
-                },
-                {
-                    "key": "field_office_flag",
-                    "label": "Country Flag",
-                    "name": "office_flag",
-                    "aria-label": "",
-                    "type": "image",
-                    "instructions": "Upload country flag icon for this office (optional).",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "50",
-                        "class": "",
-                        "id": ""
-                    },
-                    "return_format": "array",
-                    "library": "all",
-                    "min_width": "",
-                    "min_height": "",
-                    "min_size": "",
-                    "max_width": "",
-                    "max_height": "",
-                    "max_size": "",
-                    "mime_types": "jpg,jpeg,png,svg",
-                    "preview_size": "thumbnail",
-                    "parent_repeater": "field_office_locations"
-                },
-                {
-                    "key": "field_office_full_name",
-                    "label": "Full Office Name",
-                    "name": "office_full_name",
-                    "aria-label": "",
-                    "type": "text",
-                    "instructions": "Enter the full office name (e.g., Epaton, Epaton Manufacturing Ltd). Leave empty to use Office Name.",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "maxlength": "",
-                    "placeholder": "e.g., Epaton Manufacturing Ltd",
-                    "prepend": "",
-                    "append": "",
-                    "parent_repeater": "field_office_locations"
-                },
-                {
-                    "key": "field_office_address",
-                    "label": "Address (Contact Page)",
-                    "name": "office_address",
-                    "aria-label": "",
-                    "type": "textarea",
-                    "instructions": "Enter the office address for contact page. Each line will be displayed on a new line.",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "maxlength": "",
-                    "rows": 6,
-                    "placeholder": "2 Chestnut House\nFarm Close\nShenley\nHertfordshire\nWD7 9AD\nEngland",
-                    "new_lines": "br",
-                    "parent_repeater": "field_office_locations"
-                },
-                {
-                    "key": "field_office_address_footer",
-                    "label": "Address (Footer)",
-                    "name": "office_address_footer",
-                    "aria-label": "",
-                    "type": "textarea",
-                    "instructions": "Enter the office address for footer (condensed format). Use commas to combine lines.",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "maxlength": "",
-                    "rows": 3,
-                    "placeholder": "2 Chestnut House, Farm Close\nShenley, Hertfordshire\nWD7 9AD, England",
-                    "new_lines": "br",
-                    "parent_repeater": "field_office_locations"
-                },
-                {
-                    "key": "field_office_phone",
-                    "label": "Phone Number",
-                    "name": "office_phone",
-                    "aria-label": "",
-                    "type": "text",
-                    "instructions": "Enter the main phone number for this office.",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "50",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "maxlength": "",
-                    "placeholder": "+44 (0)1923 839333",
-                    "prepend": "",
-                    "append": "",
-                    "parent_repeater": "field_office_locations"
-                },
-                {
-                    "key": "field_office_email",
-                    "label": "Email Address",
-                    "name": "office_email",
-                    "aria-label": "",
-                    "type": "email",
-                    "instructions": "Enter the main email address for this office.",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "50",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "parent_repeater": "field_office_locations"
-                },
-                {
-                    "key": "field_office_additional_phones",
-                    "label": "Additional Phone Numbers",
-                    "name": "office_additional_phones",
-                    "aria-label": "",
-                    "type": "repeater",
-                    "instructions": "Add additional phone numbers for this office (optional, for offices with multiple phone lines).",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "layout": "table",
-                    "pagination": 0,
-                    "min": 0,
-                    "max": 0,
-                    "collapsed": "",
-                    "button_label": "Add Phone Number",
-                    "rows_per_page": 20,
-                    "parent_repeater": "field_office_locations",
-                    "sub_fields": [
-                        {
-                            "key": "field_additional_phone_number",
-                            "label": "Phone Number",
-                            "name": "phone_number",
-                            "aria-label": "",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 1,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "maxlength": "",
-                            "placeholder": "+27 11 706 9361",
-                            "prepend": "",
-                            "append": "",
-                            "parent_repeater": "field_office_additional_phones"
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "key": "field_contact_cta_tab",
-            "label": "Contact CTA",
-            "name": "",
-            "aria-label": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "placement": "top",
-            "endpoint": 0,
-            "selected": 0
-        },
-        {
-            "key": "field_contact_cta_heading",
-            "label": "CTA Heading",
-            "name": "contact_cta_heading",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "Enter the main heading for the contact CTA section.",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "Get in touch today",
-            "maxlength": "",
-            "placeholder": "Get in touch today",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_contact_cta_description",
-            "label": "CTA Description",
-            "name": "contact_cta_description",
-            "aria-label": "",
-            "type": "textarea",
-            "instructions": "Enter the description text that appears next to the CTA button.",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "Discover how our advanced capabilities and unwavering commitment to fantastic customer service could benefit your organisation.",
-            "maxlength": "",
-            "rows": 3,
-            "placeholder": "Discover how our advanced capabilities and unwavering commitment to fantastic customer service could benefit your organisation.",
-            "new_lines": ""
-        },
-        {
-            "key": "field_contact_cta_button",
-            "label": "CTA Button",
-            "name": "contact_cta_button",
-            "aria-label": "",
-            "type": "link",
-            "instructions": "Configure the call-to-action button link and text.",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -396,7 +63,7 @@
         },
         {
             "key": "field_footer_settings_tab",
-            "label": "Footer Settings",
+            "label": "Footer",
             "name": "",
             "aria-label": "",
             "type": "tab",
@@ -413,12 +80,12 @@
             "selected": 0
         },
         {
-            "key": "field_footer_logo",
-            "label": "Footer Logo",
-            "name": "footer_logo",
+            "key": "field_footer_company_text",
+            "label": "Company Text",
+            "name": "footer_company_text",
             "aria-label": "",
-            "type": "image",
-            "instructions": "Upload your footer logo. If not set, the main site logo will be used. Recommended size: 112x69px. Supports PNG, JPG, SVG formats.",
+            "type": "textarea",
+            "instructions": "Company registration copy shown below the footer logo.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -426,25 +93,58 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "array",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": "jpg,jpeg,png,svg",
-            "allow_in_bindings": 1,
-            "preview_size": "medium"
+            "default_value": "Epaton Limited is a company\nregistered in England and Wales.\nCompany Number 08952280.\nVAT Number 185125409.",
+            "maxlength": "",
+            "rows": 4,
+            "placeholder": "",
+            "new_lines": "br"
         },
         {
-            "key": "field_social_medias",
-            "label": "Social Media Links",
-            "name": "social_medias",
+            "key": "field_footer_email",
+            "label": "Email",
+            "name": "footer_email",
+            "aria-label": "",
+            "type": "email",
+            "instructions": "Primary footer email address.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "sales@epaton.co.uk",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_footer_phone",
+            "label": "Phone",
+            "name": "footer_phone",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Primary footer phone number.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "+44 (0)3333 111 001",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_social_links",
+            "label": "Social Links",
+            "name": "social_links",
             "aria-label": "",
             "type": "repeater",
-            "instructions": "Add your social media profiles. Upload an icon (SVG recommended for best quality) and provide the link to your profile.",
+            "instructions": "Social links displayed in contact panels and other site areas.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -456,21 +156,42 @@
             "pagination": 0,
             "min": 0,
             "max": 0,
-            "collapsed": "",
-            "button_label": "Add Social Media",
+            "collapsed": "field_social_link_label",
+            "button_label": "Add Social Link",
             "rows_per_page": 20,
             "sub_fields": [
                 {
-                    "key": "field_social_icon",
-                    "label": "Icon",
-                    "name": "social_icon",
+                    "key": "field_social_link_label",
+                    "label": "Label",
+                    "name": "label",
                     "aria-label": "",
-                    "type": "image",
-                    "instructions": "",
+                    "type": "text",
+                    "instructions": "Used for accessibility text.",
                     "required": 1,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "",
+                        "width": "25",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "LinkedIn",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_social_links"
+                },
+                {
+                    "key": "field_social_link_icon",
+                    "label": "Icon",
+                    "name": "icon",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "Upload the social SVG icon.",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "25",
                         "class": "",
                         "id": ""
                     },
@@ -482,27 +203,92 @@
                     "max_width": "",
                     "max_height": "",
                     "max_size": "",
-                    "mime_types": "svg,png,jpg",
+                    "mime_types": "svg,png,jpg,jpeg,webp",
                     "preview_size": "thumbnail",
-                    "parent_repeater": "field_social_medias"
+                    "parent_repeater": "field_social_links"
                 },
                 {
-                    "key": "field_social_link",
+                    "key": "field_social_link_url",
                     "label": "Link",
-                    "name": "social_link",
+                    "name": "link",
                     "aria-label": "",
-                    "type": "url",
+                    "type": "link",
                     "instructions": "",
                     "required": 1,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "",
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "parent_repeater": "field_social_links"
+                }
+            ]
+        },
+        {
+            "key": "field_footer_offices",
+            "label": "Offices",
+            "name": "footer_offices",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Office rows displayed in the footer.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "table",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "field_footer_office_city",
+            "button_label": "Add Office",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_footer_office_city",
+                    "label": "City",
+                    "name": "city",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "30",
                         "class": "",
                         "id": ""
                     },
                     "default_value": "",
-                    "placeholder": "https://",
-                    "parent_repeater": "field_social_medias"
+                    "maxlength": "",
+                    "placeholder": "London",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_footer_offices"
+                },
+                {
+                    "key": "field_footer_office_address",
+                    "label": "Address",
+                    "name": "address",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "70",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "2-7 Clerkenwell Green, London, EC1R 0DE",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_footer_offices"
                 }
             ]
         },
@@ -512,17 +298,37 @@
             "name": "footer_copyright",
             "aria-label": "",
             "type": "text",
-            "instructions": "Enter the copyright text to display in the footer. You can use dynamic year by including {year} which will be replaced automatically.",
+            "instructions": "Use {year} for the current year.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
+            "default_value": "©Epaton - {year}. All rights reserved",
             "maxlength": "",
-            "placeholder": "e.g., \u00a9epaton UK - 2025. All rights reserved.",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_footer_credit_text",
+            "label": "Credit Text",
+            "name": "footer_credit_text",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Text displayed before the So Marketing logo.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Website by",
+            "maxlength": "",
+            "placeholder": "",
             "prepend": "",
             "append": ""
         }
@@ -543,8 +349,8 @@
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": true,
-    "description": "Configure global site settings including header logo, footer logo, contact information for multiple office locations, social media links, and footer content.",
+    "description": "Global header and footer settings.",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1779167633
+    "modified": 1780658260
 }

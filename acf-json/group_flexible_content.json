@@ -42,26 +42,6 @@
                             "selected": 0
                         },
                         {
-                            "key": "field_hero_eyebrow",
-                            "label": "Eyebrow Text",
-                            "name": "hero_eyebrow",
-                            "aria-label": "",
-                            "type": "text",
-                            "instructions": "Enter the small text above the main title.",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "maxlength": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": ""
-                        },
-                        {
                             "key": "field_hero_title",
                             "label": "Hero Title",
                             "name": "hero_title",
@@ -75,9 +55,29 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "default_value": "",
+                            "default_value": "MORE. FOR\nLESS. BETTER.",
                             "maxlength": "",
                             "rows": 3,
+                            "placeholder": "",
+                            "new_lines": "br"
+                        },
+                        {
+                            "key": "field_hero_description",
+                            "label": "Hero Description",
+                            "name": "hero_description",
+                            "aria-label": "",
+                            "type": "textarea",
+                            "instructions": "Enter the short supporting copy displayed below the hero title.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "Our focus is simple: deliver better outcomes for our customers,\nat a lower total cost of ownership.",
+                            "maxlength": "",
+                            "rows": 2,
                             "placeholder": "",
                             "new_lines": "br"
                         },
@@ -144,77 +144,6 @@
                                     "allow_null": 0,
                                     "layout": "horizontal",
                                     "parent_repeater": "field_hero_buttons"
-                                }
-                            ]
-                        },
-                        {
-                            "key": "field_hero_usp",
-                            "label": "Hero USP",
-                            "name": "hero_usp",
-                            "aria-label": "",
-                            "type": "repeater",
-                            "instructions": "Add USP items with icon and title (e.g., NHS & Global Adoption, 24 Hour Dispatch, Great British Manufacturing, ISO 13485 Certified).",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "layout": "table",
-                            "pagination": 0,
-                            "min": 0,
-                            "max": 4,
-                            "collapsed": "",
-                            "button_label": "Add USP",
-                            "rows_per_page": 20,
-                            "sub_fields": [
-                                {
-                                    "key": "field_hero_usp_icon",
-                                    "label": "Icon",
-                                    "name": "icon",
-                                    "aria-label": "",
-                                    "type": "image",
-                                    "instructions": "Upload an icon image (SVG recommended for best quality).",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "return_format": "array",
-                                    "library": "all",
-                                    "min_width": "",
-                                    "min_height": "",
-                                    "min_size": "",
-                                    "max_width": "",
-                                    "max_height": "",
-                                    "max_size": "",
-                                    "mime_types": "svg,png,jpg,jpeg",
-                                    "preview_size": "thumbnail",
-                                    "parent_repeater": "field_hero_usp"
-                                },
-                                {
-                                    "key": "field_hero_usp_title",
-                                    "label": "Title",
-                                    "name": "title",
-                                    "aria-label": "",
-                                    "type": "textarea",
-                                    "instructions": "Enter USP title. Use line breaks for multi-line text.",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "default_value": "",
-                                    "maxlength": "",
-                                    "rows": 3,
-                                    "placeholder": "NHS & Global Adoption",
-                                    "new_lines": "",
-                                    "parent_repeater": "field_hero_usp"
                                 }
                             ]
                         },
@@ -633,6 +562,2590 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_inner_hero": {
+                    "key": "layout_inner_hero",
+                    "name": "inner_hero",
+                    "label": "Inner Hero",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_inner_hero_tab_content",
+                            "label": "Content",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "top",
+                            "endpoint": 0,
+                            "selected": 0
+                        },
+                        {
+                            "key": "field_inner_hero_title",
+                            "label": "Title",
+                            "name": "inner_hero_title",
+                            "aria-label": "",
+                            "type": "textarea",
+                            "instructions": "Main page heading. Use line breaks for multi-line titles.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "rows": 3,
+                            "placeholder": "",
+                            "new_lines": "br"
+                        },
+                        {
+                            "key": "field_inner_hero_description",
+                            "label": "Description",
+                            "name": "inner_hero_description",
+                            "aria-label": "",
+                            "type": "textarea",
+                            "instructions": "Short supporting copy displayed below the title.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "rows": 2,
+                            "placeholder": "",
+                            "new_lines": "br"
+                        },
+                        {
+                            "key": "field_inner_hero_buttons",
+                            "label": "Buttons",
+                            "name": "inner_hero_buttons",
+                            "aria-label": "",
+                            "type": "repeater",
+                            "instructions": "Optional call-to-action buttons.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layout": "table",
+                            "pagination": 0,
+                            "min": 0,
+                            "max": 2,
+                            "collapsed": "",
+                            "button_label": "Add Button",
+                            "rows_per_page": 20,
+                            "sub_fields": [
+                                {
+                                    "key": "field_inner_hero_button_link",
+                                    "label": "Button Link",
+                                    "name": "button_link",
+                                    "aria-label": "",
+                                    "type": "link",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "array",
+                                    "parent_repeater": "field_inner_hero_buttons"
+                                },
+                                {
+                                    "key": "field_inner_hero_button_style",
+                                    "label": "Button Style",
+                                    "name": "button_style",
+                                    "aria-label": "",
+                                    "type": "button_group",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "transparent-primary": "White",
+                                        "primary-gradient": "Blue Gradient",
+                                        "accent-gradient": "Accent Gradient"
+                                    },
+                                    "default_value": "transparent-primary",
+                                    "return_format": "value",
+                                    "allow_null": 0,
+                                    "layout": "horizontal",
+                                    "parent_repeater": "field_inner_hero_buttons"
+                                }
+                            ]
+                        },
+                        {
+                            "key": "field_inner_hero_tab_media",
+                            "label": "Media",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "top",
+                            "endpoint": 0,
+                            "selected": 0
+                        },
+                        {
+                            "key": "field_inner_hero_media_type",
+                            "label": "Media Type",
+                            "name": "inner_hero_media_type",
+                            "aria-label": "",
+                            "type": "button_group",
+                            "instructions": "Choose whether to display an image or video background.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "image": "Image",
+                                "video": "Video"
+                            },
+                            "default_value": "image",
+                            "return_format": "value",
+                            "allow_null": 0,
+                            "layout": "horizontal"
+                        },
+                        {
+                            "key": "field_inner_hero_image",
+                            "label": "Background Image",
+                            "name": "inner_hero_image",
+                            "aria-label": "",
+                            "type": "image",
+                            "instructions": "Upload a background image. The left side has a dark overlay to keep text readable.",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_inner_hero_media_type",
+                                        "operator": "==",
+                                        "value": "image"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": "",
+                            "preview_size": "medium"
+                        },
+                        {
+                            "key": "field_inner_hero_video",
+                            "label": "Hero Video",
+                            "name": "inner_hero_video",
+                            "aria-label": "",
+                            "type": "group",
+                            "instructions": "Configure the background video.",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_inner_hero_media_type",
+                                        "operator": "==",
+                                        "value": "video"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layout": "block",
+                            "sub_fields": [
+                                {
+                                    "key": "field_inner_hero_video_source",
+                                    "label": "Video Source",
+                                    "name": "video_source",
+                                    "aria-label": "",
+                                    "type": "select",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "self_host": "Self-Hosted (WordPress Media)",
+                                        "youtube": "YouTube",
+                                        "vimeo": "Vimeo",
+                                        "cdn": "CDN/External URL"
+                                    },
+                                    "default_value": "self_host",
+                                    "return_format": "value",
+                                    "multiple": 0,
+                                    "allow_null": 0,
+                                    "ui": 0,
+                                    "ajax": 0,
+                                    "placeholder": "",
+                                    "create_options": 0,
+                                    "save_options": 0
+                                },
+                                {
+                                    "key": "field_inner_hero_video_self_host_file",
+                                    "label": "Video File",
+                                    "name": "video_self_host_file",
+                                    "aria-label": "",
+                                    "type": "file",
+                                    "instructions": "Upload MP4 video file.",
+                                    "required": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_inner_hero_video_source",
+                                                "operator": "==",
+                                                "value": "self_host"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "array",
+                                    "library": "all",
+                                    "min_size": "",
+                                    "max_size": "",
+                                    "mime_types": "mp4,webm"
+                                },
+                                {
+                                    "key": "field_inner_hero_video_self_host_poster",
+                                    "label": "Poster Image",
+                                    "name": "video_self_host_poster",
+                                    "aria-label": "",
+                                    "type": "image",
+                                    "instructions": "Thumbnail shown before video plays.",
+                                    "required": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_inner_hero_video_source",
+                                                "operator": "==",
+                                                "value": "self_host"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "array",
+                                    "library": "all",
+                                    "min_width": "",
+                                    "min_height": "",
+                                    "min_size": "",
+                                    "max_width": "",
+                                    "max_height": "",
+                                    "max_size": "",
+                                    "mime_types": "",
+                                    "preview_size": "medium"
+                                },
+                                {
+                                    "key": "field_inner_hero_video_youtube_url",
+                                    "label": "YouTube URL",
+                                    "name": "video_youtube_url",
+                                    "aria-label": "",
+                                    "type": "url",
+                                    "instructions": "Enter YouTube video URL.",
+                                    "required": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_inner_hero_video_source",
+                                                "operator": "==",
+                                                "value": "youtube"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "https://www.youtube.com/watch?v=..."
+                                },
+                                {
+                                    "key": "field_inner_hero_video_vimeo_url",
+                                    "label": "Vimeo MP4 URL",
+                                    "name": "video_vimeo_url",
+                                    "aria-label": "",
+                                    "type": "url",
+                                    "instructions": "Enter Vimeo MP4 direct URL.",
+                                    "required": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_inner_hero_video_source",
+                                                "operator": "==",
+                                                "value": "vimeo"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "https://player.vimeo.com/..."
+                                },
+                                {
+                                    "key": "field_inner_hero_video_vimeo_poster",
+                                    "label": "Vimeo Poster Image",
+                                    "name": "video_vimeo_poster",
+                                    "aria-label": "",
+                                    "type": "image",
+                                    "instructions": "Upload a poster image to display before the video plays.",
+                                    "required": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_inner_hero_video_source",
+                                                "operator": "==",
+                                                "value": "vimeo"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "array",
+                                    "library": "all",
+                                    "min_width": "",
+                                    "min_height": "",
+                                    "min_size": "",
+                                    "max_width": "",
+                                    "max_height": "",
+                                    "max_size": "",
+                                    "mime_types": "",
+                                    "preview_size": "medium"
+                                },
+                                {
+                                    "key": "field_inner_hero_video_cdn_url",
+                                    "label": "CDN Video URL",
+                                    "name": "video_cdn_url",
+                                    "aria-label": "",
+                                    "type": "url",
+                                    "instructions": "Enter CDN or external video URL.",
+                                    "required": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_inner_hero_video_source",
+                                                "operator": "==",
+                                                "value": "cdn"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "https://cdn.example.com/video.mp4"
+                                },
+                                {
+                                    "key": "field_inner_hero_video_cdn_poster",
+                                    "label": "CDN Poster Image",
+                                    "name": "video_cdn_poster",
+                                    "aria-label": "",
+                                    "type": "image",
+                                    "instructions": "Upload a poster image to display before the video plays.",
+                                    "required": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_inner_hero_video_source",
+                                                "operator": "==",
+                                                "value": "cdn"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "array",
+                                    "library": "all",
+                                    "min_width": "",
+                                    "min_height": "",
+                                    "min_size": "",
+                                    "max_width": "",
+                                    "max_height": "",
+                                    "max_size": "",
+                                    "mime_types": "",
+                                    "preview_size": "medium"
+                                },
+                                {
+                                    "key": "field_inner_hero_video_behavior",
+                                    "label": "Video Behavior",
+                                    "name": "video_behavior",
+                                    "aria-label": "",
+                                    "type": "button_group",
+                                    "instructions": "Choose how the video should behave.",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "autoplay": "Autoplay (Muted, Looped)",
+                                        "hover": "Play on Hover",
+                                        "onclick-popup": "Click to Open Popup"
+                                    },
+                                    "default_value": "autoplay",
+                                    "return_format": "value",
+                                    "allow_null": 0,
+                                    "layout": "horizontal"
+                                },
+                                {
+                                    "key": "field_inner_hero_video_autoplay_on_scroll",
+                                    "label": "Autoplay on Scroll",
+                                    "name": "autoplay_on_scroll",
+                                    "aria-label": "",
+                                    "type": "true_false",
+                                    "instructions": "Play video only when scrolled into viewport.",
+                                    "required": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_inner_hero_video_behavior",
+                                                "operator": "==",
+                                                "value": "autoplay"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "message": "",
+                                    "default_value": 0,
+                                    "ui_on_text": "Yes",
+                                    "ui_off_text": "No",
+                                    "ui": 1
+                                },
+                                {
+                                    "key": "field_inner_hero_video_controls_visibility",
+                                    "label": "Show Video Controls",
+                                    "name": "controls_visibility",
+                                    "aria-label": "",
+                                    "type": "true_false",
+                                    "instructions": "Show custom play/pause and mute/unmute controls.",
+                                    "required": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_inner_hero_video_behavior",
+                                                "operator": "==",
+                                                "value": "autoplay"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "message": "",
+                                    "default_value": 0,
+                                    "ui_on_text": "Show",
+                                    "ui_off_text": "Hide",
+                                    "ui": 1
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_featured_services_intro": {
+                    "key": "layout_featured_services_intro",
+                    "name": "featured_services_intro",
+                    "label": "Intro with Featured Services",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_featured_services_intro_tab_content",
+                            "label": "Content",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "top",
+                            "endpoint": 0,
+                            "selected": 0
+                        },
+                        {
+                            "key": "field_featured_services_intro_eyebrow",
+                            "label": "Eyebrow",
+                            "name": "featured_services_intro_eyebrow",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "Small uppercase label displayed above the main heading.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "WHO WE ARE",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_featured_services_intro_services_eyebrow",
+                            "label": "Services Eyebrow",
+                            "name": "featured_services_intro_services_eyebrow",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "Small uppercase label displayed above the featured services column.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "FEATURED SERVICES",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_featured_services_intro_title",
+                            "label": "Title",
+                            "name": "featured_services_intro_title",
+                            "aria-label": "",
+                            "type": "textarea",
+                            "instructions": "Main heading. Line breaks are supported.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "Founded to address a growing gap in the IT marketplace, Epaton was created to provide expert, independent guidance in an industry often driven by vendor-led sales.",
+                            "maxlength": "",
+                            "rows": 5,
+                            "placeholder": "",
+                            "new_lines": "br"
+                        },
+                        {
+                            "key": "field_featured_services_intro_body",
+                            "label": "Body",
+                            "name": "featured_services_intro_body",
+                            "aria-label": "",
+                            "type": "wysiwyg",
+                            "instructions": "Supporting copy displayed below the heading.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "basic",
+                            "media_upload": 0,
+                            "delay": 0
+                        },
+                        {
+                            "key": "field_featured_services_intro_button",
+                            "label": "Button",
+                            "name": "featured_services_intro_button",
+                            "aria-label": "",
+                            "type": "link",
+                            "instructions": "Optional call-to-action button.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array"
+                        },
+                        {
+                            "key": "field_featured_services_intro_tab_services",
+                            "label": "Featured Services",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "top",
+                            "endpoint": 0,
+                            "selected": 0
+                        },
+                        {
+                            "key": "field_featured_services_intro_source",
+                            "label": "Data Source",
+                            "name": "featured_services_intro_source",
+                            "aria-label": "",
+                            "type": "button_group",
+                            "instructions": "Use existing Service posts, or enter manual cards.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "dynamic": "Relationship",
+                                "manual": "Manual"
+                            },
+                            "default_value": "dynamic",
+                            "return_format": "value",
+                            "allow_null": 0,
+                            "layout": "horizontal"
+                        },
+                        {
+                            "key": "field_featured_services_intro_services",
+                            "label": "Services",
+                            "name": "featured_services_intro_services",
+                            "aria-label": "",
+                            "type": "relationship",
+                            "instructions": "Choose Service posts to feature. The service secondary thumbnail is used first, then the featured image.",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_featured_services_intro_source",
+                                        "operator": "==",
+                                        "value": "dynamic"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "post_type": [
+                                "service"
+                            ],
+                            "post_status": [
+                                "publish"
+                            ],
+                            "taxonomy": [],
+                            "filters": [
+                                "search"
+                            ],
+                            "return_format": "object",
+                            "min": 0,
+                            "max": 2,
+                            "elements": [
+                                "featured_image"
+                            ],
+                            "bidirectional_target": []
+                        },
+                        {
+                            "key": "field_featured_services_intro_manual_services",
+                            "label": "Manual Services",
+                            "name": "featured_services_intro_manual_services",
+                            "aria-label": "",
+                            "type": "repeater",
+                            "instructions": "Add manual featured service cards.",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_featured_services_intro_source",
+                                        "operator": "==",
+                                        "value": "manual"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layout": "block",
+                            "pagination": 0,
+                            "min": 0,
+                            "max": 2,
+                            "collapsed": "field_featured_services_intro_manual_title",
+                            "button_label": "Add Service Card",
+                            "rows_per_page": 20,
+                            "sub_fields": [
+                                {
+                                    "key": "field_featured_services_intro_manual_title",
+                                    "label": "Title",
+                                    "name": "title",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "parent_repeater": "field_featured_services_intro_manual_services"
+                                },
+                                {
+                                    "key": "field_featured_services_intro_manual_link",
+                                    "label": "Link",
+                                    "name": "link",
+                                    "aria-label": "",
+                                    "type": "link",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "array",
+                                    "parent_repeater": "field_featured_services_intro_manual_services"
+                                },
+                                {
+                                    "key": "field_featured_services_intro_manual_image",
+                                    "label": "Image",
+                                    "name": "image",
+                                    "aria-label": "",
+                                    "type": "image",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "array",
+                                    "library": "all",
+                                    "min_width": "",
+                                    "min_height": "",
+                                    "min_size": "",
+                                    "max_width": "",
+                                    "max_height": "",
+                                    "max_size": "",
+                                    "mime_types": "jpg,jpeg,png,webp,svg",
+                                    "preview_size": "medium",
+                                    "parent_repeater": "field_featured_services_intro_manual_services"
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_core_areas": {
+                    "key": "layout_core_areas",
+                    "name": "core_areas",
+                    "label": "Core Areas",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_core_areas_heading",
+                            "label": "Heading",
+                            "name": "core_areas_heading",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "Heading displayed above the core area cards.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "We specialise in three core areas:",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_core_areas_items",
+                            "label": "Core Areas",
+                            "name": "core_areas_items",
+                            "aria-label": "",
+                            "type": "repeater",
+                            "instructions": "Add the core area cards shown in this section.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layout": "block",
+                            "pagination": 0,
+                            "min": 0,
+                            "max": 3,
+                            "collapsed": "field_core_areas_item_title",
+                            "button_label": "Add Core Area",
+                            "rows_per_page": 20,
+                            "sub_fields": [
+                                {
+                                    "key": "field_core_areas_item_title",
+                                    "label": "Title",
+                                    "name": "title",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "parent_repeater": "field_core_areas_items"
+                                },
+                                {
+                                    "key": "field_core_areas_item_theme",
+                                    "label": "Card Theme",
+                                    "name": "theme",
+                                    "aria-label": "",
+                                    "type": "button_group",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "blue": "Blue",
+                                        "cyan": "Cyan"
+                                    },
+                                    "default_value": "blue",
+                                    "return_format": "value",
+                                    "allow_null": 0,
+                                    "layout": "horizontal",
+                                    "parent_repeater": "field_core_areas_items"
+                                },
+                                {
+                                    "key": "field_core_areas_item_text",
+                                    "label": "Text",
+                                    "name": "text",
+                                    "aria-label": "",
+                                    "type": "textarea",
+                                    "instructions": "Card body copy. Line breaks are supported.",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "rows": 8,
+                                    "placeholder": "",
+                                    "new_lines": "br",
+                                    "parent_repeater": "field_core_areas_items"
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_approach_panels": {
+                    "key": "layout_approach_panels",
+                    "name": "approach_panels",
+                    "label": "Approach Panels",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_approach_panels_eyebrow",
+                            "label": "Eyebrow",
+                            "name": "approach_panels_eyebrow",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "Small uppercase label above the section title.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "OUR APPROACH",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_approach_panels_intro_label",
+                            "label": "Intro Label",
+                            "name": "approach_panels_intro_label",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "Bold label shown before the bullet list.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "Our approach is:",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_approach_panels_title",
+                            "label": "Title",
+                            "name": "approach_panels_title",
+                            "aria-label": "",
+                            "type": "textarea",
+                            "instructions": "Main heading. Line breaks are supported.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "We take time to assess your existing environment, future requirements, and operational challenges before recommending any solution.",
+                            "maxlength": "",
+                            "rows": 3,
+                            "placeholder": "",
+                            "new_lines": "br"
+                        },
+                        {
+                            "key": "field_approach_panels_bullets",
+                            "label": "Approach Bullets",
+                            "name": "approach_panels_bullets",
+                            "aria-label": "",
+                            "type": "repeater",
+                            "instructions": "Short bullet points displayed under the intro label.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layout": "table",
+                            "pagination": 0,
+                            "min": 0,
+                            "max": 0,
+                            "collapsed": "field_approach_panels_bullet_text",
+                            "button_label": "Add Bullet",
+                            "rows_per_page": 20,
+                            "sub_fields": [
+                                {
+                                    "key": "field_approach_panels_bullet_text",
+                                    "label": "Text",
+                                    "name": "text",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "parent_repeater": "field_approach_panels_bullets"
+                                }
+                            ]
+                        },
+                        {
+                            "key": "field_approach_panels_statement",
+                            "label": "Statement",
+                            "name": "approach_panels_statement",
+                            "aria-label": "",
+                            "type": "textarea",
+                            "instructions": "Bold statement displayed above the panels.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "We believe strong data infrastructure should enable your organisation — not restrict it.",
+                            "maxlength": "",
+                            "rows": 2,
+                            "placeholder": "",
+                            "new_lines": "br"
+                        },
+                        {
+                            "key": "field_approach_panels_cards",
+                            "label": "Panels",
+                            "name": "approach_panels_cards",
+                            "aria-label": "",
+                            "type": "repeater",
+                            "instructions": "Add the two bottom panels.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layout": "block",
+                            "pagination": 0,
+                            "min": 0,
+                            "max": 2,
+                            "collapsed": "field_approach_panels_card_title",
+                            "button_label": "Add Panel",
+                            "rows_per_page": 20,
+                            "sub_fields": [
+                                {
+                                    "key": "field_approach_panels_card_title",
+                                    "label": "Title",
+                                    "name": "title",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "parent_repeater": "field_approach_panels_cards"
+                                },
+                                {
+                                    "key": "field_approach_panels_card_theme",
+                                    "label": "Panel Theme",
+                                    "name": "theme",
+                                    "aria-label": "",
+                                    "type": "button_group",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "blue": "Blue",
+                                        "navy": "Navy"
+                                    },
+                                    "default_value": "blue",
+                                    "return_format": "value",
+                                    "allow_null": 0,
+                                    "layout": "horizontal",
+                                    "parent_repeater": "field_approach_panels_cards"
+                                },
+                                {
+                                    "key": "field_approach_panels_card_body",
+                                    "label": "Body",
+                                    "name": "body",
+                                    "aria-label": "",
+                                    "type": "wysiwyg",
+                                    "instructions": "Panel body content. Use bullets and bold text as needed.",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "tabs": "all",
+                                    "toolbar": "basic",
+                                    "media_upload": 0,
+                                    "delay": 0,
+                                    "parent_repeater": "field_approach_panels_cards"
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_commitment_panel": {
+                    "key": "layout_commitment_panel",
+                    "name": "commitment_panel",
+                    "label": "Commitment Panel",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_commitment_panel_eyebrow",
+                            "label": "Eyebrow",
+                            "name": "commitment_panel_eyebrow",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "Small uppercase label displayed above the heading.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "OUR COMMITMENT",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_commitment_panel_title",
+                            "label": "Title",
+                            "name": "commitment_panel_title",
+                            "aria-label": "",
+                            "type": "textarea",
+                            "instructions": "Main heading. Line breaks are supported.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "We are committed to delivering:",
+                            "maxlength": "",
+                            "rows": 2,
+                            "placeholder": "",
+                            "new_lines": "br"
+                        },
+                        {
+                            "key": "field_commitment_panel_intro_label",
+                            "label": "Intro Label",
+                            "name": "commitment_panel_intro_label",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "Bold label shown above the bullet list.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "We are committed to delivering:",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_commitment_panel_bullets",
+                            "label": "Bullet List",
+                            "name": "commitment_panel_bullets",
+                            "aria-label": "",
+                            "type": "repeater",
+                            "instructions": "Add commitment bullet items.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layout": "table",
+                            "pagination": 0,
+                            "min": 0,
+                            "max": 0,
+                            "collapsed": "field_commitment_panel_bullet_text",
+                            "button_label": "Add Bullet",
+                            "rows_per_page": 20,
+                            "sub_fields": [
+                                {
+                                    "key": "field_commitment_panel_bullet_text",
+                                    "label": "Text",
+                                    "name": "text",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "parent_repeater": "field_commitment_panel_bullets"
+                                }
+                            ]
+                        },
+                        {
+                            "key": "field_commitment_panel_statement",
+                            "label": "Statement",
+                            "name": "commitment_panel_statement",
+                            "aria-label": "",
+                            "type": "textarea",
+                            "instructions": "Bold closing statement below the bullet list. Line breaks are supported.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "We believe strong data infrastructure should enable your organisation - not restrict it.",
+                            "maxlength": "",
+                            "rows": 3,
+                            "placeholder": "",
+                            "new_lines": "br"
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_looking_forward": {
+                    "key": "layout_looking_forward",
+                    "name": "looking_forward",
+                    "label": "Looking Forward",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_looking_forward_eyebrow",
+                            "label": "Eyebrow",
+                            "name": "looking_forward_eyebrow",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "Small uppercase label displayed above the copy.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "LOOKING FORWARD",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_looking_forward_statements",
+                            "label": "Statements",
+                            "name": "looking_forward_statements",
+                            "aria-label": "",
+                            "type": "repeater",
+                            "instructions": "Add centered statement blocks. Line breaks are supported.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layout": "block",
+                            "pagination": 0,
+                            "min": 0,
+                            "max": 0,
+                            "collapsed": "field_looking_forward_statement_text",
+                            "button_label": "Add Statement",
+                            "rows_per_page": 20,
+                            "sub_fields": [
+                                {
+                                    "key": "field_looking_forward_statement_text",
+                                    "label": "Text",
+                                    "name": "text",
+                                    "aria-label": "",
+                                    "type": "textarea",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "rows": 3,
+                                    "placeholder": "",
+                                    "new_lines": "br",
+                                    "parent_repeater": "field_looking_forward_statements"
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_contact_cta": {
+                    "key": "layout_contact_cta",
+                    "name": "contact_cta",
+                    "label": "Contact CTA",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_contact_cta_title",
+                            "label": "Title",
+                            "name": "contact_cta_title",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "CTA heading.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "Let's Talk",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_contact_cta_body",
+                            "label": "Body",
+                            "name": "contact_cta_body",
+                            "aria-label": "",
+                            "type": "textarea",
+                            "instructions": "Supporting copy. Line breaks are supported.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "Whether you are reviewing your current platform, planning a major transformation,\nor looking to reduce cost and risk, we'd welcome the opportunity to help.",
+                            "maxlength": "",
+                            "rows": 3,
+                            "placeholder": "",
+                            "new_lines": "br"
+                        },
+                        {
+                            "key": "field_contact_cta_button_style",
+                            "label": "Button Style",
+                            "name": "contact_cta_button_style",
+                            "aria-label": "",
+                            "type": "button_group",
+                            "instructions": "Choose the CTA button presentation.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "cyan": "Cyan",
+                                "blue": "Blue"
+                            },
+                            "default_value": "cyan",
+                            "return_format": "value",
+                            "allow_null": 0,
+                            "layout": "horizontal"
+                        },
+                        {
+                            "key": "field_contact_cta_button",
+                            "label": "Button",
+                            "name": "contact_cta_button",
+                            "aria-label": "",
+                            "type": "link",
+                            "instructions": "Call-to-action button.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array"
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_contact_panel": {
+                    "key": "layout_contact_panel",
+                    "name": "contact_panel",
+                    "label": "Contact Panel",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_contact_panel_section_title",
+                            "label": "Section Title",
+                            "name": "contact_panel_section_title",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "Large heading displayed above the contact panel.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "CONTACT US",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_contact_panel_title",
+                            "label": "Panel Title",
+                            "name": "contact_panel_title",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "Heading displayed above the form inside the blue panel.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "Let’s Talk",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_contact_panel_form_shortcode",
+                            "label": "Form Shortcode",
+                            "name": "contact_panel_form_shortcode",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "Contact Form 7 shortcode for the left column form.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "[contact-form-7 id=\"535\"]",
+                            "maxlength": "",
+                            "placeholder": "[contact-form-7 id=\"535\"]",
+                            "prepend": "",
+                            "append": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_clients_logos": {
+                    "key": "layout_clients_logos",
+                    "name": "clients_logos",
+                    "label": "Our Clients",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_clients_logos_tab_content",
+                            "label": "Content",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "top",
+                            "endpoint": 0,
+                            "selected": 0
+                        },
+                        {
+                            "key": "field_clients_logos_eyebrow",
+                            "label": "Eyebrow",
+                            "name": "clients_logos_eyebrow",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "Small uppercase label above the section title.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "OUR CLIENTS",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_clients_logos_logos_eyebrow",
+                            "label": "Logos Eyebrow",
+                            "name": "clients_logos_logos_eyebrow",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "Small uppercase label above the logos grid.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "TRUSTED BY INDUSTRY LEADERS",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_clients_logos_title",
+                            "label": "Title",
+                            "name": "clients_logos_title",
+                            "aria-label": "",
+                            "type": "textarea",
+                            "instructions": "Main section heading. Line breaks are supported.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "We work with a diverse range\nof organisations, including:",
+                            "maxlength": "",
+                            "rows": 3,
+                            "placeholder": "",
+                            "new_lines": "br"
+                        },
+                        {
+                            "key": "field_clients_logos_bullets",
+                            "label": "Bullets",
+                            "name": "clients_logos_bullets",
+                            "aria-label": "",
+                            "type": "repeater",
+                            "instructions": "Audience/client type bullet list.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layout": "table",
+                            "pagination": 0,
+                            "min": 0,
+                            "max": 0,
+                            "collapsed": "field_clients_logos_bullet_text",
+                            "button_label": "Add Bullet",
+                            "rows_per_page": 20,
+                            "sub_fields": [
+                                {
+                                    "key": "field_clients_logos_bullet_text",
+                                    "label": "Text",
+                                    "name": "text",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "parent_repeater": "field_clients_logos_bullets"
+                                }
+                            ]
+                        },
+                        {
+                            "key": "field_clients_logos_body",
+                            "label": "Body",
+                            "name": "clients_logos_body",
+                            "aria-label": "",
+                            "type": "textarea",
+                            "instructions": "Short supporting text below the bullet list.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "Many of our clients have worked with us for\nyears, relying on Epaton as a long-term strategic\nbackup partner.",
+                            "maxlength": "",
+                            "rows": 4,
+                            "placeholder": "",
+                            "new_lines": "br"
+                        },
+                        {
+                            "key": "field_clients_logos_button",
+                            "label": "Button",
+                            "name": "clients_logos_button",
+                            "aria-label": "",
+                            "type": "link",
+                            "instructions": "Optional call-to-action button.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array"
+                        },
+                        {
+                            "key": "field_clients_logos_tab_logos",
+                            "label": "Logos",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "top",
+                            "endpoint": 0,
+                            "selected": 0
+                        },
+                        {
+                            "key": "field_clients_logos_items",
+                            "label": "Client Logos",
+                            "name": "clients_logos_items",
+                            "aria-label": "",
+                            "type": "repeater",
+                            "instructions": "Add individually exported client logos.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layout": "block",
+                            "pagination": 0,
+                            "min": 0,
+                            "max": 0,
+                            "collapsed": "field_clients_logos_item_name",
+                            "button_label": "Add Logo",
+                            "rows_per_page": 20,
+                            "sub_fields": [
+                                {
+                                    "key": "field_clients_logos_item_name",
+                                    "label": "Client Name",
+                                    "name": "name",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "Used for alt text.",
+                                    "required": 1,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "parent_repeater": "field_clients_logos_items"
+                                },
+                                {
+                                    "key": "field_clients_logos_item_logo",
+                                    "label": "Logo",
+                                    "name": "logo",
+                                    "aria-label": "",
+                                    "type": "image",
+                                    "instructions": "Upload the individual logo export.",
+                                    "required": 1,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "array",
+                                    "library": "all",
+                                    "min_width": "",
+                                    "min_height": "",
+                                    "min_size": "",
+                                    "max_width": "",
+                                    "max_height": "",
+                                    "max_size": "",
+                                    "mime_types": "jpg,jpeg,png,webp,svg",
+                                    "preview_size": "medium",
+                                    "parent_repeater": "field_clients_logos_items"
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_partners_listing": {
+                    "key": "layout_partners_listing",
+                    "name": "partners_listing",
+                    "label": "Partners Listing",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_partners_listing_heading",
+                            "label": "Section Heading",
+                            "name": "partners_listing_heading",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "Optional heading displayed above the partner cards.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_partners_listing_items",
+                            "label": "Partners",
+                            "name": "partners_listing_items",
+                            "aria-label": "",
+                            "type": "repeater",
+                            "instructions": "Add partner logo cards in display order.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layout": "block",
+                            "pagination": 0,
+                            "min": 0,
+                            "max": 0,
+                            "collapsed": "field_partners_listing_item_name",
+                            "button_label": "Add Partner",
+                            "rows_per_page": 20,
+                            "sub_fields": [
+                                {
+                                    "key": "field_partners_listing_item_name",
+                                    "label": "Partner Name",
+                                    "name": "name",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "parent_repeater": "field_partners_listing_items"
+                                },
+                                {
+                                    "key": "field_partners_listing_item_theme",
+                                    "label": "Tile Theme",
+                                    "name": "theme",
+                                    "aria-label": "",
+                                    "type": "button_group",
+                                    "instructions": "Choose the card background. Blue cards force inline SVG logos white; cyan cards force inline SVG logos black.",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "blue": "Blue",
+                                        "cyan": "Cyan"
+                                    },
+                                    "default_value": "blue",
+                                    "return_format": "value",
+                                    "allow_null": 0,
+                                    "parent_repeater": "field_partners_listing_items",
+                                    "layout": "horizontal"
+                                },
+                                {
+                                    "key": "field_partners_listing_item_logo",
+                                    "label": "Logo",
+                                    "name": "logo",
+                                    "aria-label": "",
+                                    "type": "image",
+                                    "instructions": "Upload the individual partner logo export.",
+                                    "required": 1,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "array",
+                                    "library": "all",
+                                    "min_width": "",
+                                    "min_height": "",
+                                    "min_size": "",
+                                    "max_width": "",
+                                    "max_height": "",
+                                    "max_size": "",
+                                    "mime_types": "jpg,jpeg,png,webp,svg",
+                                    "preview_size": "medium",
+                                    "parent_repeater": "field_partners_listing_items"
+                                },
+                                {
+                                    "key": "field_partners_listing_item_description",
+                                    "label": "Description",
+                                    "name": "description",
+                                    "aria-label": "",
+                                    "type": "textarea",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "rows": 3,
+                                    "placeholder": "",
+                                    "new_lines": "",
+                                    "parent_repeater": "field_partners_listing_items"
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_products_listing": {
+                    "key": "layout_products_listing",
+                    "name": "products_listing",
+                    "label": "Products Listing",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_products_listing_heading",
+                            "label": "Section Heading",
+                            "name": "products_listing_heading",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "Optional heading displayed above the product cards.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_products_listing_button_text",
+                            "label": "Card Button Text",
+                            "name": "products_listing_button_text",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "Text shown on each product card button. Default: Find Out More.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "Find Out More",
+                            "maxlength": "",
+                            "placeholder": "Find Out More",
+                            "prepend": "",
+                            "append": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_services_listing": {
+                    "key": "layout_services_listing",
+                    "name": "services_listing",
+                    "label": "Services Listing",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_services_listing_heading",
+                            "label": "Section Heading",
+                            "name": "services_listing_heading",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "Optional heading displayed above the service cards.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_services_listing_button_text",
+                            "label": "Card Button Text",
+                            "name": "services_listing_button_text",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "Text shown on each service card button. Default: Find Out More.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "Find Out More",
+                            "maxlength": "",
+                            "placeholder": "Find Out More",
+                            "prepend": "",
+                            "append": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_media_content_5050": {
+                    "key": "layout_media_content_5050",
+                    "name": "media_content_5050",
+                    "label": "Media Content 50/50",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_mc5050_tab_content",
+                            "label": "Content",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "top",
+                            "endpoint": 0,
+                            "selected": 0
+                        },
+                        {
+                            "key": "field_mc5050_eyebrow",
+                            "label": "Eyebrow",
+                            "name": "mc5050_eyebrow",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "Small uppercase label above the title.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_mc5050_title",
+                            "label": "Title",
+                            "name": "mc5050_title",
+                            "aria-label": "",
+                            "type": "textarea",
+                            "instructions": "Main heading. Line breaks are supported.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "rows": 3,
+                            "placeholder": "",
+                            "new_lines": "br"
+                        },
+                        {
+                            "key": "field_mc5050_body",
+                            "label": "Body",
+                            "name": "mc5050_body",
+                            "aria-label": "",
+                            "type": "wysiwyg",
+                            "instructions": "Supporting copy.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "basic",
+                            "media_upload": 0,
+                            "delay": 0
+                        },
+                        {
+                            "key": "field_mc5050_button",
+                            "label": "Button",
+                            "name": "mc5050_button",
+                            "aria-label": "",
+                            "type": "link",
+                            "instructions": "Optional call-to-action button.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array"
+                        },
+                        {
+                            "key": "field_mc5050_tab_media",
+                            "label": "Media",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "top",
+                            "endpoint": 0,
+                            "selected": 0
+                        },
+                        {
+                            "key": "field_mc5050_media_position",
+                            "label": "Media Position",
+                            "name": "mc5050_media_position",
+                            "aria-label": "",
+                            "type": "button_group",
+                            "instructions": "Which side should the media appear on?",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "right": "Right",
+                                "left": "Left"
+                            },
+                            "default_value": "right",
+                            "return_format": "value",
+                            "allow_null": 0,
+                            "layout": "horizontal"
+                        },
+                        {
+                            "key": "field_mc5050_media_type",
+                            "label": "Media Type",
+                            "name": "mc5050_media_type",
+                            "aria-label": "",
+                            "type": "button_group",
+                            "instructions": "Image or video?",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "image": "Image",
+                                "video": "Video"
+                            },
+                            "default_value": "image",
+                            "return_format": "value",
+                            "allow_null": 0,
+                            "layout": "horizontal"
+                        },
+                        {
+                            "key": "field_mc5050_image",
+                            "label": "Image",
+                            "name": "mc5050_image",
+                            "aria-label": "",
+                            "type": "image",
+                            "instructions": "Upload or select an image.",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_mc5050_media_type",
+                                        "operator": "==",
+                                        "value": "image"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": "",
+                            "preview_size": "medium"
+                        },
+                        {
+                            "key": "field_mc5050_video",
+                            "label": "Video",
+                            "name": "mc5050_video",
+                            "aria-label": "",
+                            "type": "group",
+                            "instructions": "Configure the video.",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_mc5050_media_type",
+                                        "operator": "==",
+                                        "value": "video"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layout": "block",
+                            "sub_fields": [
+                                {
+                                    "key": "field_mc5050_video_source",
+                                    "label": "Video Source",
+                                    "name": "video_source",
+                                    "type": "select",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "self_host": "Self-Hosted (WordPress Media)",
+                                        "youtube": "YouTube",
+                                        "vimeo": "Vimeo",
+                                        "cdn": "CDN/External URL"
+                                    },
+                                    "default_value": "self_host",
+                                    "return_format": "value",
+                                    "multiple": 0,
+                                    "allow_null": 0,
+                                    "ui": 0,
+                                    "ajax": 0,
+                                    "placeholder": "",
+                                    "create_options": 0,
+                                    "save_options": 0
+                                },
+                                {
+                                    "key": "field_mc5050_video_self_host_file",
+                                    "label": "Video File",
+                                    "name": "video_self_host_file",
+                                    "type": "file",
+                                    "instructions": "Upload MP4 video file.",
+                                    "required": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_mc5050_video_source",
+                                                "operator": "==",
+                                                "value": "self_host"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "array",
+                                    "library": "all",
+                                    "min_size": "",
+                                    "max_size": "",
+                                    "mime_types": "mp4,webm"
+                                },
+                                {
+                                    "key": "field_mc5050_video_self_host_poster",
+                                    "label": "Poster Image",
+                                    "name": "video_self_host_poster",
+                                    "type": "image",
+                                    "instructions": "Thumbnail shown before video plays.",
+                                    "required": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_mc5050_video_source",
+                                                "operator": "==",
+                                                "value": "self_host"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "array",
+                                    "library": "all",
+                                    "min_width": "",
+                                    "min_height": "",
+                                    "min_size": "",
+                                    "max_width": "",
+                                    "max_height": "",
+                                    "max_size": "",
+                                    "mime_types": "",
+                                    "preview_size": "medium"
+                                },
+                                {
+                                    "key": "field_mc5050_video_youtube_url",
+                                    "label": "YouTube URL",
+                                    "name": "video_youtube_url",
+                                    "type": "url",
+                                    "required": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_mc5050_video_source",
+                                                "operator": "==",
+                                                "value": "youtube"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "https://www.youtube.com/watch?v=..."
+                                },
+                                {
+                                    "key": "field_mc5050_video_vimeo_url",
+                                    "label": "Vimeo URL",
+                                    "name": "video_vimeo_url",
+                                    "type": "url",
+                                    "required": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_mc5050_video_source",
+                                                "operator": "==",
+                                                "value": "vimeo"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "https://player.vimeo.com/..."
+                                },
+                                {
+                                    "key": "field_mc5050_video_vimeo_poster",
+                                    "label": "Vimeo Poster",
+                                    "name": "video_vimeo_poster",
+                                    "type": "image",
+                                    "required": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_mc5050_video_source",
+                                                "operator": "==",
+                                                "value": "vimeo"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "array",
+                                    "library": "all",
+                                    "min_width": "",
+                                    "min_height": "",
+                                    "min_size": "",
+                                    "max_width": "",
+                                    "max_height": "",
+                                    "max_size": "",
+                                    "mime_types": "",
+                                    "preview_size": "medium"
+                                },
+                                {
+                                    "key": "field_mc5050_video_cdn_url",
+                                    "label": "CDN Video URL",
+                                    "name": "video_cdn_url",
+                                    "type": "url",
+                                    "required": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_mc5050_video_source",
+                                                "operator": "==",
+                                                "value": "cdn"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "https://cdn.example.com/video.mp4"
+                                },
+                                {
+                                    "key": "field_mc5050_video_cdn_poster",
+                                    "label": "CDN Poster",
+                                    "name": "video_cdn_poster",
+                                    "type": "image",
+                                    "required": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_mc5050_video_source",
+                                                "operator": "==",
+                                                "value": "cdn"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "array",
+                                    "library": "all",
+                                    "min_width": "",
+                                    "min_height": "",
+                                    "min_size": "",
+                                    "max_width": "",
+                                    "max_height": "",
+                                    "max_size": "",
+                                    "mime_types": "",
+                                    "preview_size": "medium"
+                                },
+                                {
+                                    "key": "field_mc5050_video_behavior",
+                                    "label": "Video Behavior",
+                                    "name": "video_behavior",
+                                    "type": "button_group",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "autoplay": "Autoplay (Muted, Looped)",
+                                        "hover": "Play on Hover",
+                                        "onclick-popup": "Click to Open Popup"
+                                    },
+                                    "default_value": "autoplay",
+                                    "return_format": "value",
+                                    "allow_null": 0,
+                                    "layout": "horizontal"
+                                },
+                                {
+                                    "key": "field_mc5050_video_autoplay_on_scroll",
+                                    "label": "Autoplay on Scroll",
+                                    "name": "autoplay_on_scroll",
+                                    "type": "true_false",
+                                    "required": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_mc5050_video_behavior",
+                                                "operator": "==",
+                                                "value": "autoplay"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "message": "",
+                                    "default_value": 0,
+                                    "ui_on_text": "Yes",
+                                    "ui_off_text": "No",
+                                    "ui": 1
+                                },
+                                {
+                                    "key": "field_mc5050_video_controls_visibility",
+                                    "label": "Show Video Controls",
+                                    "name": "controls_visibility",
+                                    "type": "true_false",
+                                    "required": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_mc5050_video_behavior",
+                                                "operator": "==",
+                                                "value": "autoplay"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "message": "",
+                                    "default_value": 0,
+                                    "ui_on_text": "Show",
+                                    "ui_off_text": "Hide",
+                                    "ui": 1
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "min": "",
@@ -666,5 +3179,8 @@
     "description": "Flexible content page builder for creating custom page layouts. Build pages using modular, reusable content sections that can be arranged in any order to create unique page designs.",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1779168310
+    "allow_ai_access": false,
+    "ai_description": "",
+    "modified": 1780658298,
+    "local_file": "/Applications/AMPPS/www/ClientProjects/WordPress/2026/epaton/wp-content/themes/epaton/acf-json/group_flexible_content.json"
 }

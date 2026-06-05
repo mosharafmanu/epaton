@@ -48,8 +48,9 @@ function epaton_setup() {
     // This theme uses wp_nav_menu() in multiple locations.
     register_nav_menus(
         array(
-            'mainMenu'   => esc_html__('Main Menu', 'epaton'),
-            'footerMenu' => esc_html__('Footer Menu', 'epaton'),
+            'mainMenu'        => esc_html__('Main Menu', 'epaton'),
+            'footerMenu'      => esc_html__('Footer Menu', 'epaton'),
+            'footerLegalMenu' => esc_html__('Footer Legal Menu', 'epaton'),
         )
     );
 
@@ -291,8 +292,15 @@ require get_template_directory() . '/inc/helper-functions/responsive-picture.php
 require get_template_directory() . '/inc/helper-functions/site-settings.php';
 require get_template_directory() . '/inc/helper-functions/video-renderer.php';
 
+// WP-CLI content seeders.
+if ( defined( 'WP_CLI' ) && WP_CLI ) {
+	require get_template_directory() . '/inc/wp-cli/acf-content-seeder.php';
+}
+
 // Components - Only load on frontend (not in admin)
 if (!is_admin()) {
+    require get_template_directory() . '/inc/components/header/class-epaton-primary-menu-walker.php';
+    require get_template_directory() . '/inc/components/cards/blog-card.php';
     require get_template_directory() . '/inc/components/video/video-autoplay-controls.php';
     require get_template_directory() . '/inc/components/header/hamburger-menu.php';
 }
