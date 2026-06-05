@@ -166,6 +166,10 @@ function epaton_scripts() {
 
 	wp_enqueue_style('epaton-theme-style', get_template_directory_uri() . '/assets/css/epaton-theme-style.css', array(), _S_VERSION);
 
+    wp_enqueue_style('epaton-imran', get_template_directory_uri() . '/imran.css', array(), _S_VERSION);
+
+    wp_enqueue_style('epaton-faisal', get_template_directory_uri() . '/faisal.css', array(), _S_VERSION);
+
     // Main stylesheet
     wp_enqueue_style('epaton-style', get_stylesheet_uri(), array(), _S_VERSION);
     wp_style_add_data('epaton-style', 'rtl', 'replace');
