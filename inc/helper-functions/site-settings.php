@@ -101,7 +101,7 @@ if ( ! function_exists( 'epaton_render_header_button' ) ) {
 		$args = wp_parse_args(
 			$args,
 			[
-				'class'              => 'site-btn header-btn',
+				'class'              => 'btn-primary site-btn header-btn',
 				'desktop_class'      => 'header-btn-desktop',
 				'mobile_class'       => 'header-btn-mobile',
 				'text_class'         => 'header-btn-text',

@@ -381,7 +381,7 @@ h4,
 	}
 }
 @media only screen and (min-width: 1600px) {
-
+	
 	.layout-padding{
         padding-left: 3.125rem; /* 50px */
 		padding-right: 3.125rem; /* 50px */
@@ -582,7 +582,7 @@ Design System Typography
 	color: var(--epaton-white);
 }
 .btn-primary:hover {
-	background: var(--epaton-cyan);
+	background: var(--epaton-white);
 	color: var(--epaton-navy);
 }
 

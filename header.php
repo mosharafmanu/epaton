@@ -33,17 +33,17 @@
 
 			<nav class="site-navigation" aria-label="<?php esc_attr_e('Primary navigation', 'epaton'); ?>">
 				<?php
-wp_nav_menu(
-    [
-        'theme_location' => 'mainMenu',
-        'container'      => false,
-        'menu_class'     => 'primary-menu',
-        'fallback_cb'    => false,
-        'depth'          => 2,
-        'walker'         => new Epaton_Primary_Menu_Walker(),
-    ]
-);
-?>
+					wp_nav_menu(
+						[
+							'theme_location' => 'mainMenu',
+							'container'      => false,
+							'menu_class'     => 'primary-menu',
+							'fallback_cb'    => false,
+							'depth'          => 2,
+							'walker'         => new Epaton_Primary_Menu_Walker(),
+						]
+					);
+					?>
 			</nav>
 
 			<div class="site-header-actions">
