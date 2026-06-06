@@ -196,7 +196,7 @@ ul.epaton-list{
 	list-style-type: none;
     display: flex;
     flex-direction: column;
-	row-gap: 0.938rem;
+	row-gap: .375rem;
 }
 ul.epaton-list li {
 	position: relative;

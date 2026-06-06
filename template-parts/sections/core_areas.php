@@ -13,7 +13,7 @@ if (empty($heading) && empty($items)) {
 }
 ?>
 
-<section class="core-areas-section layout-padding">
+<section class="core-areas-section layout-padding mt-50 mt-lg-70 pt-50 pb-70 pt-lg-130 pb-lg-180">
 		<div class="epaton-container">
 			<?php if ($heading): ?>
 				<h2 class="core-areas-heading"><?php echo esc_html($heading); ?></h2>

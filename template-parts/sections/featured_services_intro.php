@@ -68,7 +68,7 @@ if ('manual' === $source) {
 }
 ?>
 
-<section class="featured-services-intro-section layout-padding">
+<section class="featured-services-intro-section layout-padding pt-50 pt-lg-70">
 		<div class="epaton-container">
 			<div class="featured-services-intro-grid">
 				<div class="featured-services-intro-content">
@@ -110,12 +110,12 @@ if ($button && function_exists('epaton_render_button')) {
 							<div class="featured-services-intro-card-list">
 								<?php foreach ($service_cards as $service_card): ?>
 									<?php
-$card_url = $service_card['url'] ?? '';
-$card_target = $service_card['target'] ?? '';
-?>
-									<?php if ($card_url): ?>
+										$card_url = $service_card['url'] ?? '';
+										$card_target = $service_card['target'] ?? '';
+										?>
+											<?php if ($card_url): ?>
 										<a
-											class="featured-services-intro-card"
+											class="featured-services-intro-card media"
 											href="<?php echo esc_url($card_url); ?>"
 											<?php if ($card_target): ?>
 												target="<?php echo esc_attr($card_target); ?>"
@@ -129,15 +129,15 @@ $card_target = $service_card['target'] ?? '';
 									<?php endif; ?>
 										<?php if (!empty($service_card['image']) && function_exists('epaton_render_responsive_picture')): ?>
 											<?php
-epaton_render_responsive_picture(
-    $service_card['image'],
-    [
-        'class'      => 'featured-services-intro-card-image',
-        'size_group' => 'card',
-        'sizes'      => '(min-width: 992px) 18rem, 100vw',
-    ]
-);
-?>
+												epaton_render_responsive_picture(
+													$service_card['image'],
+													[
+														'class'      => 'featured-services-intro-card-image',
+														'size_group' => 'card',
+														'sizes'      => '(min-width: 992px) 18rem, 100vw',
+													]
+												);
+												?>
 										<?php endif; ?>
 										<span class="featured-services-intro-card-overlay"></span>
 										<span class="featured-services-intro-card-content">

@@ -18,7 +18,7 @@ if (empty($eyebrow) && empty($title) && empty($bullets) && empty($body) && empty
 }
 ?>
 
-<section class="clients-logos-section layout-padding">
+<section class="clients-logos-section layout-padding mt-40 mt-lg-60 pt-50 pb-70 pt-lg-130 pb-lg-195">
 		<div class="epaton-container">
 			<div class="clients-logos-grid">
 				<div class="clients-logos-content">
