@@ -21,7 +21,7 @@ $has_image = ( 'image' === $media_type && ! empty( $image ) );
 $has_video = ( 'video' === $media_type && ! empty( $video ) );
 $has_media = $has_image || $has_video;
 
-$row_classes = [ 'media-content-5050-row', 'media-' . $media_position ];
+$row_classes = [ 'media-content-5050-row mt-50 mt-lg-90 ', 'media-' . $media_position ];
 ?>
 
 <div class="media-content-5050-section">
@@ -57,7 +57,7 @@ $row_classes = [ 'media-content-5050-row', 'media-' . $media_position ];
 
 				<!-- Media column -->
 				<?php if ( $has_media ) : ?>
-					<div class="mc5050-media">
+					<div class="mc5050-media media">
 
 						<?php if ( $has_video && function_exists( 'epaton_render_video' ) ) : ?>
 							<?php
