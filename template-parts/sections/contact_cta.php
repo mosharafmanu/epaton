@@ -19,7 +19,7 @@ if (empty($title) && empty($body) && empty($button)) {
 }
 ?>
 
-<section class="contact-cta-section layout-padding pt-70 pb-80 pt-lg-200 pb-lg-200">
+<section class="contact-cta-section layout-padding pt-60 pb-70 pt-lg-200 pb-lg-200">
 		<div class="epaton-container">
 			<div class="contact-cta-card">
 				<?php if ($title): ?>
