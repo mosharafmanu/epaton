@@ -13,7 +13,7 @@ if (empty($eyebrow) && empty($statements)) {
 }
 ?>
 
-<section class="looking-forward-section layout-padding">
+<section class="looking-forward-section layout-padding pt-50 pb-55">
 	<div class="epaton-container">
 		<div class="looking-forward-content">
 			<?php if ($eyebrow): ?>

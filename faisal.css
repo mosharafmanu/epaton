@@ -378,20 +378,7 @@ Approach Style Start
   margin-top: 1.25rem;
 }
 
-.epaton-list.approach-panels-bullets li {
-  font-weight: 500;
-  line-height: 188.889%;
-}
-
-.epaton-list.approach-panels-bullets li::before {
-	content: "";
-	position: absolute;
-	left: 0;
-	top: 50%;
-  transform: translateY(-50%);
-	width: 1.3125rem;
-	height: 1.3125rem;
-	border-radius: 50%;
+.approach-panels-bullets li::before {
 	background-color: var(--epaton-blue);
 }
 
@@ -468,9 +455,16 @@ Approach Style End
 ====================================================
 */
 
+
+/*
+====================================================
+Client Logo Style Start
+====================================================
+*/
 .clients-logos-section {
 	color: var(--epaton-white);
 	background-color: var(--epaton-navy);
+
 }
 
 .clients-logos-eyebrow {
@@ -488,8 +482,8 @@ Approach Style End
 
 .clients-logos-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 10.625rem;
+  grid-template-columns: 1fr 21.375rem;
+  column-gap: 18rem;
 }
 
 .clients-logos-list {
@@ -500,8 +494,219 @@ Approach Style End
   column-gap: 1.875rem;
 }
 
+.clients-logos-title {
+	margin-top: 1.25rem;
+}
+
+.epaton-list.clients-logos-bullets {
+	margin-top: 3rem;
+}
+
+.clients-logos-bullets li::before {
+	background-color: var(--epaton-cyan);
+}
+
+.clients-logos-body {
+	margin-top: 1.875rem;
+}
+
+.site-btn.btn-accent.clients-logos-button {
+	margin-top: 3.125rem;
+}
+@media only screen and (max-width: 1199px) {
+  .clients-logos-grid {
+	  column-gap: 9.6875rem;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .clients-logos-grid {
+    grid-template-columns: 1fr 280px;
+    column-gap: 5rem;
+  }
+  .epaton-list.clients-logos-bullets {
+   	margin-top: 2rem;
+  }
+  .clients-logos-title br {
+	    display: none;
+  }
+  .clients-logos-body {
+    max-width: 25rem;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .clients-logos-grid {
+    grid-template-columns: 1fr;
+    row-gap: 3rem;
+  }
+  .site-btn.btn-accent.clients-logos-button {
+	  margin-top: 2.5rem;
+  }
+  
+}
+/*
+====================================================
+Client Logo Style End
+====================================================
+*/
 
 
+/*
+====================================================
+Commitment Style Start
+====================================================
+*/
+.commitment-panel-section {
+  background-color: var(--epaton-cyan);
+}
+
+.commitment-panel-card {
+  color: var(--epaton-white);
+  background-image: url(assets/images/commltment.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 4.25rem 8rem;
+}
+
+.commitment-panel-eyebrow {
+  color: var(--epaton-cyan);
+  font-size: .875rem;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.commitment-panel-title {
+  margin-top: 1.0625rem;
+}
+
+.commitment-panel-intro-label {
+  margin-top: 4.375rem;
+}
+
+.commitment-panel-bullets {
+  margin-top: 2.5rem;
+}
+
+.epaton-list.commitment-panel-bullets {
+  margin-top: 1.25rem;
+}
+
+.commitment-panel-bullets li:before {
+  background-color: var(--epaton-cyan);
+}
+
+.commitment-panel-statement {
+  margin-top: 2.5rem;
+}
+@media only screen and (max-width: 991px) {
+  .commitment-panel-card {
+	  padding: 4rem 5rem;
+  }
+  .commitment-panel-intro-label {
+	  margin-top: 3rem;
+   }
+}
+@media only screen and (max-width: 991px) {
+  .commitment-panel-card {
+	  padding: 2.5rem 2rem;
+  }
+  .commitment-panel-intro-label {
+	  margin-top: 2rem;
+   }
+}
+/*
+====================================================
+Commitment Style End
+====================================================
+*/
+
+
+
+/*
+====================================================
+Looking Forward Style Start
+====================================================
+*/
+.looking-forward-section {
+  color: var(--epaton-white);
+  background-color: var(--epaton-navy);
+}
+
+.looking-forward-eyebrow {
+  color: var(--epaton-cyan);
+  font-size: .875rem;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.looking-forward-statements {
+	margin-top: 1.25rem;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	row-gap: 1.25rem;
+}
+
+.looking-forward-statements p {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: normal;
+}
+@media only screen and (max-width: 1199px) {
+  .looking-forward-statements p {
+	 font-size: 1.5rem;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .looking-forward-statements p {
+	 font-size: 1.25rem;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .looking-forward-statements p {
+	 font-size: 1.125rem;
+  }
+  .looking-forward-statements {
+	 row-gap: 1rem;
+  }
+}
+/*
+====================================================
+Looking Forward Style End
+====================================================
+*/
+
+/*
+====================================================
+Contat Cta Style Start
+====================================================
+*/
+.contact-cta-card {
+  color: var(--epaton-white);
+  background: linear-gradient(133deg, #3D45E2 -2.51%, #090B36 100.07%), #D9D9D9;
+  padding: 3.5625rem 12.8125rem;
+  text-align: center;
+}
+
+.contact-cta-body {
+  margin-top: 1.875rem;
+}
+
+.contact-cta-card .site-btn {
+  margin-top: 3.125rem;
+}
+@media only screen and (max-width: 767px) {
+  .contact-cta-card {
+  	padding: 3rem 2.5rem;
+  }
+}
+/*
+====================================================
+Contat Cta Style End
+====================================================
+*/
 
 
 /*

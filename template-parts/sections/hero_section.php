@@ -84,17 +84,17 @@ if (function_exists('epaton_render_responsive_picture')) {
 						<?php endif; ?>
 
 						<?php
-if ($hero_buttons && function_exists('epaton_render_buttons')) {
-    epaton_render_buttons(
-        $hero_buttons,
-        [
-            'wrapper_class' => 'hero-buttons btns',
-            'default_style' => 'primary-gradient',
-            'show_icon'     => false,
-        ]
-    );
-}
-?>
+                        if ($hero_buttons && function_exists('epaton_render_buttons')) {
+                            epaton_render_buttons(
+                                $hero_buttons,
+                                [
+                                    'wrapper_class' => 'hero-buttons btns',
+                                    'default_style' => 'primary-gradient',
+                                    'show_icon'     => false,
+                                ]
+                            );
+                        }
+                        ?>
 
 					</div>
 				</div>

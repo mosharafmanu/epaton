@@ -19,7 +19,7 @@ if (empty($title) && empty($body) && empty($button)) {
 }
 ?>
 
-<section class="contact-cta-section layout-padding">
+<section class="contact-cta-section layout-padding pt-70 pb-80 pt-lg-200 pb-lg-200">
 		<div class="epaton-container">
 			<div class="contact-cta-card">
 				<?php if ($title): ?>
@@ -35,7 +35,7 @@ if ($button && function_exists('epaton_render_button')) {
     epaton_render_button(
         $button,
         [
-            'style'     => 'contact-cta-button-style',
+            'style'     => 'btn-accent',
             'show_icon' => false,
             'class'     => 'contact-cta-button contact-cta-button-' . $button_style,
         ]

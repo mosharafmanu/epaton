@@ -16,7 +16,7 @@ if (empty($eyebrow) && empty($title) && empty($intro_label) && empty($bullets) &
 }
 ?>
 
-<section class="commitment-panel-section layout-padding">
+<section class="commitment-panel-section layout-padding pt-50 pb-50 pt-lg-155 pb-lg-155">
 		<div class="epaton-container">
 			<div class="commitment-panel-card">
 				<div class="commitment-panel-content">
