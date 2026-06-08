@@ -370,7 +370,6 @@ Epaton Contact Form 7
 */
 .epaton-contact-form {
 	width: 100%;
-	background: linear-gradient(180deg, var(--epaton-blue) 0%, #25247d 100%);
 	color: var(--epaton-white);
 }
 

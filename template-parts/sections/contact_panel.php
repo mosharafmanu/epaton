@@ -19,13 +19,13 @@ if ( empty( $section_title ) && empty( $title ) && empty( $form_shortcode ) && e
 }
 ?>
 
-<section class="contact-panel-section layout-padding">
+<section class="contact-panel-section layout-padding mt-50 mb-70 mt-lg-185 mb-lg-200">
 	<div class="epaton-container">
 		<?php if ( $section_title ) : ?>
 			<h2 class="contact-panel-section-title"><?php echo esc_html( $section_title ); ?></h2>
 		<?php endif; ?>
 
-		<div class="contact-panel">
+		<div class="contact-panel mt-40 mt-lg-90">
 			<?php if ( $title ) : ?>
 				<h2 class="contact-panel-title"><?php echo esc_html( $title ); ?></h2>
 			<?php endif; ?>
