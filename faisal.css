@@ -1183,8 +1183,8 @@ Blog Grid Style End
 }
 
 .contact-panel {
-  background: linear-gradient(133deg, #3D45E2 -2.51%, #090B36 100.07%), #D9D9D9;
-  padding: 1.6875rem 5.5rem 6.6875rem 5.5rem;
+	background: linear-gradient(133deg, #3D45E2 -2.51%, #090B36 100.07%), #D9D9D9;
+	padding: 2.5rem 5.5rem 6.6875rem 5.5rem;
 }
 
 .epaton-contact-field p br {
@@ -1231,14 +1231,20 @@ Blog Grid Style End
 }
 @media only screen and (max-width: 991px) {
   .contact-panel {
-  padding: 1rem 3rem 4rem 3rem;
+   padding: 1rem 3rem 4rem 3rem;
+  }
+ .contact-panel-section-title {
+	font-size: 2rem;
  }
-.contact-panel-grid {
+ .contact-panel-grid {
 	column-gap: 3rem;
-}
+ }
 
 }
-@media only screen and (max-width: 991px) {
+@media only screen and (max-width: 767px) {
+  .contact-panel-section-title {
+	 font-size: 1.75rem;
+  }
   .contact-panel {
    padding: 2rem;
  }
