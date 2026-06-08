@@ -24,50 +24,52 @@ $blog_description = $blog_description ?: __( 'Want to keep learning? Explore our
 	<main id="primary" class="site-main blog-page">
 
 		<!-- Blog Posts Grid Section -->
-		<section class="blog-grid-section layout-padding">
-			<header class="blog-index-header">
+		<section class="blog-grid-section layout-padding mt-50 mt-lg-185">
+			<div class="epaton-container">
+				<header class="blog-index-header">
 				<h1 class="blog-index-title"><?php echo esc_html( $blog_title ); ?></h1>
 				<?php if ( $blog_description ) : ?>
 					<p class="blog-index-description"><?php echo esc_html( $blog_description ); ?></p>
 				<?php endif; ?>
 			</header>
 
-			<?php if ( have_posts() ) : ?>
+				<?php if ( have_posts() ) : ?>
 
-				<!-- Blog Posts Grid -->
-				<div class="blog-grid card-grid columns-3">
+					<!-- Blog Posts Grid -->
+					<div class="blog-grid card-grid mt-50 mt-lg-100 columns-3">
+						<?php
+						while ( have_posts() ) :
+							the_post();
+
+							// Render blog card using the new blog card component
+							if ( function_exists( 'epaton_render_blog_card' ) ) {
+								epaton_render_blog_card(
+									get_post(),
+									[
+										'read_more_text' => __( 'Read more', 'epaton' ),
+										'lazy'           => true,
+									]
+								);
+							}
+
+						endwhile;
+						?>
+					</div>
+
 					<?php
-					while ( have_posts() ) :
-						the_post();
-
-						// Render blog card using the new blog card component
-						if ( function_exists( 'epaton_render_blog_card' ) ) {
-							epaton_render_blog_card(
-								get_post(),
-								[
-									'read_more_text' => __( 'Read more', 'epaton' ),
-									'lazy'           => true,
-								]
-							);
-						}
-
-					endwhile;
+					// Render pagination
+					if ( function_exists( 'epaton_render_pagination' ) ) {
+						epaton_render_pagination();
+					}
 					?>
-				</div>
 
-				<?php
-				// Render pagination
-				if ( function_exists( 'epaton_render_pagination' ) ) {
-					epaton_render_pagination();
-				}
-				?>
-
-			<?php else : ?>
+			   <?php else : ?>
 
 				<!-- No Posts Found -->
 				<?php get_template_part( 'template-parts/content', 'none' ); ?>
 
-			<?php endif; ?>
+			   <?php endif; ?>
+			</div>
 
 		</section>
 
