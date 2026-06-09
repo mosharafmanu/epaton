@@ -589,8 +589,10 @@ Design System Typography
 	text-align: center;
 }
 
-.site-btn.btn-border {
-	border: 2px solid;
+@media only screen and (max-width: 767px) {
+	.site-btn {
+	font-size: .9375rem; /* 15px */
+}
 }
 
 /* Button: Primary (Blue) */

@@ -413,10 +413,10 @@ Epaton Contact Form 7
 	min-height: 9rem;
 }
 
-.epaton-contact-form .epaton-contact-privacy {
+.epaton-contact-form .epaton-contact-privacy p {
 	display: flex;
-	align-items: flex-start;
-	gap: 0.625rem;
+	align-items: center;
+	gap: .3125rem;
 	margin: 0.75rem 0 1.25rem;
 	color: var(--epaton-white);
 	font-size: 0.8125rem;
@@ -453,6 +453,19 @@ Epaton Contact Form 7
 
 .epaton-contact-form input[type="checkbox"]:checked {
 	background: var(--epaton-white);
+	position: relative;
+}
+
+input[type="checkbox"]:checked::after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 5px;
+	height: 10px;
+	border: solid var(--epaton-blue);
+	border-width: 0 2px 2px 0;
+	transform: translate(-50%, -50%) rotate(45deg);
 }
 
 .epaton-contact-form input[type="checkbox"]:checked::after {
