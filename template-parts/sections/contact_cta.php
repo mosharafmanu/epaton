@@ -35,7 +35,7 @@ if ($button && function_exists('epaton_render_button')) {
     epaton_render_button(
         $button,
         [
-            'style'     => 'btn-accent',
+            'style'     => 'btn-primary',
             'show_icon' => false,
             'class'     => 'contact-cta-button contact-cta-button-' . $button_style,
         ]
