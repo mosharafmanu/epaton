@@ -24,6 +24,12 @@
   max-width: 10rem;
 }
 
+.site-header-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
 .site-navigation > ul {
     display: flex;
     align-items: center;
@@ -89,34 +95,236 @@
     top: 0;
 }
 
-/* Mobile */
-@media screen and (max-width: 991px) {
-    .hero-background {
-      height: 35rem;
-      width: 100%;
-    }
-    .site-navigation > ul {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0;
-    }
+/* -----------------------------------------------
+   Hamburger Button (hidden on desktop by default)
+----------------------------------------------- */
+.menu-trigger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    flex-shrink: 0;
+}
 
-    .site-navigation .sub-menu {
-        position: static;
-        opacity: 1;
-        visibility: visible;
-        transform: none;
-        box-shadow: none;
-        padding-left: 1rem;
+.menu-trigger span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background-color: var(--epaton-white);
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease, width 0.3s ease;
+    transform-origin: center;
+}
+
+/* 3 lines → X animation */
+.menu-trigger.isOpen span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+.menu-trigger.isOpen span:nth-child(2) {
+    opacity: 0;
+    width: 0;
+}
+.menu-trigger.isOpen span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+/* -----------------------------------------------
+   Overlay
+----------------------------------------------- */
+.hamburger-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.55);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.35s ease, visibility 0.35s ease;
+    z-index: 998;
+}
+
+.hamburger-overlay.isOpen {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* -----------------------------------------------
+   Mobile Nav Drawer
+----------------------------------------------- */
+.hamburger-wrapper {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 320px;
+    max-width: 85vw;
+    height: 100%;
+    background-color: var(--epaton-navy);
+    transform: translateX(100%);
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 999;
+    overflow-y: auto;
+}
+
+.hamburger-wrapper.isOpen {
+    transform: translateX(0);
+}
+
+/* Close button — top-right corner of drawer */
+.hamburger-close {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    color: var(--epaton-white);
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+    line-height: 0;
+}
+
+.hamburger-close:hover {
+    opacity: 1;
+}
+
+.hamburger-inner {
+    display: flex;
+    flex-direction: column;
+    padding: 4rem 1.75rem 2.5rem;
+    min-height: 100%;
+}
+
+/* -----------------------------------------------
+   Mobile Menu Items
+----------------------------------------------- */
+.hamburger-navigation .mobile-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.hamburger-navigation .mobile-menu > ul > li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.hamburger-navigation .mobile-menu > ul > li > a {
+    display: block;
+    color: var(--epaton-cloud);
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0.875rem 0;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.hamburger-navigation .mobile-menu > ul > li > a:hover {
+    color: var(--epaton-cyan);
+}
+
+/* Submenu toggle indicator */
+.hamburger-navigation .mobile-menu .menu-item-has-children > a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hamburger-navigation .mobile-menu .menu-item-has-children > a::after {
+    content: '';
+    display: block;
+    flex-shrink: 0;
+    width: 7px;
+    height: 7px;
+    border-right: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+    transform: rotate(45deg);
+    transition: transform 0.25s ease;
+    margin-left: 0.5rem;
+    margin-bottom: 2px;
+}
+
+.hamburger-navigation .mobile-menu .menu-item-has-children.submenu-open > a::after {
+    transform: rotate(-135deg);
+    margin-bottom: -2px;
+}
+
+/* Sub-menu in mobile drawer */
+.hamburger-navigation .mobile-menu .sub-menu {
+    display: none;
+    list-style: none;
+    padding: 0 0 0.75rem 1rem;
+    margin: 0;
+}
+
+.hamburger-navigation .mobile-menu .sub-menu li a {
+    display: block;
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 0.9375rem;
+    padding: 0.45rem 0;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.hamburger-navigation .mobile-menu .sub-menu li a:hover {
+    color: var(--epaton-white);
+}
+
+/* -----------------------------------------------
+   CTA Button Inside Drawer
+----------------------------------------------- */
+.hamburger-button {
+    margin-top: auto;
+    padding-top: 2rem;
+}
+
+/* -----------------------------------------------
+   No-scroll when drawer is open
+----------------------------------------------- */
+body.no-scroll {
+    overflow: hidden;
+}
+
+/* -----------------------------------------------
+   Mobile breakpoint — show burger, hide desktop nav
+----------------------------------------------- */
+@media screen and (max-width: 991px) {
+    .site-navigation {
         display: none;
     }
 
-    .site-navigation li.active > .sub-menu {
-        display: block;
+    .menu-trigger {
+        display: flex;
     }
 
-    .site-navigation a {
-        padding: 0.75rem 0;
+    /* Hide header CTA on mobile — it lives inside the drawer */
+    .header-btn-desktop {
+        display: none;
+    }
+
+    /* Reduce bar padding on mobile */
+    .site-header-bar {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .hero-background {
+        height: 35rem;
+        width: 100%;
+    }
+}
+
+/* -----------------------------------------------
+   Desktop — hide drawer elements entirely
+----------------------------------------------- */
+@media screen and (min-width: 992px) {
+    .hamburger-overlay,
+    .hamburger-wrapper {
+        display: none !important;
     }
 }
 /*

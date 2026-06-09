@@ -17,13 +17,13 @@
 					<div class="site-footer-main">
 						<div class="site-footer-brand">
 							<?php
-						epaton_render_site_logo(
-							[
-								'class'      => 'footer-logo',
-								'link_class' => 'footer-logo-link',
-							]
-						);
-						?>
+epaton_render_site_logo(
+    [
+        'class'      => 'footer-logo',
+        'link_class' => 'footer-logo-link',
+    ]
+);
+?>
 
 							<div class="footer-company-text">
 								<?php echo wp_kses(epaton_get_footer_company_text(), ['br' => []]); ?>
@@ -35,10 +35,10 @@
 
 							<div class="footer-contact-row">
 								<?php
-								$footer_email = epaton_get_footer_email();
-								$footer_phone = epaton_get_footer_phone();
-								$phone_href = preg_replace('/[^0-9+]/', '', $footer_phone);
-								?>
+$footer_email = epaton_get_footer_email();
+$footer_phone = epaton_get_footer_phone();
+$phone_href = preg_replace('/[^0-9+]/', '', $footer_phone);
+?>
 
 								<?php if ($footer_email): ?>
 								<a class="footer-contact-link footer-email" href="mailto:<?php echo esc_attr($footer_email); ?>"><?php echo esc_html(strtoupper($footer_email)); ?></a>
@@ -56,13 +56,13 @@
 								<div class="footer-offices">
 									<?php foreach ($footer_offices as $office): ?>
 										<?php
-											$city = $office['city'] ?? '';
-											$address = $office['address'] ?? '';
+$city = $office['city'] ?? '';
+$address = $office['address'] ?? '';
 
-											if (empty($city) && empty($address)) {
-												continue;
-											}
-											?>
+if (empty($city) && empty($address)) {
+    continue;
+}
+?>
 										<div class="footer-office-row">
 											<div class="footer-office-city"><?php echo esc_html(strtoupper($city)); ?></div>
 											<div class="footer-office-address"><?php echo esc_html(strtoupper($address)); ?></div>
@@ -80,16 +80,16 @@
 							<?php if (has_nav_menu('footerLegalMenu')): ?>
 								<nav class="footer-legal-nav" aria-label="<?php esc_attr_e('Footer legal links', 'epaton'); ?>">
 									<?php
-										wp_nav_menu(
-											[
-												'theme_location' => 'footerLegalMenu',
-												'container'      => false,
-												'menu_class'     => 'footer-legal-menu',
-												'depth'          => 1,
-												'fallback_cb'    => false,
-											]
-										);
-										?>
+wp_nav_menu(
+    [
+        'theme_location' => 'footerLegalMenu',
+        'container'      => false,
+        'menu_class'     => 'footer-legal-menu',
+        'depth'          => 1,
+        'fallback_cb'    => false,
+    ]
+);
+?>
 								</nav>
 							<?php endif; ?>
 						</div>
@@ -104,8 +104,7 @@
 		</footer>
 
 	<?php
-// Hamburger Menu
-// epaton_render_hamburger_menu();
+epaton_render_hamburger_menu();
 ?>
 
 </div><!-- #page -->

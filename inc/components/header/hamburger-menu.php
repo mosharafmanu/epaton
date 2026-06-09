@@ -21,6 +21,14 @@ if ( ! function_exists( 'epaton_render_hamburger_menu' ) ) {
 
 		<!-- Hamburger Menu Panel -->
 		<div class="hamburger-wrapper">
+
+			<!-- Close Button -->
+			<button class="hamburger-close menu-trigger" type="button" aria-label="<?php esc_attr_e( 'Close menu', 'epaton' ); ?>">
+				<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+					<path d="M1 1L19 19M19 1L1 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+				</svg>
+			</button>
+
 			<div class="hamburger-inner">
 
 				<!-- Mobile Menu Navigation -->
