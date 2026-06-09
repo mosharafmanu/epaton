@@ -721,10 +721,13 @@ Inner Hero Style Start
 }
 .inner-hero-background {
 	height: 36.25rem;
-	padding-bottom: 4.875rem;
 }
 .inner-hero-content {
-  color: var(--epaton-white);
+	color: var(--epaton-white);
+	margin-top: 4rem;
+}
+.inner-hero-buttons.btns {
+	margin-top: 1.875rem;
 }
 /*
 ====================================================
@@ -958,10 +961,6 @@ Media Content 5050 Style Start
     grid-area: media;
 }
 
-.media-content-5050-row {
-  margin-bottom: 4.375rem;
-}
-
 .media-content-5050-row.media-right {
 	grid-template-areas: "content media";
   grid-template-columns: 29.25rem 1fr;
@@ -1086,6 +1085,10 @@ Partners Listing Style End
 Blog Grid Style Start
 ====================================================
 */
+.blog-grid-section {
+	margin-top: 13.75rem;
+}
+
 .blog-grid.card-grid {
   gap: 0;
 }
@@ -1157,6 +1160,16 @@ Blog Grid Style Start
 .blog-card-excerpt {
   font-size: 1rem;
 }
+@media only screen and (max-width: 991px) {
+  .blog-grid-section {
+	  margin-top: 9.375rem;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .blog-grid-section {
+	  margin-top: 6.25rem;
+  }
+}
 /*
 ====================================================
 Blog Grid Style End
@@ -1169,6 +1182,11 @@ Blog Grid Style End
 Contact Style Start
 ====================================================
 */
+
+.contact-panel-section {
+  margin-top: 13.75rem;
+}
+
 .contact-panel-grid {
 	display: grid;
 	grid-template-columns: repeat(2,1fr);

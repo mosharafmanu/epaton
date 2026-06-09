@@ -24,7 +24,7 @@ $blog_description = $blog_description ?: __( 'Want to keep learning? Explore our
 	<main id="primary" class="site-main blog-page">
 
 		<!-- Blog Posts Grid Section -->
-		<section class="blog-grid-section layout-padding mt-50 mt-lg-185">
+		<section class="blog-grid-section layout-padding">
 			<div class="epaton-container">
 				<header class="blog-index-header">
 				<h1 class="blog-index-title"><?php echo esc_html( $blog_title ); ?></h1>

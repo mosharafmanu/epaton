@@ -13,7 +13,7 @@ if ( empty( $heading ) && empty( $partners ) ) {
 }
 ?>
 
-<section class="partners-listing-section layout-padding pt-5 pt-lg-30">
+<section class="partners-listing-section layout-padding mt-50 mt-lg-140">
 	<div class="epaton-container">
 		<?php if ( $heading ) : ?>
 			<h2 class="partners-listing-heading"><?php echo esc_html( $heading ); ?></h2>

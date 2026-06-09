@@ -25,7 +25,7 @@ if ( ! $products->have_posts() ) {
 }
 ?>
 
-<div class="products-listing-section">
+<div class="products-listing-section mt-50 mt-lg-70">
 	<div class="products-listing-inner layout-padding">
 		<div class="epaton-container">
 

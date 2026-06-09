@@ -26,7 +26,7 @@ if ( ! $services->have_posts() ) {
 }
 ?>
 
-<div class="services-listing-section">
+<div class="services-listing-section mt-50 mt-lg-70">
 	<div class="services-listing-inner layout-padding">
 		<div class="epaton-container">
 
