@@ -67,9 +67,9 @@ if (function_exists('epaton_render_responsive_picture')) {
 		</div>
 	<?php endif; ?>
 
-	<div class="hero-inner layout-padding">
+	<div class="hero-inner">
 		<div class="epaton-container">
-			<div class="hero-grid">
+			<div class="hero-grid layout-padding">
 
 				<!-- Hero Content Column -->
 				<div class="hero-content">
