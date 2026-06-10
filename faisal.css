@@ -14,8 +14,8 @@
 	align-items: center;
   justify-content: space-between;
 	gap: 2rem;
-	padding-left: 45px;
-	padding-right: 45px;
+	padding-left: 2.8125rem;
+	padding-right: 2.8125rem;
 }
 
 .site-logo-link {
@@ -351,7 +351,7 @@ Hero Style Start
 }
 
 .hero-background {
-  height: 50rem;
+  height: 53.625rem;
   width: 100%;
 }
 
@@ -364,9 +364,54 @@ Hero Style Start
   margin-left: auto;
   color: var(--epaton-white);
 }
+
+@media only screen and (max-width: 991px) {
+  .hero-background {
+	 height: 35rem;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .hero-background {
+	 height: 30rem;
+  }
+  .hero-content {
+  	margin-top: 6.25rem;
+  }
+}
+
 /*
 ====================================================
 Hero Style End
+====================================================
+*/
+
+/*
+====================================================
+Inner Hero Style Start
+====================================================
+*/
+.inner-hero-background,.inner-hero-inner {
+  grid-row: 1;
+  grid-column: 1;
+}
+.inner-hero-background {
+	height: 36.25rem;
+}
+
+.page-partners .inner-hero-content {
+	margin-top: 0;
+}
+
+.inner-hero-content {
+	color: var(--epaton-white);
+	margin-top: 4rem;
+}
+.inner-hero-buttons.btns {
+	margin-top: 1.875rem;
+}
+/*
+====================================================
+Inner Hero Style End
 ====================================================
 */
 
@@ -398,8 +443,6 @@ Featured Service Style Start
 
 .site-btn.primary-gradient.featured-services-intro-button {
   margin-top: 5.625rem;
-  background-color: var(--epaton-blue);
-  color: var(--epaton-white);
 }
 
 /* .featured-services-intro-card {
@@ -656,6 +699,15 @@ Approach Style Start
   .approach-panels-card-navy p:last-child {
 	  margin-top: 2rem;
   }
+  .approach-panels-card-body {
+	 margin-top: 1.5rem;
+  }
+  .approach-panels-card-body p:nth-child(2) {
+	  margin-top: 1.5rem;
+  }
+  .approach-panels-card-body ul {
+  	margin-top: 2rem;
+  }
 }
 
 /*
@@ -750,7 +802,6 @@ Client Logo Style Start
   .site-btn.btn-accent.clients-logos-button {
 	  margin-top: 2.5rem;
   }
-  
 }
 /*
 ====================================================
@@ -871,6 +922,7 @@ Looking Forward Style Start
 @media only screen and (max-width: 991px) {
   .looking-forward-statements p {
 	 font-size: 1.25rem;
+   margin-bottom: 0;
   }
 }
 @media only screen and (max-width: 767px) {
@@ -916,33 +968,6 @@ Contat Cta Style Start
 Contat Cta Style End
 ====================================================
 */
-
-
-/*
-====================================================
-Inner Hero Style Start
-====================================================
-*/
-.inner-hero-background,.inner-hero-inner {
-  grid-row: 1;
-  grid-column: 1;
-}
-.inner-hero-background {
-	height: 36.25rem;
-}
-.inner-hero-content {
-	color: var(--epaton-white);
-	margin-top: 4rem;
-}
-.inner-hero-buttons.btns {
-	margin-top: 1.875rem;
-}
-/*
-====================================================
-Inner Hero Style End
-====================================================
-*/
-
 
 /*
 ====================================================
@@ -1294,7 +1319,7 @@ Blog Grid Style Start
 ====================================================
 */
 .blog-grid-section {
-	margin-top: 13.75rem;
+	margin-top: 12rem;
 }
 
 .blog-grid.card-grid {
@@ -1370,12 +1395,12 @@ Blog Grid Style Start
 }
 @media only screen and (max-width: 991px) {
   .blog-grid-section {
-	  margin-top: 9.375rem;
+	  margin-top: 10rem;
   }
 }
 @media only screen and (max-width: 767px) {
   .blog-grid-section {
-	  margin-top: 6.25rem;
+	  margin-top: 9.25rem;
   }
 }
 /*
@@ -1392,7 +1417,7 @@ Contact Style Start
 */
 
 .contact-panel-section {
-  margin-top: 13.75rem;
+  margin-top: 12rem;
 }
 
 .contact-panel-grid {
@@ -1460,6 +1485,9 @@ Contact Style Start
 	margin-top: 2.1875rem;
 }
 @media only screen and (max-width: 991px) {
+  .contact-panel-section {
+   margin-top: 10rem;
+  }
   .contact-panel {
    padding: 1rem 3rem 4rem 3rem;
   }
@@ -1472,6 +1500,9 @@ Contact Style Start
 
 }
 @media only screen and (max-width: 767px) {
+   .contact-panel-section {
+   margin-top: 9.25rem;
+  }
   .contact-panel-section-title {
 	 font-size: 1.75rem;
   }

@@ -601,7 +601,7 @@ Design System Typography
 	color: var(--epaton-white);
 }
 .btn-primary:hover {
-	background: var(--epaton-white);
+	background: var(--epaton-cyan);
 	color: var(--epaton-navy);
 }
 

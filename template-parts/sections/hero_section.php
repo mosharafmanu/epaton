@@ -89,7 +89,7 @@ if (function_exists('epaton_render_responsive_picture')) {
                                 $hero_buttons,
                                 [
                                     'wrapper_class' => 'hero-buttons btns',
-                                    'default_style' => 'primary-gradient',
+                                    'default_style' => 'primary-btn',
                                     'show_icon'     => false,
                                 ]
                             );

@@ -91,7 +91,7 @@ if ($button && function_exists('epaton_render_button')) {
     epaton_render_button(
         $button,
         [
-            'style'     => 'primary-gradient',
+            'style'     => 'primary-gradient btn-primary',
             'show_icon' => false,
             'class'     => 'featured-services-intro-button',
         ]
