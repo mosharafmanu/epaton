@@ -3,7 +3,7 @@
 .site-header {
 	position: absolute;
 	left: 0;
-  top: 5.625rem;
+  top: 3.75rem;
 	width: 100%;
 	z-index: 99;
 }
@@ -313,6 +313,9 @@ body.no-scroll {
 
 }
 @media only screen and (max-width: 767px) {
+  .site-header {
+	top: 1.875rem;
+}
   .site-header-bar {
   padding-top: .875rem;
   padding-bottom: .875rem;
