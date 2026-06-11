@@ -25,7 +25,7 @@ if ( empty( $section_title ) && empty( $title ) && empty( $form_shortcode ) && e
 			<h2 class="contact-panel-section-title"><?php echo esc_html( $section_title ); ?></h2>
 		<?php endif; ?>
 
-		<div class="contact-panel mt-40 mt-lg-90">
+		<div class="contact-panel mt-40 mt-lg-85">
 			<?php if ( $title ) : ?>
 				<h2 class="contact-panel-title"><?php echo esc_html( $title ); ?></h2>
 			<?php endif; ?>

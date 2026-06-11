@@ -17,7 +17,7 @@ if (empty($eyebrow) && empty($title) && empty($bullets) && empty($statement) && 
 }
 ?>
 
-<section class="approach-panels-section layout-padding pt-50">
+<section class="approach-panels-section layout-padding pt-45">
 		<div class="epaton-container">
 			<div class="approach-panels-content">
 				<?php if ($eyebrow): ?>

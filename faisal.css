@@ -314,7 +314,7 @@ body.no-scroll {
 }
 @media only screen and (max-width: 767px) {
   .site-header {
-	top: 1.875rem;
+	 top: 1.875rem;
 }
   .site-header-bar {
   padding-top: .875rem;
@@ -493,7 +493,7 @@ Inner Hero Style Start
       padding: 5rem 0;
     }
     .page-who-we-are .inner-hero-section {
-	    min-height: 37.5rem;
+	    min-height: 30.5rem;
     }
 
     .inner-hero-content {
@@ -865,11 +865,11 @@ Client Logo Style Start
 }
 
 .clients-logos-body {
-	margin-top: 1.875rem;
+	margin-top: 2.1875rem;
 }
 
 .site-btn.btn-accent.clients-logos-button {
-	margin-top: 3.125rem;
+	margin-top: 3.4375rem;
 }
 @media only screen and (max-width: 1199px) {
   .clients-logos-grid {
@@ -1054,6 +1054,14 @@ Contat Cta Style Start
 
 .contact-cta-card .site-btn {
   margin-top: 3.125rem;
+}
+@media only screen and (max-width: 991px) {
+  .contact-cta-body br {
+	  display: none;
+  }
+  .contact-cta-card .site-btn {
+	  margin-top: 2.125rem;
+  }
 }
 @media only screen and (max-width: 767px) {
   .contact-cta-card {
@@ -1326,7 +1334,6 @@ Media Content 5050 Style Start
 @media only screen and (max-width: 767px) {
   .media-content-5050-row {
     row-gap: 1.875rem;
-    margin-bottom: 3rem;
   }
   .media-content-5050-row.media-right {
         grid-template-areas: 
