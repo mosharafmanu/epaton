@@ -9,6 +9,21 @@
 
 if ( ! function_exists( 'epaton_render_button' ) ) {
 	/**
+	 * Normalize legacy ACF button style values to current design-system classes.
+	 *
+	 * @param string $style Button style value.
+	 * @return string
+	 */
+	function epaton_normalize_button_style( $style ) {
+		$style_aliases = [
+			'primary-gradient'    => 'btn-primary',
+			'transparent-primary' => 'btn-light',
+		];
+
+		return $style_aliases[ $style ] ?? $style;
+	}
+
+	/**
 	 * Render a button from ACF link field
 	 *
 	 * @param array $button_link ACF link field array with 'url', 'title', 'target'.
@@ -16,7 +31,7 @@ if ( ! function_exists( 'epaton_render_button' ) ) {
 	 *     Optional customization.
 	 *
  * @type string $style Button style class. Default 'btn-accent'.
- *                         Options: 'btn-primary', 'btn-accent', 'btn-outline'.
+ *                         Options: 'btn-primary', 'btn-light', 'btn-accent', 'btn-outline'.
 	 *     @type bool   $show_icon Show arrow icon. Default true.
 	 *     @type string $class Additional CSS classes. Default ''.
 	 *     @type bool   $echo Echo or return. Default true.
@@ -49,7 +64,8 @@ if ( ! function_exists( 'epaton_render_button' ) ) {
 		}
 
 		// Build button classes
-		$button_classes = 'site-btn ' . esc_attr( $args['style'] );
+		$button_style   = epaton_normalize_button_style( $args['style'] );
+		$button_classes = 'site-btn ' . esc_attr( $button_style );
 		if ( ! empty( $args['class'] ) ) {
 			$button_classes .= ' ' . esc_attr( $args['class'] );
 		}
@@ -147,4 +163,3 @@ if ( ! function_exists( 'epaton_render_buttons' ) ) {
 		}
 	}
 }
-

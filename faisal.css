@@ -389,7 +389,7 @@ Hero Style Start
 /* Tablet */
 @media screen and (max-width: 991px) {
     .hero-section {
-    	min-height: 30rem;
+        min-height: 30rem;
    }
     .hero-inner {
         padding: 6rem 0;
@@ -409,7 +409,7 @@ Hero Style Start
     .hero-section {
         min-height: 31.25rem;
     }
-    
+
     .hero-inner {
         padding: 3rem 0;
     }
@@ -505,7 +505,7 @@ Inner Hero Style Start
       min-height: 22rem;
     }
     .page-who-we-are .inner-hero-content {
-      	margin-top: 85px;
+        margin-top: 85px;
     }
    .page-who-we-are .inner-hero-section {
 	    min-height: 20rem;
@@ -803,7 +803,7 @@ Approach Style Start
 	  margin-top: 1.5rem;
   }
   .approach-panels-card-body ul {
-  	margin-top: 2rem;
+    margin-top: 2rem;
   }
 }
 
