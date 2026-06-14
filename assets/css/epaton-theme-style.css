@@ -556,11 +556,11 @@ h4,
 
 /* Pagination Style End */
 
-.btns{
-    display: flex;
-    flex-wrap: wrap;
-    column-gap: 1.5625rem; /* 25px */
-    row-gap: 1.5625rem; /* 25px */
+.btns {
+	display: flex;
+	flex-wrap: wrap;
+	column-gap: 2.25rem;
+	row-gap: 1.5625rem; 
 }
 
 /* ====================================================

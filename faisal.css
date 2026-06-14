@@ -367,7 +367,7 @@ Hero Style Start
 }
 
 .hero-content {
-    margin-top: 8.125rem;
+	margin-top: 9.375rem;
 }
 
 .hero-inner {
@@ -383,7 +383,11 @@ Hero Style Start
 }
 
 .hero-buttons {
-    margin-top: 3.125rem;
+	margin-top: 3.75rem;
+}
+
+.hero-buttons .site-btn {
+	padding: 1.1875rem 2.6875rem;
 }
 
 /* Tablet */
@@ -485,6 +489,11 @@ Inner Hero Style Start
 .inner-hero-buttons {
 	margin-top: 1.875rem;
 }
+
+.inner-hero-buttons .site-btn {
+	padding: 1.1875rem 1.625rem;
+}
+
 @media only screen and (max-width: 991px) {
     .inner-hero-section {
         min-height: 28rem;
@@ -554,12 +563,25 @@ Featured Service Style Start
 }
 
 .featured-services-intro-body {
-  margin-top: 2.5rem;
+	margin-top: 2.5rem;
+	color: #333;
 }
 
 .site-btn.primary-gradient.featured-services-intro-button {
-  margin-top: 5.625rem;
+	margin-top: 5.625rem;
 }
+.site-btn.primary-gradient {
+	border-radius: 1px;
+	background: linear-gradient(0deg, #3D45E2 0%, #3D45E2 100%), linear-gradient(133deg, #3D45E2 -2.51%, #090B36 100.07%), #D9D9D9;
+	padding: 1.1875rem 1.25rem;
+  transition: all 0.3s ease;
+}
+.site-btn.primary-gradient:hover {
+  background: var(--epaton-cyan);
+  color: var(--epaton-navy);
+}
+
+
 .featured-services-intro-card-list {
 	margin-top: 1rem;
 }
@@ -653,6 +675,10 @@ Core Areas Style Start
   color: var(--epaton-white);
 }
 
+.core-areas-card-text {
+	margin-top: 1.875rem;
+}
+
 .core-areas-card.core-areas-card-cyan {
 	background-color: #30F5F5;
 	color: var(--epaton-navy);
@@ -709,7 +735,8 @@ Approach Style Start
 }
 
 .approach-panels-title {
-  margin-top: .9375rem;
+	margin-top: .9375rem;
+	color: #222222;
 }
 
 .approach-panels-intro-label {
@@ -724,7 +751,8 @@ Approach Style Start
 }
 
 .epaton-list.approach-panels-bullets {
-  margin-top: 1.25rem;
+	margin-top: 1.25rem;
+	color: #222222;
 }
 
 .approach-panels-bullets li::before {
@@ -732,9 +760,10 @@ Approach Style Start
 }
 
 .approach-panels-statement {
-  margin-top: 1.6875rem;
-  font-weight: 700;
-  line-height: 133.333%;
+	margin-top: 1.6875rem;
+	font-weight: 700;
+	line-height: 133.333%;
+	color: #222222;
 }
 
 .approach-panels-grid {
@@ -870,6 +899,7 @@ Client Logo Style Start
 
 .site-btn.btn-accent.clients-logos-button {
 	margin-top: 3.4375rem;
+	padding: 1.1875rem 1.25rem;
 }
 @media only screen and (max-width: 1199px) {
   .clients-logos-grid {
@@ -938,7 +968,8 @@ Commitment Style Start
 }
 
 .commitment-panel-intro-label {
-  margin-top: 4.375rem;
+	margin-top: 4.375rem;
+	font-weight: 700;
 }
 
 .commitment-panel-bullets {
@@ -954,7 +985,8 @@ Commitment Style Start
 }
 
 .commitment-panel-statement {
-  margin-top: 2.5rem;
+	margin-top: 2.5rem;
+	font-weight: 700;
 }
 @media only screen and (max-width: 991px) {
   .commitment-panel-card {
@@ -1052,9 +1084,18 @@ Contat Cta Style Start
   margin-top: 1.875rem;
 }
 
-.contact-cta-card .site-btn {
-  margin-top: 3.125rem;
+.contact-cta-card .contact-cta-button {
+	margin-top: 3.125rem;
+	padding: 1.1875rem 2.0625rem;
+	background: var(--epaton-cyan);
+	color: var(--epaton-navy);
+	transition: all .3s ease;
 }
+
+.contact-cta-card .contact-cta-button:hover {
+	background: #fff;
+}
+
 @media only screen and (max-width: 991px) {
   .contact-cta-body br {
 	  display: none;
@@ -1195,6 +1236,10 @@ Service Card Style Start
   line-height: normal;
 }
 
+.service-card-title a {
+	font-weight: 700;
+}
+
 .service-card-image img {
 	height: 100%;
   width: 100%;
@@ -1208,6 +1253,10 @@ Service Card Style Start
 .service-card.theme-light .service-card-btn {
 	color: var(--epaton-white);
 	background-color: var(--epaton-navy);
+}
+
+.service-card-content .site-btn {
+	padding: 1.1875rem 2.3125rem;
 }
 
 .service-card.theme-blue .service-card-btn {
@@ -1317,7 +1366,8 @@ Media Content 5050 Style Start
 }
 
 .mc5050-body.wysiwyg-content {
-  margin-top: 2.5rem;
+	margin-top: 2.5rem;
+	color: #333333;
 }
 
 @media only screen and (max-width:991px) {
