@@ -588,6 +588,26 @@
                             "selected": 0
                         },
                         {
+                            "key": "field_inner_hero_eyebrow",
+                            "label": "Eyebrow",
+                            "name": "inner_hero_eyebrow",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "Small label displayed above the title. Typically uppercase.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
                             "key": "field_inner_hero_title",
                             "label": "Title",
                             "name": "inner_hero_title",
@@ -1417,6 +1437,26 @@
                     "display": "block",
                     "sub_fields": [
                         {
+                            "key": "field_core_areas_eyebrow",
+                            "label": "Eyebrow",
+                            "name": "core_areas_eyebrow",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "Small label displayed above the heading. Typically uppercase.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "What We Do",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
                             "key": "field_core_areas_heading",
                             "label": "Heading",
                             "name": "core_areas_heading",
@@ -1972,14 +2012,42 @@
                     "display": "block",
                     "sub_fields": [
                         {
+                            "key": "field_contact_cta_use_global",
+                            "label": "Content Source",
+                            "name": "contact_cta_use_global",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "By default, this section pulls its content from the global <strong>Site Settings > Contact CTA<\/strong> tab. Turn this OFF only if you want to enter custom content for this specific page.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "Use global content from Site Settings",
+                            "default_value": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "ui": 1
+                        },
+                        {
                             "key": "field_contact_cta_title",
                             "label": "Title",
                             "name": "contact_cta_title",
                             "aria-label": "",
                             "type": "text",
-                            "instructions": "CTA heading.",
+                            "instructions": "CTA heading. Only used when \"Content Source\" is set to override the global content.",
                             "required": 0,
-                            "conditional_logic": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_contact_cta_use_global",
+                                        "operator": "!=",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
                             "wrapper": {
                                 "width": "",
                                 "class": "",
@@ -1997,9 +2065,17 @@
                             "name": "contact_cta_body",
                             "aria-label": "",
                             "type": "textarea",
-                            "instructions": "Supporting copy. Line breaks are supported.",
+                            "instructions": "Supporting copy. Line breaks are supported. Only used when \"Content Source\" is set to override the global content.",
                             "required": 0,
-                            "conditional_logic": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_contact_cta_use_global",
+                                        "operator": "!=",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
                             "wrapper": {
                                 "width": "",
                                 "class": "",
@@ -2017,9 +2093,17 @@
                             "name": "contact_cta_button_style",
                             "aria-label": "",
                             "type": "button_group",
-                            "instructions": "Choose the CTA button presentation.",
+                            "instructions": "Choose the CTA button presentation. Only used when overriding the global content.",
                             "required": 0,
-                            "conditional_logic": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_contact_cta_use_global",
+                                        "operator": "!=",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
                             "wrapper": {
                                 "width": "",
                                 "class": "",
@@ -2040,9 +2124,17 @@
                             "name": "contact_cta_button",
                             "aria-label": "",
                             "type": "link",
-                            "instructions": "Call-to-action button.",
+                            "instructions": "Call-to-action button. Only used when overriding the global content.",
                             "required": 0,
-                            "conditional_logic": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_contact_cta_use_global",
+                                        "operator": "!=",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
                             "wrapper": {
                                 "width": "",
                                 "class": "",
