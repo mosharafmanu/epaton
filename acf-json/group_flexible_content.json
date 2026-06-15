@@ -8,7 +8,7 @@
             "name": "cms",
             "aria-label": "",
             "type": "flexible_content",
-            "instructions": "Build your page by adding and arranging content sections below. Each section is a modular layout component that you can customize independently. Drag sections to reorder them, and use the collapse/expand controls to manage your workspace efficiently. <strong>Note:</strong> When using the Page Builder, the standard WordPress content editor is hidden and the 'Show Page Title' setting in the sidebar is ignored.",
+            "instructions": "Build your page by adding and arranging content sections below. Each section is a modular layout component that you can customize independently. Drag sections to reorder them, and use the collapse\/expand controls to manage your workspace efficiently. <strong>Note:<\/strong> When using the Page Builder, the standard WordPress content editor is hidden and the 'Show Page Title' setting in the sidebar is ignored.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -263,7 +263,7 @@
                                         "self_host": "Self-Hosted (WordPress Media)",
                                         "youtube": "YouTube",
                                         "vimeo": "Vimeo",
-                                        "cdn": "CDN/External URL"
+                                        "cdn": "CDN\/External URL"
                                     },
                                     "default_value": "self_host",
                                     "return_format": "value",
@@ -359,7 +359,7 @@
                                         "id": ""
                                     },
                                     "default_value": "",
-                                    "placeholder": "https://www.youtube.com/watch?v=..."
+                                    "placeholder": "https:\/\/www.youtube.com\/watch?v=..."
                                 },
                                 {
                                     "key": "field_hero_video_vimeo_url",
@@ -384,7 +384,7 @@
                                         "id": ""
                                     },
                                     "default_value": "",
-                                    "placeholder": "https://player.vimeo.com/..."
+                                    "placeholder": "https:\/\/player.vimeo.com\/..."
                                 },
                                 {
                                     "key": "field_hero_video_vimeo_poster",
@@ -442,7 +442,7 @@
                                         "id": ""
                                     },
                                     "default_value": "",
-                                    "placeholder": "https://cdn.example.com/video.mp4"
+                                    "placeholder": "https:\/\/cdn.example.com\/video.mp4"
                                 },
                                 {
                                     "key": "field_hero_video_cdn_poster",
@@ -535,7 +535,7 @@
                                     "name": "controls_visibility",
                                     "aria-label": "",
                                     "type": "true_false",
-                                    "instructions": "Show custom play/pause and mute/unmute controls for the video.",
+                                    "instructions": "Show custom play\/pause and mute\/unmute controls for the video.",
                                     "required": 0,
                                     "conditional_logic": [
                                         [
@@ -586,26 +586,6 @@
                             "placement": "top",
                             "endpoint": 0,
                             "selected": 0
-                        },
-                        {
-                            "key": "field_inner_hero_eyebrow",
-                            "label": "Eyebrow",
-                            "name": "inner_hero_eyebrow",
-                            "aria-label": "",
-                            "type": "text",
-                            "instructions": "Small label displayed above the title. Typically uppercase.",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "maxlength": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": ""
                         },
                         {
                             "key": "field_inner_hero_title",
@@ -829,7 +809,7 @@
                                         "self_host": "Self-Hosted (WordPress Media)",
                                         "youtube": "YouTube",
                                         "vimeo": "Vimeo",
-                                        "cdn": "CDN/External URL"
+                                        "cdn": "CDN\/External URL"
                                     },
                                     "default_value": "self_host",
                                     "return_format": "value",
@@ -925,7 +905,7 @@
                                         "id": ""
                                     },
                                     "default_value": "",
-                                    "placeholder": "https://www.youtube.com/watch?v=..."
+                                    "placeholder": "https:\/\/www.youtube.com\/watch?v=..."
                                 },
                                 {
                                     "key": "field_inner_hero_video_vimeo_url",
@@ -950,7 +930,7 @@
                                         "id": ""
                                     },
                                     "default_value": "",
-                                    "placeholder": "https://player.vimeo.com/..."
+                                    "placeholder": "https:\/\/player.vimeo.com\/..."
                                 },
                                 {
                                     "key": "field_inner_hero_video_vimeo_poster",
@@ -1008,7 +988,7 @@
                                         "id": ""
                                     },
                                     "default_value": "",
-                                    "placeholder": "https://cdn.example.com/video.mp4"
+                                    "placeholder": "https:\/\/cdn.example.com\/video.mp4"
                                 },
                                 {
                                     "key": "field_inner_hero_video_cdn_poster",
@@ -1101,7 +1081,7 @@
                                     "name": "controls_visibility",
                                     "aria-label": "",
                                     "type": "true_false",
-                                    "instructions": "Show custom play/pause and mute/unmute controls.",
+                                    "instructions": "Show custom play\/pause and mute\/unmute controls.",
                                     "required": 0,
                                     "conditional_logic": [
                                         [
@@ -1436,26 +1416,6 @@
                     "label": "Core Areas",
                     "display": "block",
                     "sub_fields": [
-                        {
-                            "key": "field_core_areas_eyebrow",
-                            "label": "Eyebrow",
-                            "name": "core_areas_eyebrow",
-                            "aria-label": "",
-                            "type": "text",
-                            "instructions": "Small label displayed above the heading. Typically uppercase.",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "What We Do",
-                            "maxlength": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": ""
-                        },
                         {
                             "key": "field_core_areas_heading",
                             "label": "Heading",
@@ -2012,42 +1972,14 @@
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_contact_cta_use_global",
-                            "label": "Content Source",
-                            "name": "contact_cta_use_global",
-                            "aria-label": "",
-                            "type": "true_false",
-                            "instructions": "By default, this section pulls its content from the global <strong>Site Settings > Contact CTA<\/strong> tab. Turn this OFF only if you want to enter custom content for this specific page.",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "message": "Use global content from Site Settings",
-                            "default_value": 1,
-                            "ui_on_text": "",
-                            "ui_off_text": "",
-                            "ui": 1
-                        },
-                        {
                             "key": "field_contact_cta_title",
                             "label": "Title",
                             "name": "contact_cta_title",
                             "aria-label": "",
                             "type": "text",
-                            "instructions": "CTA heading. Only used when \"Content Source\" is set to override the global content.",
+                            "instructions": "CTA heading.",
                             "required": 0,
-                            "conditional_logic": [
-                                [
-                                    {
-                                        "field": "field_contact_cta_use_global",
-                                        "operator": "!=",
-                                        "value": "1"
-                                    }
-                                ]
-                            ],
+                            "conditional_logic": 0,
                             "wrapper": {
                                 "width": "",
                                 "class": "",
@@ -2065,17 +1997,9 @@
                             "name": "contact_cta_body",
                             "aria-label": "",
                             "type": "textarea",
-                            "instructions": "Supporting copy. Line breaks are supported. Only used when \"Content Source\" is set to override the global content.",
+                            "instructions": "Supporting copy. Line breaks are supported.",
                             "required": 0,
-                            "conditional_logic": [
-                                [
-                                    {
-                                        "field": "field_contact_cta_use_global",
-                                        "operator": "!=",
-                                        "value": "1"
-                                    }
-                                ]
-                            ],
+                            "conditional_logic": 0,
                             "wrapper": {
                                 "width": "",
                                 "class": "",
@@ -2093,17 +2017,9 @@
                             "name": "contact_cta_button_style",
                             "aria-label": "",
                             "type": "button_group",
-                            "instructions": "Choose the CTA button presentation. Only used when overriding the global content.",
+                            "instructions": "Choose the CTA button presentation.",
                             "required": 0,
-                            "conditional_logic": [
-                                [
-                                    {
-                                        "field": "field_contact_cta_use_global",
-                                        "operator": "!=",
-                                        "value": "1"
-                                    }
-                                ]
-                            ],
+                            "conditional_logic": 0,
                             "wrapper": {
                                 "width": "",
                                 "class": "",
@@ -2124,17 +2040,9 @@
                             "name": "contact_cta_button",
                             "aria-label": "",
                             "type": "link",
-                            "instructions": "Call-to-action button. Only used when overriding the global content.",
+                            "instructions": "Call-to-action button.",
                             "required": 0,
-                            "conditional_logic": [
-                                [
-                                    {
-                                        "field": "field_contact_cta_use_global",
-                                        "operator": "!=",
-                                        "value": "1"
-                                    }
-                                ]
-                            ],
+                            "conditional_logic": 0,
                             "wrapper": {
                                 "width": "",
                                 "class": "",
@@ -2306,7 +2214,7 @@
                             "name": "clients_logos_bullets",
                             "aria-label": "",
                             "type": "repeater",
-                            "instructions": "Audience/client type bullet list.",
+                            "instructions": "Audience\/client type bullet list.",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -2723,7 +2631,7 @@
                 "layout_media_content_5050": {
                     "key": "layout_media_content_5050",
                     "name": "media_content_5050",
-                    "label": "Media Content 50/50",
+                    "label": "Media Content 50\/50",
                     "display": "block",
                     "sub_fields": [
                         {
@@ -2945,7 +2853,9 @@
                                     "key": "field_mc5050_video_source",
                                     "label": "Video Source",
                                     "name": "video_source",
+                                    "aria-label": "",
                                     "type": "select",
+                                    "instructions": "",
                                     "required": 0,
                                     "conditional_logic": 0,
                                     "wrapper": {
@@ -2957,7 +2867,7 @@
                                         "self_host": "Self-Hosted (WordPress Media)",
                                         "youtube": "YouTube",
                                         "vimeo": "Vimeo",
-                                        "cdn": "CDN/External URL"
+                                        "cdn": "CDN\/External URL"
                                     },
                                     "default_value": "self_host",
                                     "return_format": "value",
@@ -2973,6 +2883,7 @@
                                     "key": "field_mc5050_video_self_host_file",
                                     "label": "Video File",
                                     "name": "video_self_host_file",
+                                    "aria-label": "",
                                     "type": "file",
                                     "instructions": "Upload MP4 video file.",
                                     "required": 0,
@@ -3000,6 +2911,7 @@
                                     "key": "field_mc5050_video_self_host_poster",
                                     "label": "Poster Image",
                                     "name": "video_self_host_poster",
+                                    "aria-label": "",
                                     "type": "image",
                                     "instructions": "Thumbnail shown before video plays.",
                                     "required": 0,
@@ -3032,7 +2944,9 @@
                                     "key": "field_mc5050_video_youtube_url",
                                     "label": "YouTube URL",
                                     "name": "video_youtube_url",
+                                    "aria-label": "",
                                     "type": "url",
+                                    "instructions": "",
                                     "required": 0,
                                     "conditional_logic": [
                                         [
@@ -3049,13 +2963,15 @@
                                         "id": ""
                                     },
                                     "default_value": "",
-                                    "placeholder": "https://www.youtube.com/watch?v=..."
+                                    "placeholder": "https:\/\/www.youtube.com\/watch?v=..."
                                 },
                                 {
                                     "key": "field_mc5050_video_vimeo_url",
                                     "label": "Vimeo URL",
                                     "name": "video_vimeo_url",
+                                    "aria-label": "",
                                     "type": "url",
+                                    "instructions": "",
                                     "required": 0,
                                     "conditional_logic": [
                                         [
@@ -3072,13 +2988,15 @@
                                         "id": ""
                                     },
                                     "default_value": "",
-                                    "placeholder": "https://player.vimeo.com/..."
+                                    "placeholder": "https:\/\/player.vimeo.com\/..."
                                 },
                                 {
                                     "key": "field_mc5050_video_vimeo_poster",
                                     "label": "Vimeo Poster",
                                     "name": "video_vimeo_poster",
+                                    "aria-label": "",
                                     "type": "image",
+                                    "instructions": "",
                                     "required": 0,
                                     "conditional_logic": [
                                         [
@@ -3109,7 +3027,9 @@
                                     "key": "field_mc5050_video_cdn_url",
                                     "label": "CDN Video URL",
                                     "name": "video_cdn_url",
+                                    "aria-label": "",
                                     "type": "url",
+                                    "instructions": "",
                                     "required": 0,
                                     "conditional_logic": [
                                         [
@@ -3126,13 +3046,15 @@
                                         "id": ""
                                     },
                                     "default_value": "",
-                                    "placeholder": "https://cdn.example.com/video.mp4"
+                                    "placeholder": "https:\/\/cdn.example.com\/video.mp4"
                                 },
                                 {
                                     "key": "field_mc5050_video_cdn_poster",
                                     "label": "CDN Poster",
                                     "name": "video_cdn_poster",
+                                    "aria-label": "",
                                     "type": "image",
+                                    "instructions": "",
                                     "required": 0,
                                     "conditional_logic": [
                                         [
@@ -3163,7 +3085,9 @@
                                     "key": "field_mc5050_video_behavior",
                                     "label": "Video Behavior",
                                     "name": "video_behavior",
+                                    "aria-label": "",
                                     "type": "button_group",
+                                    "instructions": "",
                                     "required": 0,
                                     "conditional_logic": 0,
                                     "wrapper": {
@@ -3185,7 +3109,9 @@
                                     "key": "field_mc5050_video_autoplay_on_scroll",
                                     "label": "Autoplay on Scroll",
                                     "name": "autoplay_on_scroll",
+                                    "aria-label": "",
                                     "type": "true_false",
+                                    "instructions": "",
                                     "required": 0,
                                     "conditional_logic": [
                                         [
@@ -3211,7 +3137,9 @@
                                     "key": "field_mc5050_video_controls_visibility",
                                     "label": "Show Video Controls",
                                     "name": "controls_visibility",
+                                    "aria-label": "",
                                     "type": "true_false",
+                                    "instructions": "",
                                     "required": 0,
                                     "conditional_logic": [
                                         [
@@ -3259,6 +3187,20 @@
                 "operator": "==",
                 "value": "post"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "service"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "product"
+            }
         ]
     ],
     "menu_order": 0,
@@ -3273,6 +3215,5 @@
     "display_title": "",
     "allow_ai_access": false,
     "ai_description": "",
-    "modified": 1780658298,
-    "local_file": "/Applications/AMPPS/www/ClientProjects/WordPress/2026/epaton/wp-content/themes/epaton/acf-json/group_flexible_content.json"
+    "modified": 1781527659
 }
