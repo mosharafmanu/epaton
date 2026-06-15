@@ -639,6 +639,9 @@ Featured Service Style Start
   .featured-services-intro-body {
  	  margin-top: 1.25rem;
   }
+  .featured-services-intro-card-title {
+    font-size: 1.5em;
+  }
   .site-btn.primary-gradient.featured-services-intro-button {
 	  margin-top: 2rem;
   }
@@ -1107,6 +1110,9 @@ Contat Cta Style Start
 @media only screen and (max-width: 767px) {
   .contact-cta-card {
   	padding: 3rem 2.5rem;
+  }
+  .contact-cta-card .contact-cta-button {
+    padding: 1.1875rem .75rem;
   }
 }
 /*
@@ -1655,18 +1661,20 @@ Contact Style Start
 }
 @media only screen and (max-width: 767px) {
    .contact-panel-section {
-   margin-top: 9.25rem;
+    margin-top: 9.25rem;
   }
   .contact-panel-section-title {
 	 font-size: 1.75rem;
   }
   .contact-panel {
-   padding: 2rem;
- }
+    padding: 2rem;
+  }
  .contact-panel-grid {
-  grid-template-columns: 1fr;
-	row-gap: 1rem;
- }
+    grid-template-columns: 1fr;
+    row-gap: 1rem;
+    margin-top: 2rem;
+  }
+
 
 }
 /*
