@@ -155,6 +155,17 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
 	transform: rotate(180deg);
 }
 
+@media screen and (max-width: 1199px) {
+	.site-navigation > ul {
+		gap: 1.5rem;
+	}
+
+	.site-btn {
+		padding: .875rem 1rem;
+	}
+
+}
+
 /* -----------------------------------------------
    Hamburger Button (hidden on desktop by default)
 ----------------------------------------------- */
@@ -1253,10 +1264,6 @@ Contat Cta Style Start
 .contact-cta-card .contact-cta-button {
 	margin-top: 3.125rem;
 	padding: 1.1875rem 2.0625rem;
-	transition: background-color .3s ease, color .3s ease;
-}
-
-.contact-cta-card .contact-cta-button-cyan {
 	background: var(--epaton-cyan);
 	color: var(--epaton-navy);
 }
@@ -1312,6 +1319,13 @@ Product Card Style Start
 
 .product-card-content {
 	padding: 3.125rem 5rem;
+}
+
+.product-card-image {
+	width: 100%;
+	height: 100%;
+	max-width: 29.25rem;
+	max-height: 30rem;
 }
 
 .products-list {
@@ -1406,6 +1420,12 @@ Service Card Style Start
 
 .service-card-content {
 	padding: 3.125rem 5rem;
+}
+.service-card-image {
+	width: 100%;
+	height: 100%;
+	max-width: 29.25rem;
+	max-height: 30rem;
 }
 
 .services-list {
@@ -1527,8 +1547,12 @@ Media Content 5050 Style Start
 	margin-top: 2.6875rem;
 }
 
-.mc5050-media{
+.mc5050-media {
 	grid-area: media;
+	width: 100%;
+	max-width: 37.125rem;
+	height: 100%;
+	max-height: 30rem;
 }
 
 .media-content-5050-row.media-right {
@@ -1665,6 +1689,10 @@ Blog Grid Style Start
 
 .blog-card-image-wrap {
 	position: relative;
+	width: 100%;
+	max-width: 22.875rem;
+	height: 100%;
+	max-height: 11.25rem;
 }
 
 .blog-card-label {
@@ -1798,7 +1826,7 @@ Contact Style Start
 .contact-panel-info {
 	display: flex;
 	flex-direction: column;
-	row-gap: 2.3125rem;
+	row-gap: 1.5rem;
 }
 
 .contact-panel-info-link {
@@ -1819,8 +1847,9 @@ Contact Style Start
 }
 
 .contact-panel-info {
-	margin-top: 2.1875rem;
+	margin-top: 0.5rem;
 }
+
 @media only screen and (max-width: 991px) {
 	.contact-panel-section {
 		margin-top: 3rem;
@@ -1844,7 +1873,7 @@ Contact Style Start
 		font-size: 1.75rem;
 	}
 	.contact-panel {
-		padding: 2rem;
+		padding: 2.5rem;
 	}
 	.contact-panel-grid {
 		grid-template-columns: 1fr;
@@ -2016,7 +2045,7 @@ Footer Style Start
 }
 @media only screen and (max-width: 767px) {
 	.site-footer {
-		margin-top: 80px;
+		margin-top: 3.125rem;
 	}
 	.site-footer-main {
 		grid-template-columns: 1fr;
