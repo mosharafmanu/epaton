@@ -1,8 +1,8 @@
 # Epaton — Session Handoff
 
 **Date:** 2026-06-15
-**Latest implementation commit:** `c909842`
-**Branch:** `main` (pending push at handoff update time)
+**Latest implementation commit:** `e43ff64`
+**Branch:** `main` synced with `origin/main`
 **Remote:** `https://github.com/mosharafmanu/epaton.git`
 
 ### Branch Merge State
@@ -17,6 +17,9 @@
   - `inner_hero_eyebrow`
   - `core_areas_eyebrow`
   - `contact_cta_use_global` and its conditional override fields
+- Flexible Content ACF JSON timestamp was bumped in `e43ff64` to `1781529243` (`2026-06-15 13:14:03 UTC`).
+- This timestamp update is intended to make **ACF > Field Groups > Sync available** appear for `group_flexible_content`.
+- If the sync option is still not visible, reload the ACF Field Groups screen and confirm the server has commit `e43ff64` or later.
 
 ---
 
