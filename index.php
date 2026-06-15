@@ -73,6 +73,12 @@ $blog_description = $blog_description ?: __( 'Want to keep learning? Explore our
 
 		</section>
 
+		<?php
+		if ( function_exists( 'epaton_render_global_contact_cta' ) ) {
+			epaton_render_global_contact_cta();
+		}
+		?>
+
 	</main><!-- #main -->
 
 <?php

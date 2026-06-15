@@ -19,19 +19,21 @@ if ( $is_args_mode ) {
 	$default_title = $args['default_title'] ?? '';
 	$source_id     = 'options' === $context ? 'options' : get_the_ID();
 
-	$title      = get_field( $prefix . 'title', $source_id ) ?: $default_title;
+	$eyebrow     = get_field( $prefix . 'eyebrow', $source_id );
+	$title       = get_field( $prefix . 'title', $source_id ) ?: $default_title;
 	$description = get_field( $prefix . 'description', $source_id );
-	$buttons    = get_field( $prefix . 'buttons', $source_id );
-	$media_type = get_field( $prefix . 'media_type', $source_id ) ?: 'image';
-	$bg_image   = get_field( $prefix . 'image', $source_id );
-	$bg_video   = get_field( $prefix . 'video', $source_id );
+	$buttons     = get_field( $prefix . 'buttons', $source_id );
+	$media_type  = get_field( $prefix . 'media_type', $source_id ) ?: 'image';
+	$bg_image    = get_field( $prefix . 'image', $source_id );
+	$bg_video    = get_field( $prefix . 'video', $source_id );
 } else {
-	$title      = get_sub_field( 'inner_hero_title' );
+	$eyebrow     = get_sub_field( 'inner_hero_eyebrow' );
+	$title       = get_sub_field( 'inner_hero_title' );
 	$description = get_sub_field( 'inner_hero_description' );
-	$buttons    = get_sub_field( 'inner_hero_buttons' );
-	$media_type = get_sub_field( 'inner_hero_media_type' ) ?: 'image';
-	$bg_image   = get_sub_field( 'inner_hero_image' );
-	$bg_video   = get_sub_field( 'inner_hero_video' );
+	$buttons     = get_sub_field( 'inner_hero_buttons' );
+	$media_type  = get_sub_field( 'inner_hero_media_type' ) ?: 'image';
+	$bg_image    = get_sub_field( 'inner_hero_image' );
+	$bg_video    = get_sub_field( 'inner_hero_video' );
 }
 
 $has_video = ( 'video' === $media_type && $bg_video );
@@ -97,6 +99,10 @@ if ( $has_video ) {
 			<?php endif; ?>
 
 			<div class="inner-hero-content">
+
+				<?php if ( $eyebrow ) : ?>
+					<p class="inner-hero-eyebrow"><?php echo esc_html( $eyebrow ); ?></p>
+				<?php endif; ?>
 
 				<?php if ( $title ) : ?>
 					<h1 class="inner-hero-title"><?php echo wp_kses( $title, [ 'br' => [] ] ); ?></h1>

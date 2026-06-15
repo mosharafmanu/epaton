@@ -12,8 +12,11 @@ jQuery(document).ready(function($) {
 	function updateHeaderOffset() {
 		const header = $('.site-header');
 		if (header.length) {
+			const isStatic = header.hasClass('is-static');
 			const headerHeight = header.outerHeight();
-			document.documentElement.style.setProperty('--header-offset', headerHeight + 'px');
+			const isMobile = $(window).width() <= 767;
+			const topGap = isStatic ? 0 : (isMobile ? 30 : 60);
+			document.documentElement.style.setProperty('--header-offset', (headerHeight + topGap) + 'px');
 		}
 	}
 

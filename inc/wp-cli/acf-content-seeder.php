@@ -565,9 +565,10 @@ class Epaton_ACF_Content_Seeder {
 		}
 
 		$core_areas_layout = [
-			'acf_fc_layout'      => 'core_areas',
-			'core_areas_heading' => 'We specialise in three core areas:',
-			'core_areas_items'   => $this->get_core_areas_seed_data(),
+			'acf_fc_layout'        => 'core_areas',
+			'core_areas_eyebrow'   => 'What We Do',
+			'core_areas_heading'   => 'We specialise in three core areas:',
+			'core_areas_items'     => $this->get_core_areas_seed_data(),
 		];
 
 		$layouts = $this->upsert_flexible_layout( $layouts, 'core_areas', $core_areas_layout );
@@ -761,6 +762,7 @@ class Epaton_ACF_Content_Seeder {
 
 		$contact_cta_layout = [
 			'acf_fc_layout'            => 'contact_cta',
+			'contact_cta_use_global'   => 1,
 			'contact_cta_title'        => 'Let\'s Talk',
 			'contact_cta_body'         => "Whether you are reviewing your current platform, planning a major transformation,\nor looking to reduce cost and risk, we'd welcome the opportunity to help.",
 			'contact_cta_button_style' => 'cyan',
@@ -992,6 +994,7 @@ class Epaton_ACF_Content_Seeder {
 			// 1. Inner Hero
 			[
 				'acf_fc_layout'          => 'inner_hero',
+				'inner_hero_eyebrow'     => 'WHO WE ARE',
 				'inner_hero_title'       => 'WE ARE A VENDOR INDEPENDENT SPECIALIST IN NEXT-GENERATION STORAGE & BACKUP TECHNOLOGIES.',
 				'inner_hero_description' => '',
 				'inner_hero_buttons'     => [],
@@ -1055,6 +1058,7 @@ class Epaton_ACF_Content_Seeder {
 			// 6. Contact CTA
 			[
 				'acf_fc_layout'            => 'contact_cta',
+				'contact_cta_use_global'   => 1,
 				'contact_cta_title'        => "Let's Talk",
 				'contact_cta_body'         => "Whether you are reviewing your current platform, planning a major transformation,\nor looking to reduce cost and risk, we'd welcome the opportunity to help.",
 				'contact_cta_button_style' => 'cyan',
@@ -1121,6 +1125,7 @@ class Epaton_ACF_Content_Seeder {
 
 		$inner_hero_layout = [
 			'acf_fc_layout'          => 'inner_hero',
+			'inner_hero_eyebrow'     => 'OUR PRODUCTS',
 			'inner_hero_title'       => 'STORAGE, BACKUP, RECOVERY AND SOFTWARE DEFINED SOLUTIONS',
 			'inner_hero_description' => 'A vendor independent specialist in Next Generation Storage, Backup, Recovery and Software Defined Solutions',
 			'inner_hero_buttons'     => [
@@ -1201,6 +1206,7 @@ class Epaton_ACF_Content_Seeder {
 
 		$inner_hero_layout = [
 			'acf_fc_layout'          => 'inner_hero',
+			'inner_hero_eyebrow'     => 'OUR PARTNERS',
 			'inner_hero_title'       => 'OUR PARTNERS',
 			'inner_hero_description' => 'We build strong, long-lasting relationships with our partners.',
 			'inner_hero_buttons'     => [],

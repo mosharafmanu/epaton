@@ -8,7 +8,7 @@
  */
 
 if (!defined('_S_VERSION')) {
-    define('_S_VERSION', '1.0.0');
+    define('_S_VERSION', '1.0.1');
 }
 
 /**
@@ -166,10 +166,6 @@ function epaton_scripts() {
 
 	wp_enqueue_style('epaton-theme-style', get_template_directory_uri() . '/assets/css/epaton-theme-style.css', array(), _S_VERSION);
 
-    wp_enqueue_style('epaton-imran', get_template_directory_uri() . '/imran.css', array(), _S_VERSION);
-
-    wp_enqueue_style('epaton-faisal', get_template_directory_uri() . '/faisal.css', array(), _S_VERSION);
-
     // Main stylesheet
     wp_enqueue_style('epaton-style', get_stylesheet_uri(), array(), _S_VERSION);
     wp_style_add_data('epaton-style', 'rtl', 'replace');
@@ -290,6 +286,17 @@ require get_template_directory() . '/inc/image-sizes.php';
 require get_template_directory() . '/inc/helper-functions/breadcrumb.php';
 require get_template_directory() . '/inc/helper-functions/button-renderer.php';
 require get_template_directory() . '/inc/helper-functions/flexible-content.php';
+
+// Dynamic body classes for header positioning
+add_filter( 'body_class', function ( $classes ) {
+	if ( function_exists( 'epaton_has_hero_first_section' ) && epaton_has_hero_first_section() ) {
+		$classes[] = 'has-hero-section';
+	} else {
+		$classes[] = 'has-static-header';
+	}
+	return $classes;
+} );
+
 require get_template_directory() . '/inc/helper-functions/icon-renderer.php';
 require get_template_directory() . '/inc/helper-functions/pagination.php';
 require get_template_directory() . '/inc/helper-functions/responsive-picture.php';

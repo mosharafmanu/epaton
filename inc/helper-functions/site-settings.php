@@ -231,3 +231,75 @@ if ( ! function_exists( 'epaton_get_footer_credit_text' ) ) {
 		return epaton_get_option_field( 'footer_credit_text', 'Website by' );
 	}
 }
+
+if ( ! function_exists( 'epaton_get_global_contact_cta' ) ) {
+	/**
+	 * Get the global Contact CTA content from Site Settings.
+	 *
+	 * Returns an associative array with title, body, button_style, and button keys.
+	 * All values fall back to sensible defaults when nothing is configured.
+	 *
+	 * @return array{title: string, body: string, button_style: string, button: array|false}
+	 */
+	function epaton_get_global_contact_cta() {
+		return [
+			'title'        => epaton_get_option_field( 'global_contact_cta_title', "Let's Talk" ),
+			'body'         => epaton_get_option_field( 'global_contact_cta_body', "Whether you are reviewing your current platform, planning a major transformation,\nor looking to reduce cost and risk, we'd welcome the opportunity to help." ),
+			'button_style' => epaton_get_option_field( 'global_contact_cta_button_style', 'cyan' ),
+			'button'       => epaton_get_option_field(
+				'global_contact_cta_button',
+				[
+					'title'  => 'Speak to our team today to start the conversation.',
+					'url'    => home_url( '/contact/' ),
+					'target' => '',
+				]
+			),
+		];
+	}
+}
+
+if ( ! function_exists( 'epaton_render_global_contact_cta' ) ) {
+	/**
+	 * Render the global Contact CTA section.
+	 *
+	 * Outputs the full contact CTA HTML using data from Site Settings.
+	 * Returns early if no title or body is configured.
+	 *
+	 * @return void
+	 */
+	function epaton_render_global_contact_cta() {
+		$cta = epaton_get_global_contact_cta();
+
+		if ( empty( $cta['title'] ) && empty( $cta['body'] ) ) {
+			return;
+		}
+		?>
+		<section class="contact-cta-section layout-padding pt-60 pt-lg-200">
+			<div class="epaton-container">
+				<div class="contact-cta-card">
+					<?php if ( $cta['title'] ) : ?>
+						<h2 class="contact-cta-title"><?php echo esc_html( $cta['title'] ); ?></h2>
+					<?php endif; ?>
+
+					<?php if ( $cta['body'] ) : ?>
+						<div class="contact-cta-body"><?php echo wp_kses( $cta['body'], [ 'br' => [] ] ); ?></div>
+					<?php endif; ?>
+
+					<?php
+					if ( ! empty( $cta['button'] ) && function_exists( 'epaton_render_button' ) ) :
+						epaton_render_button(
+							$cta['button'],
+							[
+								'style'     => 'btn-primary',
+								'show_icon' => false,
+								'class'     => 'contact-cta-button contact-cta-button-' . $cta['button_style'],
+							]
+						);
+					endif;
+					?>
+				</div>
+			</div>
+		</section>
+		<?php
+	}
+}

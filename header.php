@@ -25,8 +25,12 @@
 
 <div id="page" class="site">
 
+<?php
+$has_hero = function_exists( 'epaton_has_hero_first_section' ) && epaton_has_hero_first_section();
+$header_class = $has_hero ? 'site-header' : 'site-header is-static';
+?>
 
-<header class="site-header">
+<header class="<?php echo esc_attr( $header_class ); ?>">
 	<div class="site-header-inner layout-padding">
 		<div class="site-header-bar">
 			<?php epaton_render_site_logo(); ?>

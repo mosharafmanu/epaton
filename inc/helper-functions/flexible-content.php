@@ -159,15 +159,8 @@ if ( ! function_exists( 'epaton_has_hero_first_section' ) ) {
 	 * @return bool True if first section is hero_section or inner_hero
 	 */
 	function epaton_has_hero_first_section( $field_name = 'cms', $post_id = null ) {
-		// Check if it's the blog page (which uses inner_hero from options)
-		if ( is_home() ) {
-			return true;
-		}
-
-		// Check flexible content for other pages
 		$first_layout = epaton_get_first_flexible_layout( $field_name, $post_id );
 
-		// Check if first layout is hero_section or inner_hero
 		return in_array( $first_layout, [ 'hero_section', 'inner_hero' ], true );
 	}
 }

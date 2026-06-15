@@ -53,21 +53,32 @@
             closeMenu(false);
         });
 
-        // Handle submenu toggle for mobile menu - clicking on parent link with submenu
-        $('.mobile-menu .menu-item-has-children > a').on('click', function(e) {
+        // Inject submenu toggle buttons into parent items
+        $('.mobile-menu .menu-item-has-children > a').each(function() {
+            var $link = $(this);
+            if (!$link.siblings('.submenu-toggle').length) {
+                $link.after('<button type="button" class="submenu-toggle" aria-label="Toggle submenu"><span></span></button>');
+            }
+        });
+
+        // Handle submenu toggle - click on toggle button
+        $('.mobile-menu').on('click', '.submenu-toggle', function(e) {
             e.preventDefault();
             e.stopPropagation();
 
-            var $parentLi = $(this).parent();
-            var $submenu = $parentLi.find('> .sub-menu');
+            var $btn = $(this);
+            var $parentLi = $btn.closest('.menu-item-has-children');
+            var $submenu = $parentLi.children('.sub-menu');
 
-            // Toggle current submenu
             $parentLi.toggleClass('submenu-open');
             $submenu.slideToggle(300);
 
-            // Close other submenus at the same level
-            $parentLi.siblings('.menu-item-has-children').removeClass('submenu-open')
-                .find('> .sub-menu').slideUp(300);
+            // Close sibling submenus
+            $parentLi.siblings('.menu-item-has-children').each(function() {
+                var $sibling = $(this);
+                $sibling.removeClass('submenu-open');
+                $sibling.children('.sub-menu').slideUp(300);
+            });
         });
 
         // Close menu on ESC key press

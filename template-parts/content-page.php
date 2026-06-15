@@ -7,7 +7,7 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class( 'layout-padding pt-50 pt-md-70 pt-lg-100' ); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'layout-padding pt-30 pt-md-50 pt-lg-80' ); ?>>
 
 	<header class="entry-header">
 		<?php the_title( '<h1 class="entry-title h2-style mb-15 mb-md-30">', '</h1>' ); ?>

@@ -331,6 +331,103 @@
             "placeholder": "",
             "prepend": "",
             "append": ""
+        },
+        {
+            "key": "field_global_contact_cta_tab",
+            "label": "Contact CTA",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_global_contact_cta_title",
+            "label": "Title",
+            "name": "global_contact_cta_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Default heading for the Contact CTA section. Used globally across the site when pages have not overridden the content.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Let's Talk",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_global_contact_cta_body",
+            "label": "Body",
+            "name": "global_contact_cta_body",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Default supporting copy for the Contact CTA section. Line breaks are supported. Used globally unless overridden on a specific page.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Whether you are reviewing your current platform, planning a major transformation,\nor looking to reduce cost and risk, we'd welcome the opportunity to help.",
+            "maxlength": "",
+            "rows": 3,
+            "placeholder": "",
+            "new_lines": "br"
+        },
+        {
+            "key": "field_global_contact_cta_button_style",
+            "label": "Button Style",
+            "name": "global_contact_cta_button_style",
+            "aria-label": "",
+            "type": "button_group",
+            "instructions": "Choose the default button presentation for the global Contact CTA.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "cyan": "Cyan",
+                "blue": "Blue"
+            },
+            "default_value": "cyan",
+            "return_format": "value",
+            "allow_null": 0,
+            "layout": "horizontal"
+        },
+        {
+            "key": "field_global_contact_cta_button",
+            "label": "Button",
+            "name": "global_contact_cta_button",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "Default call-to-action button for the global Contact CTA section.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
         }
     ],
     "location": [

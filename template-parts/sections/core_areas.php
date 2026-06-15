@@ -5,16 +5,21 @@
  * @package epaton
  */
 
+$eyebrow = get_sub_field('core_areas_eyebrow');
 $heading = get_sub_field('core_areas_heading');
 $items = get_sub_field('core_areas_items');
 
-if (empty($heading) && empty($items)) {
+if (empty($eyebrow) && empty($heading) && empty($items)) {
     return;
 }
 ?>
 
 <section class="core-areas-section layout-padding mt-50 mt-lg-70 pt-50 pb-70 pt-lg-130 pb-lg-180">
 		<div class="epaton-container">
+			<?php if ($eyebrow): ?>
+				<p class="core-areas-eyebrow"><?php echo esc_html($eyebrow); ?></p>
+			<?php endif; ?>
+
 			<?php if ($heading): ?>
 				<h2 class="core-areas-heading"><?php echo esc_html($heading); ?></h2>
 			<?php endif; ?>

@@ -15,7 +15,7 @@ $search_query = get_search_query();
 <main id="primary" class="site-main">
 
 	<!-- Search Results Header -->
-	<section class="search-results-header layout-padding pt-50 pb-30 pt-md-70">
+	<section class="search-results-header layout-padding pt-30 pb-30 pt-md-50 pt-lg-80">
 		<div class="search-results-header-inner">
 			<h1 class="search-results-title">
 				<?php
@@ -69,7 +69,7 @@ $search_query = get_search_query();
 	<?php else : ?>
 
 		<!-- No Results -->
-		<section class="search-no-results layout-padding pt-70 pt-lg-100">
+		<section class="search-no-results layout-padding pt-30 pt-md-50 pt-lg-80">
 			<div class="no-results-content">
 				<h2 class="no-results-title"><?php esc_html_e( 'No Results Found', 'epaton' ); ?></h2>
 				<p class="no-results-text">
