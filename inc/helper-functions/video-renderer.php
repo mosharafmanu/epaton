@@ -300,7 +300,7 @@ if ( ! function_exists( 'epaton_render_youtube_video' ) ) {
 		// For onclick-popup, show thumbnail with play overlay
 		if ( 'onclick-popup' === $args['behavior'] ) {
 			$thumbnail_url = 'https://img.youtube.com/vi/' . $video_id . '/maxresdefault.jpg';
-			$html = '<img src="' . esc_url( $thumbnail_url ) . '" alt="' . esc_attr__( 'Video Thumbnail', 'epaton' ) . '" ';
+			$html = '<img src="' . esc_url( $thumbnail_url ) . '" alt="' . esc_attr__( 'Video Thumbnail', 'epaton' ) . '" width="1280" height="720" loading="lazy" decoding="async" ';
 			$html .= 'data-youtube-id="' . esc_attr( $video_id ) . '" ';
 			if ( $args['class'] ) {
 				$html .= 'class="' . esc_attr( $args['class'] ) . '" ';
@@ -332,10 +332,10 @@ if ( ! function_exists( 'epaton_render_youtube_video' ) ) {
 		}
 
 		$html = '<iframe ';
-		$html .= 'width="' . esc_attr( $args['width'] ) . '" ';
-		$html .= 'height="' . esc_attr( $args['height'] ) . '" ';
+		$html .= 'width="1280" height="720" ';
 		$html .= 'src="' . esc_url( $embed_url ) . '" ';
-		$html .= 'frameborder="0" ';
+		$html .= 'title="' . esc_attr__( 'Embedded video', 'epaton' ) . '" ';
+		$html .= 'loading="lazy" referrerpolicy="strict-origin-when-cross-origin" ';
 		$html .= 'allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" ';
 		$html .= 'allowfullscreen>';
 		$html .= '</iframe>';
@@ -575,5 +575,4 @@ if ( ! function_exists( 'epaton_render_cdn_video' ) ) {
 		return $html;
 	}
 }
-
 

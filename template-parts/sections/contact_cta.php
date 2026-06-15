@@ -44,10 +44,12 @@ if (empty($title) && empty($body) && empty($button)) {
 
 				<?php
 if ($button && function_exists('epaton_render_button')) {
+	$button_class = 'cyan' === $button_style ? 'btn-accent' : 'btn-primary';
+
 	epaton_render_button(
 		$button,
 		[
-			'style'     => 'btn-primary',
+			'style'     => $button_class,
 			'show_icon' => false,
 			'class'     => 'contact-cta-button contact-cta-button-' . $button_style,
 		]

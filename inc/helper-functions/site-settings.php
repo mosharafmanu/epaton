@@ -269,6 +269,8 @@ if ( ! function_exists( 'epaton_render_global_contact_cta' ) ) {
 	 */
 	function epaton_render_global_contact_cta() {
 		$cta = epaton_get_global_contact_cta();
+		$button_style = in_array( $cta['button_style'], [ 'cyan', 'blue' ], true ) ? $cta['button_style'] : 'cyan';
+		$button_class = 'cyan' === $button_style ? 'btn-accent' : 'btn-primary';
 
 		if ( empty( $cta['title'] ) && empty( $cta['body'] ) ) {
 			return;
@@ -290,9 +292,9 @@ if ( ! function_exists( 'epaton_render_global_contact_cta' ) ) {
 						epaton_render_button(
 							$cta['button'],
 							[
-								'style'     => 'btn-primary',
+								'style'     => $button_class,
 								'show_icon' => false,
-								'class'     => 'contact-cta-button contact-cta-button-' . $cta['button_style'],
+								'class'     => 'contact-cta-button contact-cta-button-' . $button_style,
 							]
 						);
 					endif;

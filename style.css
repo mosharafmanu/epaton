@@ -19,7 +19,6 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
 	top: 3.75rem;
 	width: 100%;
 	z-index: 99;
-	transition: all 0.3s ease;
 }
 
 .site-header.is-static {
@@ -1254,13 +1253,27 @@ Contat Cta Style Start
 .contact-cta-card .contact-cta-button {
 	margin-top: 3.125rem;
 	padding: 1.1875rem 2.0625rem;
-	background: var(--epaton-cyan);
-	color: var(--epaton-navy);
-	transition: all .3s ease;
+	transition: background-color .3s ease, color .3s ease;
 }
 
-.contact-cta-card .contact-cta-button:hover {
+.contact-cta-card .contact-cta-button-cyan {
+	background: var(--epaton-cyan);
+	color: var(--epaton-navy);
+}
+
+.contact-cta-card .contact-cta-button-cyan:hover {
 	background: #fff;
+	color: var(--epaton-navy);
+}
+
+.contact-cta-card .contact-cta-button-blue {
+	background: var(--epaton-blue);
+	color: var(--epaton-white);
+}
+
+.contact-cta-card .contact-cta-button-blue:hover {
+	background: var(--epaton-cyan);
+	color: var(--epaton-navy);
 }
 
 @media only screen and (max-width: 991px) {

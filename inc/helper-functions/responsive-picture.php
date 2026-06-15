@@ -161,7 +161,7 @@ if (!function_exists('epaton_render_responsive_picture')) {
                 }
 
                 $html = sprintf(
-                    '<picture>%s<img src="%s" srcset="%s" sizes="%s" width="%d" height="%d" alt="%s" class="%s" loading="%s"%s /></picture>',
+                    '<picture>%s<img src="%s" srcset="%s" sizes="%s" width="%d" height="%d" alt="%s" class="%s" loading="%s" decoding="async"%s /></picture>',
                     $mobile_source,
                     esc_url($token_url),
                     esc_attr($srcset),
@@ -279,6 +279,11 @@ if (!function_exists('epaton_render_responsive_picture')) {
             $html .= 'srcset="' . esc_attr($srcset) . '" ';
             $html .= 'sizes="' . $sizes . '" ';
             $html .= 'alt="' . $alt . '" ';
+			if ( ! empty( $image_meta['width'] ) && ! empty( $image_meta['height'] ) ) {
+				$html .= 'width="' . absint( $image_meta['width'] ) . '" ';
+				$html .= 'height="' . absint( $image_meta['height'] ) . '" ';
+			}
+			$html .= 'decoding="async" ';
             if ($class) {
                 $html .= 'class="' . $class . '" ';
             }

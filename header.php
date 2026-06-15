@@ -52,7 +52,7 @@ $header_class = $has_hero ? 'site-header' : 'site-header is-static';
 
 			<div class="site-header-actions">
 				<?php epaton_render_header_button(); ?>
-				<button class="menu-trigger hamburger-menu-toggle" type="button" aria-label="<?php esc_attr_e('Open menu', 'epaton'); ?>">
+				<button class="menu-trigger hamburger-menu-toggle" type="button" aria-label="<?php esc_attr_e('Open menu', 'epaton'); ?>" aria-controls="epaton-mobile-menu" aria-expanded="false">
 					<span></span>
 					<span></span>
 					<span></span>

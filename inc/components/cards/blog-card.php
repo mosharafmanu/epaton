@@ -48,6 +48,7 @@ if ( ! function_exists( 'epaton_render_blog_card' ) ) {
 							[
 								'class'   => 'blog-card-image',
 								'loading' => $args['lazy'] ? 'lazy' : 'eager',
+								'decoding' => 'async',
 								'sizes'   => '(max-width: 767px) 100vw, 33vw',
 							]
 						);

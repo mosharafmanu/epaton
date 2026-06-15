@@ -20,7 +20,7 @@ if ( ! function_exists( 'epaton_render_hamburger_menu' ) ) {
 		<div class="hamburger-overlay"></div>
 
 		<!-- Hamburger Menu Panel -->
-		<div class="hamburger-wrapper">
+		<div class="hamburger-wrapper" id="epaton-mobile-menu">
 
 			<!-- Close Button -->
 			<button class="hamburger-close menu-trigger" type="button" aria-label="<?php esc_attr_e( 'Close menu', 'epaton' ); ?>">

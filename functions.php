@@ -8,7 +8,7 @@
  */
 
 if (!defined('_S_VERSION')) {
-    define('_S_VERSION', '1.0.1');
+    define('_S_VERSION', '1.1.0');
 }
 
 /**
@@ -145,8 +145,8 @@ function epaton_scripts() {
         return;
     }
 
-    // Enqueue CSS files - Fonts first for critical loading
-	wp_enqueue_style('epaton-fonts', 'https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap', array(), NULL, 'all');
+    // Enqueue self-hosted fonts before theme styles.
+	wp_enqueue_style('epaton-fonts', get_template_directory_uri() . '/assets/css/fonts.css', array(), _S_VERSION);
 
     wp_style_add_data('epaton-fonts', 'priority', 'high');
 
@@ -154,15 +154,14 @@ function epaton_scripts() {
 
     wp_enqueue_style('epaton-utilities', get_template_directory_uri() . '/assets/css/utilities.css', array(), _S_VERSION);
 
-    wp_enqueue_style('slick-carousel', get_template_directory_uri() . '/assets/css/slick.css', array(), _S_VERSION);
+    if ( epaton_page_has_contact_form() ) {
+        wp_enqueue_style('epaton-form', get_template_directory_uri() . '/assets/css/epaton-form.css', array(), _S_VERSION);
+    }
 
-    wp_enqueue_style('epaton-slick-carousel', get_template_directory_uri() . '/assets/css/epaton-slick-custom.css', array(), _S_VERSION);
-
-    wp_enqueue_style('epaton-form', get_template_directory_uri() . '/assets/css/epaton-form.css', array(), _S_VERSION);
-
-    wp_enqueue_style('epaton-video-behaviors', get_template_directory_uri() . '/assets/css/video-behaviors.css', array(), _S_VERSION);
-
-    wp_enqueue_style('epaton-video-popup', get_template_directory_uri() . '/assets/css/video-popup.css', array(), _S_VERSION);
+    if ( epaton_page_has_video() ) {
+        wp_enqueue_style('epaton-video-behaviors', get_template_directory_uri() . '/assets/css/video-behaviors.css', array(), _S_VERSION);
+        wp_enqueue_style('epaton-video-popup', get_template_directory_uri() . '/assets/css/video-popup.css', array('epaton-video-behaviors'), _S_VERSION);
+    }
 
 	wp_enqueue_style('epaton-theme-style', get_template_directory_uri() . '/assets/css/epaton-theme-style.css', array(), _S_VERSION);
 
@@ -170,38 +169,20 @@ function epaton_scripts() {
     wp_enqueue_style('epaton-style', get_stylesheet_uri(), array(), _S_VERSION);
     wp_style_add_data('epaton-style', 'rtl', 'replace');
 
-    // Enqueue JavaScript files
-    wp_enqueue_script('slick-carousel', get_template_directory_uri() . '/assets/js/slick.js', array('jquery'), _S_VERSION, true);
+    if ( epaton_page_has_video() ) {
+        wp_enqueue_script('epaton-video-behaviors', get_template_directory_uri() . '/assets/js/video-behaviors.js', array(), _S_VERSION, true);
+        wp_enqueue_script('epaton-video-popup', get_template_directory_uri() . '/assets/js/video-popup.js', array('epaton-video-behaviors'), _S_VERSION, true);
+    }
 
-    wp_enqueue_script('epaton-carousels', get_template_directory_uri() . '/assets/js/epaton-carousels.js', array('jquery', 'slick-carousel'), _S_VERSION, true);
+    wp_enqueue_script('epaton-hamburger-menu', get_template_directory_uri() . '/assets/js/hamburger-menu.js', array(), _S_VERSION, true);
 
-    // Localize carousel arrows SVG
-    ob_start();
-    get_template_part('assets/svgs/carousel-arrow-left');
-    $arrow_left = ob_get_clean();
+	wp_enqueue_script('epaton-scripts', get_template_directory_uri() . '/assets/js/scripts.js', array(), _S_VERSION, true);
 
-    ob_start();
-    get_template_part('assets/svgs/carousel-arrow-right');
-    $arrow_right = ob_get_clean();
-
-    wp_localize_script(
-        'epaton-carousels',
-        'epatonCarousel',
-        array(
-            'arrowLeft'  => $arrow_left,
-            'arrowRight' => $arrow_right,
-        )
-    );
-
-    wp_enqueue_script('jquery-vimeo-player', get_template_directory_uri() . '/assets/js/jquery.mb.vimeo_player.min.js', array('jquery'), _S_VERSION, true);
-
-    wp_enqueue_script('epaton-video-behaviors', get_template_directory_uri() . '/assets/js/video-behaviors.js', array('jquery'), _S_VERSION, true);
-
-    wp_enqueue_script('epaton-video-popup', get_template_directory_uri() . '/assets/js/video-popup.js', array('jquery'), _S_VERSION, true);
-
-    wp_enqueue_script('epaton-hamburger-menu', get_template_directory_uri() . '/assets/js/hamburger-menu.js', array('jquery'), _S_VERSION, true);
-
-	wp_enqueue_script('epaton-scripts', get_template_directory_uri() . '/assets/js/scripts.js', array('jquery'), _S_VERSION, true);
+    foreach ( array( 'epaton-video-behaviors', 'epaton-video-popup', 'epaton-hamburger-menu', 'epaton-scripts' ) as $handle ) {
+        if ( wp_script_is( $handle, 'enqueued' ) ) {
+            wp_script_add_data( $handle, 'strategy', 'defer' );
+        }
+    }
 
 }
 add_action('wp_enqueue_scripts', 'epaton_scripts');
@@ -250,6 +231,17 @@ add_action('wp_enqueue_scripts', 'epaton_disable_block_library_css', 100);
 add_action('wp_print_styles', 'epaton_disable_block_library_css', 100);
 
 /**
+ * Remove core assets that the classic, non-block front end does not use.
+ */
+function epaton_remove_unused_core_assets() {
+	remove_action( 'wp_enqueue_scripts', 'wp_enqueue_global_styles' );
+	remove_action( 'wp_footer', 'wp_enqueue_global_styles', 1 );
+	remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+	remove_action( 'wp_print_styles', 'print_emoji_styles' );
+}
+add_action( 'after_setup_theme', 'epaton_remove_unused_core_assets', 100 );
+
+/**
  * Disable Gutenberg block library CSS in admin
  * Further performance optimization
  */
@@ -286,6 +278,8 @@ require get_template_directory() . '/inc/image-sizes.php';
 require get_template_directory() . '/inc/helper-functions/breadcrumb.php';
 require get_template_directory() . '/inc/helper-functions/button-renderer.php';
 require get_template_directory() . '/inc/helper-functions/flexible-content.php';
+require get_template_directory() . '/inc/helper-functions/performance.php';
+require get_template_directory() . '/inc/helper-functions/seo.php';
 
 // Dynamic body classes for header positioning
 add_filter( 'body_class', function ( $classes ) {

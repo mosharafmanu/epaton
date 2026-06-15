@@ -8,6 +8,8 @@
 $section_title  = get_sub_field( 'contact_panel_section_title' ) ?: 'CONTACT US';
 $title          = get_sub_field( 'contact_panel_title' ) ?: 'Let’s Talk';
 $form_shortcode = get_sub_field( 'contact_panel_form_shortcode' ) ?: '[contact-form-7 id="535"]';
+$page_layouts    = function_exists( 'epaton_get_page_layouts' ) ? epaton_get_page_layouts() : [];
+$is_first_layout = 'contact_panel' === ( $page_layouts[0]['acf_fc_layout'] ?? '' );
 
 $email = function_exists( 'epaton_get_footer_email' ) ? epaton_get_footer_email() : 'sales@epaton.co.uk';
 $phone = function_exists( 'epaton_get_footer_phone' ) ? epaton_get_footer_phone() : '+44 (0)3333 111 001';
@@ -22,12 +24,16 @@ if ( empty( $section_title ) && empty( $title ) && empty( $form_shortcode ) && e
 <section class="contact-panel-section layout-padding mt-50">
 	<div class="epaton-container">
 		<?php if ( $section_title ) : ?>
-			<h2 class="contact-panel-section-title"><?php echo esc_html( $section_title ); ?></h2>
+			<p class="contact-panel-section-title"><?php echo esc_html( $section_title ); ?></p>
 		<?php endif; ?>
 
 		<div class="contact-panel mt-40 mt-lg-85">
 			<?php if ( $title ) : ?>
-				<h2 class="contact-panel-title"><?php echo esc_html( $title ); ?></h2>
+				<?php if ( $is_first_layout ) : ?>
+					<h1 class="contact-panel-title"><?php echo esc_html( $title ); ?></h1>
+				<?php else : ?>
+					<h2 class="contact-panel-title"><?php echo esc_html( $title ); ?></h2>
+				<?php endif; ?>
 			<?php endif; ?>
 
 			<div class="contact-panel-grid">

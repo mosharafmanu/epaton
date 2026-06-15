@@ -1,105 +1,162 @@
 /**
- * Hamburger Menu Toggle
- * Handles mobile menu open/close functionality
+ * Mobile navigation interactions.
  *
  * @package epaton
  */
 
-(function($) {
-    'use strict';
+(function() {
+	'use strict';
 
-    $(document).ready(function() {
+	const trigger = document.querySelector('.menu-trigger');
+	const overlay = document.querySelector('.hamburger-overlay');
+	const wrapper = document.querySelector('.hamburger-wrapper');
+	const mobileMenu = document.querySelector('.mobile-menu');
 
-        /**
-         * Open hamburger menu
-         */
-        function openMenu() {
-            $('.menu-trigger').addClass('isOpen');
-            $('.hamburger-overlay').addClass('isOpen');
-            $('.hamburger-wrapper').addClass('isOpen');
-            $('body').addClass('no-scroll');
-        }
+	if (!trigger || !overlay || !wrapper || !mobileMenu) {
+		return;
+	}
 
-        /**
-         * Close hamburger menu
-         * @param {boolean} resetSubmenus - Whether to reset submenu states
-         */
-        function closeMenu(resetSubmenus) {
-            $('.menu-trigger').removeClass('isOpen');
-            $('.hamburger-overlay').removeClass('isOpen');
-            $('.hamburger-wrapper').removeClass('isOpen');
-            $('body').removeClass('no-scroll');
+	function slideDown(element) {
+		element.hidden = false;
+		element.style.display = 'block';
+		element.style.overflow = 'hidden';
+		element.style.height = '0';
+		element.style.opacity = '0';
 
-            // Reset submenu states if needed (on resize)
-            if (resetSubmenus) {
-                $('.mobile-menu .submenu-open').removeClass('submenu-open')
-                    .find('.sub-menu').removeAttr('style');
-            }
-        }
+		const targetHeight = element.scrollHeight;
+		element.offsetHeight;
+		element.style.transition = 'height 300ms ease, opacity 220ms ease';
+		element.style.height = targetHeight + 'px';
+		element.style.opacity = '1';
 
-        // Toggle menu - Menu trigger click
-        $('.menu-trigger').on('click', function(e) {
-            e.preventDefault();
+		element.addEventListener('transitionend', function cleanup(event) {
+			if (event.propertyName !== 'height') {
+				return;
+			}
+			element.style.height = 'auto';
+			element.style.overflow = '';
+			element.style.transition = '';
+			element.removeEventListener('transitionend', cleanup);
+		});
+	}
 
-            if ($('.hamburger-wrapper').hasClass('isOpen')) {
-                closeMenu(false);
-            } else {
-                openMenu();
-            }
-        });
+	function slideUp(element) {
+		element.style.overflow = 'hidden';
+		element.style.height = element.scrollHeight + 'px';
+		element.style.opacity = '1';
+		element.offsetHeight;
+		element.style.transition = 'height 300ms ease, opacity 220ms ease';
+		element.style.height = '0';
+		element.style.opacity = '0';
 
-        // Close menu when clicking on overlay
-        $('.hamburger-overlay').on('click', function() {
-            closeMenu(false);
-        });
+		element.addEventListener('transitionend', function cleanup(event) {
+			if (event.propertyName !== 'height') {
+				return;
+			}
+			element.hidden = true;
+			element.style.display = 'none';
+			element.style.height = '';
+			element.style.opacity = '';
+			element.style.overflow = '';
+			element.style.transition = '';
+			element.removeEventListener('transitionend', cleanup);
+		});
+	}
 
-        // Inject submenu toggle buttons into parent items
-        $('.mobile-menu .menu-item-has-children > a').each(function() {
-            var $link = $(this);
-            if (!$link.siblings('.submenu-toggle').length) {
-                $link.after('<button type="button" class="submenu-toggle" aria-label="Toggle submenu"><span></span></button>');
-            }
-        });
+	function closeMenu(resetSubmenus) {
+		trigger.classList.remove('isOpen');
+		overlay.classList.remove('isOpen');
+		wrapper.classList.remove('isOpen');
+		document.body.classList.remove('no-scroll');
+		trigger.setAttribute('aria-expanded', 'false');
 
-        // Handle submenu toggle - click on toggle button
-        $('.mobile-menu').on('click', '.submenu-toggle', function(e) {
-            e.preventDefault();
-            e.stopPropagation();
+		if (resetSubmenus) {
+			mobileMenu.querySelectorAll('.submenu-open').forEach(function(item) {
+				item.classList.remove('submenu-open');
+				const submenu = item.querySelector(':scope > .sub-menu');
+				if (submenu) {
+					submenu.hidden = true;
+					submenu.removeAttribute('style');
+				}
+			});
+		}
+	}
 
-            var $btn = $(this);
-            var $parentLi = $btn.closest('.menu-item-has-children');
-            var $submenu = $parentLi.children('.sub-menu');
+	function openMenu() {
+		trigger.classList.add('isOpen');
+		overlay.classList.add('isOpen');
+		wrapper.classList.add('isOpen');
+		document.body.classList.add('no-scroll');
+		trigger.setAttribute('aria-expanded', 'true');
+	}
 
-            $parentLi.toggleClass('submenu-open');
-            $submenu.slideToggle(300);
+	mobileMenu.querySelectorAll('.menu-item-has-children > a').forEach(function(link) {
+		if (link.nextElementSibling && link.nextElementSibling.classList.contains('submenu-toggle')) {
+			return;
+		}
 
-            // Close sibling submenus
-            $parentLi.siblings('.menu-item-has-children').each(function() {
-                var $sibling = $(this);
-                $sibling.removeClass('submenu-open');
-                $sibling.children('.sub-menu').slideUp(300);
-            });
-        });
+		const button = document.createElement('button');
+		button.type = 'button';
+		button.className = 'submenu-toggle';
+		button.setAttribute('aria-label', 'Toggle submenu');
+		button.setAttribute('aria-expanded', 'false');
+		button.innerHTML = '<span></span>';
+		link.after(button);
 
-        // Close menu on ESC key press
-        $(document).on('keydown', function(e) {
-            if (e.key === 'Escape' && $('.hamburger-wrapper').hasClass('isOpen')) {
-                closeMenu(false);
-            }
-        });
+		const submenu = link.parentElement.querySelector(':scope > .sub-menu');
+		if (submenu) {
+			submenu.hidden = true;
+		}
+	});
 
-        // Close menu on window resize if open (when switching to desktop)
-        var resizeTimer;
-        $(window).on('resize', function() {
-            clearTimeout(resizeTimer);
-            resizeTimer = setTimeout(function() {
-                // Match the CSS breakpoint: max-width: 1024px
-                if ($(window).width() > 1024 && $('.hamburger-wrapper').hasClass('isOpen')) {
-                    closeMenu(true); // Reset submenus on resize
-                }
-            }, 250);
-        });
+	trigger.setAttribute('aria-expanded', 'false');
+	trigger.addEventListener('click', function() {
+		wrapper.classList.contains('isOpen') ? closeMenu(false) : openMenu();
+	});
+	overlay.addEventListener('click', function() { closeMenu(false); });
 
-    });
+	mobileMenu.addEventListener('click', function(event) {
+		const button = event.target.closest('.submenu-toggle');
+		if (!button) {
+			return;
+		}
 
-})(jQuery);
+		const item = button.closest('.menu-item-has-children');
+		const submenu = item.querySelector(':scope > .sub-menu');
+		const willOpen = !item.classList.contains('submenu-open');
+
+		item.parentElement.querySelectorAll(':scope > .menu-item-has-children.submenu-open').forEach(function(sibling) {
+			if (sibling === item) {
+				return;
+			}
+			sibling.classList.remove('submenu-open');
+			const siblingButton = sibling.querySelector(':scope > .submenu-toggle');
+			const siblingMenu = sibling.querySelector(':scope > .sub-menu');
+			if (siblingButton) siblingButton.setAttribute('aria-expanded', 'false');
+			if (siblingMenu) slideUp(siblingMenu);
+		});
+
+		item.classList.toggle('submenu-open', willOpen);
+		button.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+		if (submenu) {
+			willOpen ? slideDown(submenu) : slideUp(submenu);
+		}
+	});
+
+	document.addEventListener('keydown', function(event) {
+		if (event.key === 'Escape' && wrapper.classList.contains('isOpen')) {
+			closeMenu(false);
+			trigger.focus();
+		}
+	});
+
+	let resizeTimer;
+	window.addEventListener('resize', function() {
+		window.clearTimeout(resizeTimer);
+		resizeTimer = window.setTimeout(function() {
+			if (window.innerWidth > 1024 && wrapper.classList.contains('isOpen')) {
+				closeMenu(true);
+			}
+		}, 250);
+	}, { passive: true });
+})();
