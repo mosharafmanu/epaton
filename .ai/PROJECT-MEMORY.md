@@ -1,12 +1,12 @@
 # Epaton Project Memory
 
-Last updated: 2026-06-05 18:48 +06
+Last updated: 2026-07-07
 
 ## Project
 
 - Theme path: `/Applications/AMPPS/www/ClientProjects/WordPress/2026/epaton/wp-content/themes/epaton`
-- GitHub remote: `https://github.com/mosharafmanu/epaton-wp-theme.git`
-- Branch: `main`
+- GitHub remote: `https://github.com/mosharafmanu/epaton.git` (renamed from `epaton-wp-theme`; old URL redirects). Repo root = theme directory.
+- Branch: `main`. As of 2026-07-07 all branches (`main`, `imran`, `faisal`) point to the same commit `25067a8`; `imran`/`faisal` carry no unmerged work.
 - Initial pushed commit: `984e285 Initial Epaton theme commit`
 - Theme function prefix: `epaton_`
 - ACF Flexible Content field: `cms`
@@ -171,12 +171,21 @@ File: `template-parts/sections/hero_section.php`
 ACF fields:
 - `hero_title`, `hero_description`, `hero_buttons` repeater
 - `hero_media_type`, `hero_image`, `hero_video` (full video group)
+- `hero_logo` — single Image field (Media tab, return Array, SVG/PNG/JPG/WebP). The combined "epaton notape" logo, rendered separately from the background (background stays clean, no baked-in logos).
+
+Hero logo rendering (added 2026-07-07):
+- Rendered via `epaton_render_icon()` in `.hero-logo-wrap` > `.hero-logo`, a flex sibling of `.hero-content` inside `.hero-grid`. `has-logo` class added to `.hero-section` when set.
+- DOM order is content-first (H1 first); the logo is moved visually left with `order: -1`.
+- Desktop ≥1200px: row layout, logo vertically centered against content, left edge aligned with the **header logo** (layout-padding gutter + 2.8125rem bar padding) **+ 5rem (80px) nudge**. Achieved with a negative `margin-left` calc using `--container-outdent` (distance from the centered 68.625rem container edge to the gutter edge, `max(0rem, (100vw - 2×gutter - 68.625rem)/2)`), with breakpoint-matched gutter values (1.5/2/3.125rem). Caveat: uses `100vw`, so classic (non-overlay) scrollbars introduce ~8px drift.
+- 768–1199px: stacked — `.hero-grid` becomes a centered content-width column (`max-width: 37.125rem`) with `align-items: flex-start`, so the logo's left edge aligns with the text.
+- ≤767px: logo centered (`align-items: center`) to match the centered mobile text; `max-width: 16rem`.
+- Logo display width is set by CSS (29rem / 20rem / 16rem), not by the uploaded file. SVG uploads must keep their `viewBox`; exports must be tightly cropped (alignment is to the file bounding box).
 
 ## Styling State
 
-Root `style.css` currently only contains the WordPress theme header comment. This is intentional: all previous section CSS was removed so the user can build pixel-perfect styles from Figma. Do not re-add section CSS unless explicitly asked.
+Root `style.css` now contains the full Figma styling pass: design tokens, dynamic header, hero + hero logo, inner hero, admin bar support, hamburger toggle, and per-section CSS with block comments. Global/base utilities remain in `assets/css/epaton-theme-style.css`.
 
-Global/base utilities remain in `assets/css/epaton-theme-style.css`.
+`.layout-padding` gutter values: `1.5rem` base, `2rem` ≥1200px, `3.125rem` ≥1600px. Header bar (`.site-header-bar`) horizontal padding: `2.8125rem` desktop, `1rem` ≤1024px. Convention: `layout-padding` sits **outside** `.epaton-container` (the hero originally had it inside on `.hero-grid`, which inset the content 50px from the container edge — fixed 2026-07-07 by moving it to `.hero-inner`; the hero tablet/mobile `padding` shorthands were split into `padding-top`/`padding-bottom` so they don't zero the gutter).
 
 ## Assets
 
@@ -272,44 +281,10 @@ SVG sideload note: SVG Support's WP-CLI sanitizer can fatal with a null service.
 - Contact Form 7 form ID used by seeder: `535`.
 - Site Settings includes social links repeater, read by `epaton_get_social_links()`.
 
-## 2026-06-05 Current Handoff Checklist
+## 2026-07-07 Current State
 
-1. Flexible content sections are built.
-2. Section CSS was intentionally removed from `style.css`.
-3. Next work is the user's Figma pixel-perfect CSS pass.
-4. Check for stale/duplicate ACF field group entries if anything looks off in admin.
-5. Commit all accepted work when ready.
-
-## Uncommitted Files (as of 2026-06-05)
-
-All changes from this session are uncommitted. Key files:
-
-- `acf-json/group_flexible_content.json` — all new layouts
-- `acf-json/group_site_settings.json`
-- `acf-json/group_service_media.json`
-- `acf-json/post_type_product.json` — archive disabled
-- `acf-json/post_type_service.json` — archive disabled
-- `assets/css/epaton-theme-style.css`
-- `footer.php`
-- `functions.php`
-- `header.php`
-- `inc/helper-functions/site-settings.php`
-- `inc/wp-cli/acf-content-seeder.php`
-- `inc/components/header/class-epaton-primary-menu-walker.php`
-- `assets/svgs/epaton-angle-down.php`
-- `style.css` — intentionally stripped back to theme header comment only
-- `template-parts/sections/hero_section.php`
-- `template-parts/sections/inner_hero.php`
-- `template-parts/sections/featured_services_intro.php`
-- `template-parts/sections/core_areas.php`
-- `template-parts/sections/approach_panels.php`
-- `template-parts/sections/commitment_panel.php`
-- `template-parts/sections/looking_forward.php`
-- `template-parts/sections/contact_cta.php`
-- `template-parts/sections/clients_logos.php`
-- `template-parts/sections/products_listing.php`
-- `template-parts/sections/services_listing.php`
-- `template-parts/sections/media_content_5050.php`
-- `template-parts/sections/partners_listing.php`
-- `template-parts/sections/contact_panel.php`
-- `inc/wp-cli/acf-content-seeder.php`
+1. All flexible content sections built and styled; hero logo field added.
+2. All work committed and pushed — no uncommitted WIP. All branches at `25067a8`.
+3. Production build: `~/Desktop/epaton.zip` created for live upload (see SESSION-HANDOFF-2026-07-07.md for the exclusion list).
+4. `functions.php` guards the WP-CLI seeder require with `file_exists()` so production builds can omit `inc/wp-cli/`.
+5. Next: live deployment + post-launch checks (search-replace URLs, enable indexing, flush permalinks).
