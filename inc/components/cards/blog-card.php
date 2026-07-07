@@ -38,7 +38,7 @@ if ( ! function_exists( 'epaton_render_blog_card' ) ) {
 
 		<article <?php post_class( 'blog-card', $post_id ); ?>>
 			<a class="blog-card-link" href="<?php echo esc_url( $url ); ?>" aria-label="<?php echo esc_attr( $title ); ?>">
-				<div class="blog-card-image-wrap">
+				<div class="blog-card-image-wrap media">
 					<?php if ( $thumbnail_id ) : ?>
 						<?php
 						echo wp_get_attachment_image(
