@@ -8,7 +8,7 @@
  */
 
 if (!defined('_S_VERSION')) {
-    define('_S_VERSION', '1.1.0');
+    define('_S_VERSION', '1.0.0');
 }
 
 /**
@@ -297,8 +297,8 @@ require get_template_directory() . '/inc/helper-functions/responsive-picture.php
 require get_template_directory() . '/inc/helper-functions/site-settings.php';
 require get_template_directory() . '/inc/helper-functions/video-renderer.php';
 
-// WP-CLI content seeders.
-if ( defined( 'WP_CLI' ) && WP_CLI ) {
+// WP-CLI content seeders (dev only — not shipped in production builds).
+if ( defined( 'WP_CLI' ) && WP_CLI && file_exists( get_template_directory() . '/inc/wp-cli/acf-content-seeder.php' ) ) {
 	require get_template_directory() . '/inc/wp-cli/acf-content-seeder.php';
 }
 

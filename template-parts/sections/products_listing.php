@@ -66,7 +66,7 @@ if ( ! $products->have_posts() ) {
 						</div>
 
 						<?php if ( $thumbnail ) : ?>
-							<div class="product-card-image">
+							<div class="product-card-image media">
 								<?php
 								if ( function_exists( 'epaton_render_responsive_picture' ) ) {
 									epaton_render_responsive_picture(

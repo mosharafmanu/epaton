@@ -558,6 +558,31 @@
                                     "ui": 1
                                 }
                             ]
+                        },
+                        {
+                            "key": "field_hero_logo",
+                            "label": "Hero Logo",
+                            "name": "hero_logo",
+                            "aria-label": "",
+                            "type": "image",
+                            "instructions": "Single logo image displayed in the hero, rendered separately from the background media.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": "jpg,jpeg,png,webp,svg",
+                            "preview_size": "medium"
                         }
                     ],
                     "min": "",
@@ -3307,5 +3332,5 @@
     "display_title": "",
     "allow_ai_access": false,
     "ai_description": "",
-    "modified": 1781529243
+    "modified": 1783388187
 }

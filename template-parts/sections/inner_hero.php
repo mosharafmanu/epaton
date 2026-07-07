@@ -92,7 +92,7 @@ if ( $has_video ) {
 	<?php endif; ?>
 
 	<div class="inner-hero-inner">
-		<div class="epaton-container layout-padding">
+		<div class="epaton-container">
 
 			<?php if ( $show_breadcrumb && function_exists( 'epaton_render_breadcrumb' ) ) : ?>
 				<?php epaton_render_breadcrumb(); ?>

@@ -13,6 +13,7 @@ $hero_buttons = get_sub_field('hero_buttons');
 $media_type = get_sub_field('hero_media_type') ?: 'image';
 $hero_image = get_sub_field('hero_image');
 $hero_video = get_sub_field('hero_video');
+$hero_logo = get_sub_field('hero_logo');
 
 // Build section classes
 $section_classes = ['hero-section'];
@@ -20,6 +21,9 @@ if ('video' === $media_type && $hero_video) {
     $section_classes[] = 'has-video';
 } elseif ($hero_image) {
     $section_classes[] = 'has-image';
+}
+if ($hero_logo) {
+    $section_classes[] = 'has-logo';
 }
 ?>
 
@@ -67,9 +71,9 @@ if (function_exists('epaton_render_responsive_picture')) {
 		</div>
 	<?php endif; ?>
 
-	<div class="hero-inner">
+	<div class="hero-inner layout-padding">
 		<div class="epaton-container">
-			<div class="hero-grid layout-padding">
+			<div class="hero-grid">
 
 				<!-- Hero Content Column -->
 				<div class="hero-content">
@@ -98,6 +102,19 @@ if (function_exists('epaton_render_responsive_picture')) {
 
 					</div>
 				</div>
+
+				<?php if ($hero_logo && function_exists('epaton_render_icon')): ?>
+					<div class="hero-logo-wrap">
+						<?php
+    epaton_render_icon(
+        $hero_logo,
+        [
+            'class' => 'hero-logo',
+        ]
+    );
+    ?>
+					</div>
+				<?php endif; ?>
 
 			</div>
 		</div>
