@@ -87,17 +87,17 @@ if ('manual' === $source) {
 					<?php endif; ?>
 
 					<?php
-if ($button && function_exists('epaton_render_button')) {
-    epaton_render_button(
-        $button,
-        [
-            'style'     => 'primary-gradient btn-primary',
-            'show_icon' => false,
-            'class'     => 'featured-services-intro-button',
-        ]
-    );
-}
-?>
+						if ($button && function_exists('epaton_render_button')) {
+							epaton_render_button(
+								$button,
+								[
+									'style'     => 'primary-gradient btn-primary',
+									'show_icon' => false,
+									'class'     => 'featured-services-intro-button',
+								]
+							);
+						}
+					?>
 				</div>
 
 				<?php if ($services_eyebrow || $service_cards): ?>
@@ -142,7 +142,9 @@ if ($button && function_exists('epaton_render_button')) {
 										<span class="featured-services-intro-card-overlay"></span>
 										<span class="featured-services-intro-card-content">
 											<span class="featured-services-intro-card-title"><?php echo esc_html($service_card['title']); ?></span>
-											<span class="featured-services-intro-card-link"><?php esc_html_e('Find out more', 'epaton'); ?></span>
+											<span class="featured-services-intro-card-link-wrapper">
+												<span class="featured-services-intro-card-link"><?php esc_html_e('Find out more', 'epaton'); ?></span>
+											</span>
 										</span>
 									<?php if ($card_url): ?>
 										</a>

@@ -612,7 +612,7 @@ Design System Typography
 	color: var(--epaton-white);
 }
 .btn-primary:hover {
-	background: var(--epaton-cyan);
+	background: var(--epaton-white);
 	color: var(--epaton-navy);
 }
 
@@ -622,7 +622,8 @@ Design System Typography
 	color: var(--epaton-navy);
 }
 .btn-light:hover {
-	background: var(--epaton-cloud);
+	background: var(--epaton-blue);
+	color: var(--epaton-white);
 }
 
 /* Button: Muted (Silver) */

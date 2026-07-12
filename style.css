@@ -103,7 +103,7 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
 	padding: 1rem 0;
 	opacity: 0;
 	visibility: hidden;
-	transform: translateY(10px);
+	transform: translateY(-10px);
 	transition: .3s;
 	z-index: 99;
 	list-style: none;
@@ -152,9 +152,6 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
 	fill: currentColor;
 }
 
-.site-navigation > ul > li.menu-item-has-children:hover > a .submenu-indicator {
-	transform: rotate(180deg);
-}
 
 @media screen and (max-width: 1199px) {
 	.site-navigation > ul {
@@ -406,6 +403,9 @@ body.no-scroll {
    Mobile breakpoint — show burger, hide desktop nav
 ----------------------------------------------- */
 @media screen and (max-width: 1024px) {
+	.site-header {
+		top: 2.5rem;
+	}
 	.site-navigation {
 		display: none;
 	}
@@ -582,6 +582,17 @@ Hero Style Start
 
 .hero-buttons .site-btn {
 	padding: 1.1875rem 2.6875rem;
+}
+
+
+@media screen and (max-width: 1299px) {
+	.hero-section {
+		min-height: 50.625rem;
+	}
+
+	.hero-title {
+		font-size: 4rem;
+	}
 }
 
 /* Tablet */
@@ -821,6 +832,7 @@ Featured Service Style Start
 	padding: 1.1875rem 1.25rem;
 	transition: all 0.3s ease;
 }
+
 .site-btn.primary-gradient:hover {
 	background: var(--epaton-cyan);
 	color: var(--epaton-navy);
@@ -839,6 +851,24 @@ Featured Service Style Start
 	color: var(--epaton-white);
 }
 
+.featured-services-intro-card picture {
+	position: relative;
+	overflow: hidden;
+}
+
+.featured-services-intro-card picture::after {
+	content: '';
+	position: absolute;
+	inset: 0;
+	transition: background 0.3s ease;
+	width: 100%;
+	height: 100%;
+}
+
+.featured-services-intro-card:hover picture::after {
+	background: rgba(255, 255, 255, 0.25);
+}
+
 .featured-services-intro-card-content {
 	z-index: 2;
 	position: absolute;
@@ -855,6 +885,33 @@ Featured Service Style Start
 	font-size: 2.875rem;
 	font-weight: 700;
 	line-height: normal;
+}
+
+.featured-services-intro-card-link {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.featured-services-intro-card-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 1px;
+    background: currentColor;
+    transition: width .3s ease;
+}
+
+.featured-services-intro-card:hover .featured-services-intro-card-link::after {
+    width: 100%;
+}
+
+@media only screen and (max-width: 1299px) {
+	.featured-services-intro-card-title {
+		font-size: 2.25rem;
+	}
 }
 
 @media only screen and (max-width: 1199px) {

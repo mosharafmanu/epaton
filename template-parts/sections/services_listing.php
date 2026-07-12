@@ -57,9 +57,9 @@ if ( ! $services->have_posts() ) {
 					<article class="service-card theme-<?php echo esc_attr( $theme ); ?>">
 
 						<div class="service-card-content">
-							<h3 class="service-card-title">
+							<h2 class="service-card-title">
 								<a href="<?php echo esc_url( $service_url ); ?>"><?php echo esc_html( $service_title ); ?></a>
-							</h3>
+							</h2>
 
 							<?php if ( $excerpt ) : ?>
 								<p class="service-card-description"><?php echo esc_html( $excerpt ); ?></p>
