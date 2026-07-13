@@ -28,13 +28,14 @@ if ( empty( $heading ) && empty( $partners ) ) {
 					$logo        = $partner['logo'] ?? [];
 					$theme       = $partner['theme'] ?? 'blue';
 					$theme       = in_array( $theme, [ 'blue', 'cyan' ], true ) ? $theme : 'blue';
+					$has_description = ! empty( $description );
 
 					if ( empty( $name ) && empty( $description ) && empty( $logo ) ) {
 						continue;
 					}
 					?>
 
-					<article class="partners-listing-card theme-<?php echo esc_attr( $theme ); ?>">
+					<article class="partners-listing-card theme-<?php echo esc_attr( $theme ); ?> <?php echo $has_description ? 'has-description' : 'is-title-only'; ?>">
 						<?php if ( $logo && function_exists( 'epaton_render_icon' ) ) : ?>
 							<div class="partners-listing-logo-wrap">
 								<?php

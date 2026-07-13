@@ -406,7 +406,7 @@ Epaton Contact Form 7
 
 .epaton-contact-form select {
 	background-color: var(--epaton-white);
-	color: var(--epaton-grey);
+	color: var(--epaton-navy);
 }
 
 .epaton-contact-form textarea {
@@ -487,6 +487,7 @@ input[type="checkbox"]:checked::after {
 	text-align: center;
 	text-transform: uppercase;
 	cursor: pointer;
+	transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .epaton-contact-form .epaton-contact-submit:hover,
@@ -494,4 +495,3 @@ input[type="checkbox"]:checked::after {
 	background: var(--epaton-cyan);
 	color: var(--epaton-navy);
 }
-

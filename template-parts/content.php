@@ -36,11 +36,15 @@
 		</div>
 	</header>
 
+	</div>
+
 	<?php if ( has_post_thumbnail() ) : ?>
 		<figure class="entry-thumbnail">
-			<?php the_post_thumbnail( 'large', [ 'class' => 'entry-thumbnail-image' ] ); ?>
+			<?php the_post_thumbnail( 'full', [ 'class' => 'entry-thumbnail-image' ] ); ?>
 		</figure>
 	<?php endif; ?>
+
+	<div class="epaton-container">
 
 	<div class="entry-content">
 		<?php

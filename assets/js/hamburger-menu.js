@@ -7,12 +7,13 @@
 (function() {
 	'use strict';
 
-	const trigger = document.querySelector('.menu-trigger');
+	const trigger = document.querySelector('.hamburger-menu-toggle');
+	const closeTrigger = document.querySelector('.hamburger-close');
 	const overlay = document.querySelector('.hamburger-overlay');
 	const wrapper = document.querySelector('.hamburger-wrapper');
 	const mobileMenu = document.querySelector('.mobile-menu');
 
-	if (!trigger || !overlay || !wrapper || !mobileMenu) {
+	if (!trigger || !closeTrigger || !overlay || !wrapper || !mobileMenu) {
 		return;
 	}
 
@@ -112,6 +113,10 @@
 	trigger.setAttribute('aria-expanded', 'false');
 	trigger.addEventListener('click', function() {
 		wrapper.classList.contains('isOpen') ? closeMenu(false) : openMenu();
+	});
+	closeTrigger.addEventListener('click', function() {
+		closeMenu(false);
+		trigger.focus();
 	});
 	overlay.addEventListener('click', function() { closeMenu(false); });
 
