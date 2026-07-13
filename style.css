@@ -830,12 +830,20 @@ Featured Service Style Start
 	border-radius: 1px;
 	background: linear-gradient(0deg, #3D45E2 0%, #3D45E2 100%), linear-gradient(133deg, #3D45E2 -2.51%, #090B36 100.07%), #D9D9D9;
 	padding: 1.1875rem 1.25rem;
-	transition: all 0.3s ease;
+	transition: all 0.4s ease;
 }
 
 .site-btn.primary-gradient:hover {
 	background: var(--epaton-cyan);
 	color: var(--epaton-navy);
+}
+
+.site-btn.primary-gradient .btn-text {
+  color: var(--epaton-cloud);
+  transition: all 0.4s ease;
+}
+.site-btn.primary-gradient:hover .btn-text {
+  color: var(--epaton-navy);
 }
 
 
@@ -1779,12 +1787,13 @@ Partners Listing Style Start
 */
 
 .partners-listing-grid {
-	display: grid;
-	grid-template-columns: repeat(3,1fr);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.partners-listing-card:last-child {
-	grid-column: 2;
+.partners-listing-card {
+    width: calc((100% - 0px) / 3);
 }
 
 .partners-listing-card {
@@ -1802,18 +1811,25 @@ Partners Listing Style Start
 }
 
 .partners-listing-logo-wrap {
-	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100px;
+	margin-bottom: 2.8125rem;
 }
 
-.partners-listing-name {
-	margin-top: 2.8125rem;
-}
 @media only screen and (max-width: 767px) {
-	.partners-listing-grid {
+	/* .partners-listing-grid {
 		grid-template-columns: 1fr;
 	}
 	.partners-listing-card:last-child {
 		grid-column: 1;
+	} */
+
+	@media (max-width: 768px) {
+		.partners-listing-card {
+			width: 100%;
+		}
 	}
 	.partners-listing-logo-wrap {
 		max-width: 9.375rem;
@@ -1983,7 +1999,7 @@ Contact Style Start
 }
 
 .wpcf7 .wpcf7-submit:disabled {
-	cursor: pointer;
+	display: none;
 }
 
 .contact-panel-info {

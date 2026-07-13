@@ -58,7 +58,7 @@ if ( ! function_exists( 'epaton_render_blog_card' ) ) {
 				</div>
 
 				<div class="blog-card-content">
-					<h4 class="blog-card-title"><?php echo esc_html( $title ); ?></h4>
+					<h2 class="h4-style blog-card-title"><?php echo esc_html( $title ); ?></h2>
 
 					<?php if ( $excerpt ) : ?>
 						<p class="blog-card-excerpt"><?php echo esc_html( $excerpt ); ?></p>

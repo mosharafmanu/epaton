@@ -50,7 +50,7 @@ if ( empty( $heading ) && empty( $partners ) ) {
 						<?php endif; ?>
 
 						<?php if ( $name ) : ?>
-							<h3 class="partners-listing-name"><?php echo esc_html( $name ); ?></h3>
+							<h2 class="h3-style partners-listing-name"><?php echo esc_html( $name ); ?></h2>
 						<?php endif; ?>
 
 						<?php if ( $description ) : ?>

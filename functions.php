@@ -326,3 +326,9 @@ add_filter('the_content', function ($content) {
     }
     return $content;
 }, 20);
+
+
+// Change the default excerpt dots to an ellipsis
+add_filter('excerpt_more', function ($more) {
+    return ' "..."';
+});

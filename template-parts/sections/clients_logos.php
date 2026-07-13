@@ -45,17 +45,17 @@ if (empty($eyebrow) && empty($title) && empty($bullets) && empty($body) && empty
 					<?php endif; ?>
 
 					<?php
-if ($button && function_exists('epaton_render_button')) {
-    epaton_render_button(
-        $button,
-        [
-            'style'     => 'btn-accent',
-            'show_icon' => false,
-            'class'     => 'clients-logos-button',
-        ]
-    );
-}
-?>
+					if ($button && function_exists('epaton_render_button')) {
+						epaton_render_button(
+							$button,
+							[
+								'style'     => 'btn-accent',
+								'show_icon' => false,
+								'class'     => 'clients-logos-button',
+							]
+						);
+					}
+					?>
 				</div>
 
 				<div class="clients-logos-list-wrap">
@@ -67,23 +67,23 @@ if ($button && function_exists('epaton_render_button')) {
 						<div class="clients-logos-list">
 							<?php foreach ($logos as $logo): ?>
 								<?php
-$logo_image = $logo['logo'] ?? [];
-$logo_name = $logo['name'] ?? '';
+								$logo_image = $logo['logo'] ?? [];
+								$logo_name = $logo['name'] ?? '';
 
-if (empty($logo_image) || !function_exists('epaton_render_icon')) {
-    continue;
-}
-?>
+								if (empty($logo_image) || !function_exists('epaton_render_icon')) {
+									continue;
+								}
+								?>
 								<div class="clients-logos-item">
 									<?php
-epaton_render_icon(
-    $logo_image,
-    [
-        'class' => 'clients-logos-logo',
-        'alt'   => $logo_name,
-    ]
-);
-?>
+									epaton_render_icon(
+										$logo_image,
+										[
+											'class' => 'clients-logos-logo',
+											'alt'   => $logo_name,
+										]
+									);
+									?>
 								</div>
 							<?php endforeach; ?>
 						</div>

@@ -106,13 +106,13 @@ if (function_exists('epaton_render_responsive_picture')) {
 				<?php if ($hero_logo && function_exists('epaton_render_icon')): ?>
 					<div class="hero-logo-wrap">
 						<?php
-    epaton_render_icon(
-        $hero_logo,
-        [
-            'class' => 'hero-logo',
-        ]
-    );
-    ?>
+                        epaton_render_icon(
+                            $hero_logo,
+                            [
+                                'class' => 'hero-logo',
+                            ]
+                        );
+                        ?>
 					</div>
 				<?php endif; ?>
 
