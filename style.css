@@ -248,10 +248,12 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
 	position: absolute;
 	top: 1.25rem;
 	right: 1.25rem;
+	width: 2.75rem;
+	height: 2.75rem;
 	background: transparent;
 	border: none;
 	cursor: pointer;
-	padding: 0.5rem;
+	padding: 0.625rem;
 	color: var(--epaton-white);
 	opacity: 0.7;
 	transition: opacity 0.2s ease;
@@ -265,7 +267,7 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
 .hamburger-inner {
 	display: flex;
 	flex-direction: column;
-	padding: 4rem 1.75rem 2.5rem;
+	padding: 5.25rem 1.75rem 2.5rem;
 	min-height: 100%;
 }
 
@@ -392,6 +394,10 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
 	padding-top: 2rem;
 }
 
+.hamburger-button .site-btn {
+	width: 100%;
+}
+
 /* -----------------------------------------------
    No-scroll when drawer is open
 ----------------------------------------------- */
@@ -404,7 +410,7 @@ body.no-scroll {
 ----------------------------------------------- */
 @media screen and (max-width: 1024px) {
 	.site-header {
-		top: 2.5rem;
+		top: 1.25rem;
 	}
 	.site-navigation {
 		display: none;
@@ -425,12 +431,17 @@ body.no-scroll {
 	}
 
 }
+@media screen and (max-width: 991px) {
+	.site-header {
+		top: 1.25rem;
+	}
+}
 @media only screen and (max-width: 767px) {
 	.site-header {
-		top: 1.875rem;
+		top: 1.25rem;
 	}
 	.site-header.is-static {
-		margin-top: 1.875rem;
+		margin-top: 1.25rem;
 	}
 	.site-header-bar {
 		padding-top: .875rem;
@@ -517,7 +528,7 @@ Hero Style Start
 
 .hero-logo-wrap {
 	order: -1;
-	flex: 0 1 29rem;
+	flex: 0 1 34rem;
 	/* Align the logo's left edge with the header logo (layout-padding gutter +
 	   2.8125rem bar padding), then nudge 5rem (80px) right per design.
 	   --container-outdent = distance from the container edge to the gutter edge. */
@@ -533,6 +544,8 @@ Hero Style Start
 
 @media only screen and (min-width: 1600px) {
 	.hero-logo-wrap {
+		flex-basis: 37.5rem;
+		min-width: 37.5rem;
 		--container-outdent: max(0rem, (100vw - 6.25rem - 68.625rem) / 2);
 	}
 }
@@ -558,7 +571,7 @@ Hero Style Start
 	.hero-logo-wrap {
 		flex: 0 0 auto;
 		width: 100%;
-		max-width: 20rem;
+		max-width: 24rem;
 		margin-left: 0;
 	}
 
@@ -634,7 +647,7 @@ Hero Style Start
 	}
 
 	.hero-logo-wrap {
-		max-width: 16rem;
+		max-width: 18rem;
 	}
 
 	.hero-content-inner {
@@ -687,23 +700,28 @@ Inner Hero Style Start
 	grid-area: 1 / 1;
 }
 
+.inner-hero-background {
+	position: relative;
+	overflow: hidden;
+	background: #090B36;
+}
+
+.inner-hero-background::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+	z-index: 1;
+	background: rgba(9, 11, 54, 0.6);
+	pointer-events: none;
+}
+
 .single-product .inner-hero-background,
 .single-product .inner-hero-inner {
 	height: 31.25rem;
 }
 
 .single-product .inner-hero-background {
-	position: relative;
-	overflow: hidden;
 	background: #090B36;
-}
-
-.single-product .inner-hero-background::after {
-	content: "";
-	position: absolute;
-	inset: 0;
-	background: rgba(9, 11, 54, 0.62);
-	pointer-events: none;
 }
 
 .inner-hero-background img {
@@ -818,11 +836,11 @@ Inner Hero Style End
 
 @media screen and (max-width: 782px) {
 	.admin-bar .site-header {
-		top: calc(3.75rem + 46px);
+		top: calc(1.25rem + 46px);
 	}
 
 	.admin-bar .site-header.is-static {
-		margin-top: 3.75rem;
+		margin-top: 1.25rem;
 		top: 46px;
 	}
 
@@ -833,11 +851,11 @@ Inner Hero Style End
 
 @media only screen and (max-width: 767px) {
 	.admin-bar .site-header {
-		top: calc(1.875rem + 46px);
+		top: calc(1.25rem + 46px);
 	}
 
 	.admin-bar .site-header.is-static {
-		margin-top: 1.875rem;
+		margin-top: 1.25rem;
 	}
 }
 
@@ -901,28 +919,86 @@ Featured Service Style Start
 	width: 100%;
 	height: 100%;
 	color: var(--epaton-white);
+	background: #D9D9D9;
+	overflow: hidden;
+	isolation: isolate;
+}
+
+.featured-services-intro-card::before {
+	content: '';
+	position: absolute;
+	inset: 0;
+	z-index: 0;
+	background:
+		linear-gradient(132.67deg, #3D45E2 2.51%, #090B36 100.07%),
+		#D9D9D9;
+}
+
+.featured-services-intro-card::after {
+	content: '';
+	position: absolute;
+	inset: 0;
+	z-index: 0;
+	background:
+		linear-gradient(132.67deg, rgba(61, 69, 226, 0.6) 2.51%, rgba(9, 11, 54, 0.6) 100.07%),
+		#D9D9D9;
+	opacity: 0;
+	transition: opacity 0.55s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .featured-services-intro-card picture {
 	position: relative;
 	overflow: hidden;
+	z-index: 1;
+	mix-blend-mode: saturation;
+	transition: opacity 0.55s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.featured-services-intro-card picture::after {
-	content: '';
-	position: absolute;
-	inset: 0;
-	transition: background 0.3s ease;
+.featured-services-intro-card img {
+	display: block;
 	width: 100%;
 	height: 100%;
+	object-fit: cover;
+	transition: transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.featured-services-intro-card:hover picture::after {
-	background: rgba(255, 255, 255, 0.25);
+.featured-services-intro-card-list > *:nth-child(2)::before {
+	background:
+		linear-gradient(132.67deg, #3D45E2 2.51%, #30F5F5 100.07%),
+		#D9D9D9;
+}
+
+.featured-services-intro-card-list > *:nth-child(2) picture {
+	mix-blend-mode: hue;
+}
+
+.featured-services-intro-card-overlay {
+	position: absolute;
+	inset: 0;
+	z-index: 2;
+	pointer-events: none;
+	transition: opacity 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.featured-services-intro-card-list > *:nth-child(2) .featured-services-intro-card-overlay {
+	background: rgb(9, 11, 54);
+	opacity: 0.2;
+}
+
+.featured-services-intro-card-list > *:nth-child(1):hover::after {
+	opacity: 1;
+}
+
+.featured-services-intro-card-list > *:nth-child(2):hover .featured-services-intro-card-overlay {
+	opacity: 0.7;
+}
+
+.featured-services-intro-card:hover img {
+	transform: scale(1.035);
 }
 
 .featured-services-intro-card-content {
-	z-index: 2;
+	z-index: 3;
 	position: absolute;
 	width: 100%;
 	height: 100%;
@@ -946,18 +1022,20 @@ Featured Service Style Start
 }
 
 .featured-services-intro-card-link::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -2px;
-    width: 0;
-    height: 1px;
-    background: currentColor;
-    transition: width .3s ease;
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: -0.12em;
+	height: 1px;
+	background: currentColor;
+	transform: scaleX(0);
+	transform-origin: left center;
+	transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .featured-services-intro-card:hover .featured-services-intro-card-link::after {
-    width: 100%;
+	transform: scaleX(1);
 }
 
 @media only screen and (max-width: 1299px) {

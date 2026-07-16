@@ -8,7 +8,7 @@
  */
 
 if (!defined('_S_VERSION')) {
-    define('_S_VERSION', '1.0.1');
+    define('_S_VERSION', '2.0.50');
 }
 
 /**
@@ -327,8 +327,9 @@ add_filter('the_content', function ($content) {
     return $content;
 }, 20);
 
-
-// Change the default excerpt dots to an ellipsis
-add_filter('excerpt_more', function ($more) {
-    return ' "..."';
-});
+/**
+ * Use a plain ellipsis for automatically trimmed excerpts.
+ */
+add_filter( 'excerpt_more', function () {
+	return ' ...';
+} );
